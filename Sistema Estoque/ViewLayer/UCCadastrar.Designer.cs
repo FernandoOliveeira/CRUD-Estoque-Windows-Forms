@@ -194,6 +194,8 @@
             this.txtDescricao.Size = new System.Drawing.Size(722, 119);
             this.txtDescricao.TabIndex = 5;
             this.txtDescricao.Text = "";
+            this.txtDescricao.Enter += new System.EventHandler(this.txtDescricao_Enter);
+            this.txtDescricao.Leave += new System.EventHandler(this.txtDescricao_Leave);
             // 
             // lblDescricao
             // 
@@ -255,6 +257,8 @@
             this.txtLocalArmazenado.Name = "txtLocalArmazenado";
             this.txtLocalArmazenado.Size = new System.Drawing.Size(176, 19);
             this.txtLocalArmazenado.TabIndex = 3;
+            this.txtLocalArmazenado.Enter += new System.EventHandler(this.txtLocalArmazenado_Enter);
+            this.txtLocalArmazenado.Leave += new System.EventHandler(this.txtLocalArmazenado_Leave);
             // 
             // panel7
             // 
@@ -299,6 +303,8 @@
             this.txtCodBarras.Name = "txtCodBarras";
             this.txtCodBarras.Size = new System.Drawing.Size(200, 19);
             this.txtCodBarras.TabIndex = 3;
+            this.txtCodBarras.Enter += new System.EventHandler(this.txtCodBarras_Enter);
+            this.txtCodBarras.Leave += new System.EventHandler(this.txtCodBarras_Leave);
             // 
             // panel5
             // 
@@ -329,6 +335,8 @@
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(161, 22);
             this.txtQuantidade.TabIndex = 3;
+            this.txtQuantidade.Enter += new System.EventHandler(this.txtQuantidade_Enter);
+            this.txtQuantidade.Leave += new System.EventHandler(this.txtQuantidade_Leave);
             // 
             // lblQuantidade
             // 
@@ -400,6 +408,8 @@
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(200, 19);
             this.txtPreco.TabIndex = 3;
+            this.txtPreco.Enter += new System.EventHandler(this.txtPreco_Enter);
+            this.txtPreco.Leave += new System.EventHandler(this.txtPreco_Leave);
             // 
             // panel2
             // 
@@ -444,6 +454,8 @@
             this.txtNomeProduto.Name = "txtNomeProduto";
             this.txtNomeProduto.Size = new System.Drawing.Size(200, 19);
             this.txtNomeProduto.TabIndex = 3;
+            this.txtNomeProduto.Enter += new System.EventHandler(this.txtNomeProduto_Enter);
+            this.txtNomeProduto.Leave += new System.EventHandler(this.txtNomeProduto_Leave);
             // 
             // UCCadastrar
             // 
@@ -454,6 +466,7 @@
             this.Controls.Add(this.label2);
             this.Name = "UCCadastrar";
             this.Size = new System.Drawing.Size(745, 513);
+            this.Load += new System.EventHandler(this.UCCadastrar_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();

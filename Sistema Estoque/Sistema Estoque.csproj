@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,7 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLayer\BlProduto.cs" />
     <Compile Include="DataLayer\Connection.cs" />
+    <Compile Include="DataLayer\DlProduto.cs" />
+    <Compile Include="Model\Produto.cs" />
     <Compile Include="ViewLayer\FrmInicial.cs">
       <SubType>Form</SubType>
     </Compile>
