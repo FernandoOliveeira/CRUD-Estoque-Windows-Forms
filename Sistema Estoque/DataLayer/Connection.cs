@@ -10,7 +10,7 @@ using System.Data;
 namespace Sistema_Estoque.DataLayer
 {
     class Connection
-    {/*
+    {
         public string connectionString = ConfigurationManager.ConnectionStrings["cnn"].ConnectionString;
 
         //Abrir banco de dados e conectar
@@ -44,8 +44,7 @@ namespace Sistema_Estoque.DataLayer
                 throw e;
             }
         }
-
-        */
+       
 
     }
 }
