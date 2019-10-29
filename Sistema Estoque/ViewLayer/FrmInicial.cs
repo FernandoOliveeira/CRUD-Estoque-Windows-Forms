@@ -85,6 +85,7 @@ namespace Sistema_Estoque
         {
             if (this.WindowState == FormWindowState.Normal)
             {
+                this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea; // Faz com que a tela, quando maximizada, não cubra a barra de tarefas
                 this.WindowState = FormWindowState.Maximized;
             }
             else

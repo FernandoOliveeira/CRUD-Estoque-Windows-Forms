@@ -123,6 +123,7 @@ namespace Sistema_Estoque.ViewLayer
             if (txtLocalArmazenado.Text == "Local de armazenamento")
             {
                 txtLocalArmazenado.Text = "";
+                txtLocalArmazenado.Font = new Font("Century Gothic", 11);
                 txtLocalArmazenado.ForeColor = Color.White;
             }
         }
@@ -131,6 +132,7 @@ namespace Sistema_Estoque.ViewLayer
         {
             if (txtLocalArmazenado.Text == "")
             {
+                txtLocalArmazenado.Font = new Font("Century Gothic", 9);
                 txtLocalArmazenado.Text = "Local de armazenamento";
                 txtLocalArmazenado.ForeColor = Color.Gray;
             }
@@ -160,5 +162,6 @@ namespace Sistema_Estoque.ViewLayer
 
         #endregion
 
+        
     }
 }
