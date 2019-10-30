@@ -25,6 +25,7 @@ namespace Sistema_Estoque
         public FrmInicial()
         {
             InitializeComponent();
+            lblTopPanel.Text = "HOME";
             painelLateral.Height = btnHome.Height;
             painelLateral.Top = btnHome.Top;
             ucHome1.BringToFront();
@@ -133,6 +134,7 @@ namespace Sistema_Estoque
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+            lblTopPanel.Text = "HOME";
             painelLateral.Height = btnHome.Height;
             painelLateral.Top = btnHome.Top;
             ucHome1.BringToFront();
@@ -142,6 +144,7 @@ namespace Sistema_Estoque
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            lblTopPanel.Text = "CADASTRAR PRODUTOS";
             painelLateral.Height = btnCadastrar.Height;
             painelLateral.Top = btnCadastrar.Top;
             ucCadastrar1.BringToFront();
@@ -150,6 +153,6 @@ namespace Sistema_Estoque
 
 
         #endregion
-
+        
     }
 }
