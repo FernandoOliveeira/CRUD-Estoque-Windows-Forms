@@ -18,6 +18,7 @@ namespace Sistema_Estoque.BusinessLayer
                 objProduto.Preco != 0 &&
                 objProduto.Quantidade != 0 &&
                 String.IsNullOrEmpty(objProduto.CodBarras) &&
+                String.IsNullOrEmpty(objProduto.CodProduto) &&
                 String.IsNullOrEmpty(objProduto.DataValidade.ToString()) &&
                 String.IsNullOrEmpty(objProduto.LocalArmazenamento) &&
                 String.IsNullOrEmpty(objProduto.Descricao))

@@ -13,6 +13,7 @@ namespace Sistema_Estoque.Model
         public double Preco { get; set; }
         public int Quantidade { get; set; }
         public string CodBarras { get; set; }
+        public string CodProduto{ get; set; }
         public DateTime DataValidade { get; set; }
         public string LocalArmazenamento { get; set; }
         public string Descricao { get; set; }

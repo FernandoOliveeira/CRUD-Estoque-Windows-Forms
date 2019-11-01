@@ -30,6 +30,7 @@ namespace Sistema_Estoque.ViewLayer
             txtCodBarras.Text = "Código de barras";
             txtLocalArmazenado.Text = "Local de armazenamento";
             txtDescricao.Text = "Descrição";
+            txtCodProduto.Text = "Código do produto";
 
             txtNomeProduto.ForeColor = Color.Gray;
             txtPreco.ForeColor = Color.Gray;
@@ -37,6 +38,7 @@ namespace Sistema_Estoque.ViewLayer
             txtCodBarras.ForeColor = Color.Gray;
             txtLocalArmazenado.ForeColor = Color.Gray;
             txtDescricao.ForeColor = Color.Gray;
+            txtCodProduto.ForeColor = Color.Gray;
         }
 
 
@@ -60,13 +62,14 @@ namespace Sistema_Estoque.ViewLayer
             Produto objProduto = new Produto();
 
            
-            objProduto.NomeProduto = txtNomeProduto.Text;
-            objProduto.Preco = double.Parse(txtPreco.Text.Replace(',', '.'));
+            objProduto.NomeProduto = txtNomeProduto.Text.Trim();
+            objProduto.Preco = double.Parse(txtPreco.Text.Replace(',', '.').Trim());
             objProduto.Quantidade = (int)txtQuantidade.Value;
-            objProduto.CodBarras = txtCodBarras.Text;
+            objProduto.CodBarras = txtCodBarras.Text.Trim();
+            objProduto.CodProduto = txtCodProduto.Text.Trim();
             objProduto.DataValidade = DateTime.Parse(dtValidade.Text);
-            objProduto.LocalArmazenamento = txtLocalArmazenado.Text;
-            objProduto.Descricao = txtDescricao.Text;
+            objProduto.LocalArmazenamento = txtLocalArmazenado.Text.Trim();
+            objProduto.Descricao = txtDescricao.Text.Trim();
 
             objBlProduto.AbrirBanco();
             objBlProduto.CadastrarProduto(objProduto);
@@ -162,6 +165,26 @@ namespace Sistema_Estoque.ViewLayer
 
 
 
+        private void txtCodProduto_Enter(object sender, EventArgs e)
+        {
+            if (txtCodProduto.Text == "Código do produto")
+            {
+                txtCodProduto.Text = "";
+                txtCodProduto.ForeColor = Color.White;
+            }
+        }
+                           
+        private void txtCodProduto_Leave(object sender, EventArgs e)
+        {
+            if (txtCodProduto.Text == "")
+            {
+                txtCodProduto.Text = "Código do produto";
+                txtCodProduto.ForeColor = Color.Gray;
+            }
+        }
+
+
+
         private void txtLocalArmazenado_Enter(object sender, EventArgs e)
         {
             if (txtLocalArmazenado.Text == "Local de armazenamento")
@@ -204,8 +227,12 @@ namespace Sistema_Estoque.ViewLayer
 
 
 
+
+
+
+
         #endregion
 
-        
+     
     }
 }

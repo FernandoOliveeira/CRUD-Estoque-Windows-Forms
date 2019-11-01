@@ -33,15 +33,6 @@
             this.dataValidadePanel = new System.Windows.Forms.Panel();
             this.dtValidade = new System.Windows.Forms.DateTimePicker();
             this.lblDataValidade = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.btnCadastrar = new System.Windows.Forms.Button();
-            this.descricaoPanel = new System.Windows.Forms.Panel();
-            this.txtDescricao = new System.Windows.Forms.RichTextBox();
-            this.lblDescricao = new System.Windows.Forms.Label();
-            this.localArmazenadoPanel = new System.Windows.Forms.Panel();
-            this.lblLocalArmazenado = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.txtLocalArmazenado = new System.Windows.Forms.TextBox();
             this.codBarrasPanel = new System.Windows.Forms.Panel();
             this.lblCodBarras = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -58,21 +49,34 @@
             this.lblNomeProduto = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtNomeProduto = new System.Windows.Forms.TextBox();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.descricaoPanel = new System.Windows.Forms.Panel();
+            this.txtDescricao = new System.Windows.Forms.RichTextBox();
+            this.lblDescricao = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblCodProduto = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtCodProduto = new System.Windows.Forms.TextBox();
+            this.localArmazenadoPanel = new System.Windows.Forms.Panel();
+            this.lblLocalArmazenado = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.txtLocalArmazenado = new System.Windows.Forms.TextBox();
             this.tblCadastrar.SuspendLayout();
             this.dataValidadePanel.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.descricaoPanel.SuspendLayout();
-            this.localArmazenadoPanel.SuspendLayout();
             this.codBarrasPanel.SuspendLayout();
             this.quantidadePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).BeginInit();
             this.precoPanel.SuspendLayout();
             this.nomeProdutoPanel.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.descricaoPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.localArmazenadoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
@@ -89,25 +93,28 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tblCadastrar.ColumnCount = 3;
-            this.tblCadastrar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tblCadastrar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tblCadastrar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tblCadastrar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.44782F));
+            this.tblCadastrar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.36053F));
+            this.tblCadastrar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.19165F));
             this.tblCadastrar.Controls.Add(this.dataValidadePanel, 1, 1);
-            this.tblCadastrar.Controls.Add(this.panel12, 1, 3);
-            this.tblCadastrar.Controls.Add(this.descricaoPanel, 0, 2);
-            this.tblCadastrar.Controls.Add(this.localArmazenadoPanel, 2, 1);
             this.tblCadastrar.Controls.Add(this.codBarrasPanel, 0, 1);
             this.tblCadastrar.Controls.Add(this.quantidadePanel, 2, 0);
             this.tblCadastrar.Controls.Add(this.precoPanel, 1, 0);
             this.tblCadastrar.Controls.Add(this.nomeProdutoPanel, 0, 0);
+            this.tblCadastrar.Controls.Add(this.panel12, 1, 4);
+            this.tblCadastrar.Controls.Add(this.descricaoPanel, 0, 3);
+            this.tblCadastrar.Controls.Add(this.panel2, 2, 1);
+            this.tblCadastrar.Controls.Add(this.localArmazenadoPanel, 1, 2);
             this.tblCadastrar.Location = new System.Drawing.Point(3, 63);
             this.tblCadastrar.Name = "tblCadastrar";
-            this.tblCadastrar.RowCount = 4;
-            this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.79696F));
-            this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.28934F));
-            this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.32487F));
-            this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.33503F));
-            this.tblCadastrar.Size = new System.Drawing.Size(714, 394);
+            this.tblCadastrar.RowCount = 5;
+            this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.28665F));
+            this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.24104F));
+            this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.24104F));
+            this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.23127F));
+            this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblCadastrar.Size = new System.Drawing.Size(726, 429);
             this.tblCadastrar.TabIndex = 2;
             // 
             // dataValidadePanel
@@ -117,9 +124,9 @@
             this.dataValidadePanel.Controls.Add(this.dtValidade);
             this.dataValidadePanel.Controls.Add(this.lblDataValidade);
             this.dataValidadePanel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataValidadePanel.Location = new System.Drawing.Point(241, 81);
+            this.dataValidadePanel.Location = new System.Drawing.Point(238, 53);
             this.dataValidadePanel.Name = "dataValidadePanel";
-            this.dataValidadePanel.Size = new System.Drawing.Size(232, 70);
+            this.dataValidadePanel.Size = new System.Drawing.Size(214, 50);
             this.dataValidadePanel.TabIndex = 4;
             // 
             // dtValidade
@@ -129,7 +136,7 @@
             this.dtValidade.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtValidade.Location = new System.Drawing.Point(7, 26);
             this.dtValidade.Name = "dtValidade";
-            this.dtValidade.Size = new System.Drawing.Size(192, 22);
+            this.dtValidade.Size = new System.Drawing.Size(171, 22);
             this.dtValidade.TabIndex = 6;
             // 
             // lblDataValidade
@@ -145,122 +152,6 @@
             this.lblDataValidade.TabIndex = 5;
             this.lblDataValidade.Text = "Data de Validade";
             // 
-            // panel12
-            // 
-            this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel12.Controls.Add(this.btnCadastrar);
-            this.panel12.Location = new System.Drawing.Point(241, 308);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(232, 83);
-            this.panel12.TabIndex = 7;
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
-            this.btnCadastrar.FlatAppearance.BorderSize = 0;
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.Location = new System.Drawing.Point(29, 3);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(127, 36);
-            this.btnCadastrar.TabIndex = 8;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
-            // descricaoPanel
-            // 
-            this.descricaoPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tblCadastrar.SetColumnSpan(this.descricaoPanel, 3);
-            this.descricaoPanel.Controls.Add(this.txtDescricao);
-            this.descricaoPanel.Controls.Add(this.lblDescricao);
-            this.descricaoPanel.Location = new System.Drawing.Point(3, 157);
-            this.descricaoPanel.Name = "descricaoPanel";
-            this.descricaoPanel.Size = new System.Drawing.Size(708, 145);
-            this.descricaoPanel.TabIndex = 6;
-            // 
-            // txtDescricao
-            // 
-            this.txtDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescricao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricao.Location = new System.Drawing.Point(6, 23);
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(697, 119);
-            this.txtDescricao.TabIndex = 5;
-            this.txtDescricao.Text = "";
-            this.txtDescricao.Enter += new System.EventHandler(this.txtDescricao_Enter);
-            this.txtDescricao.Leave += new System.EventHandler(this.txtDescricao_Leave);
-            // 
-            // lblDescricao
-            // 
-            this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescricao.ForeColor = System.Drawing.Color.White;
-            this.lblDescricao.Location = new System.Drawing.Point(3, 3);
-            this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(177, 17);
-            this.lblDescricao.TabIndex = 4;
-            this.lblDescricao.Text = "Local de Armazenamento";
-            // 
-            // localArmazenadoPanel
-            // 
-            this.localArmazenadoPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.localArmazenadoPanel.Controls.Add(this.lblLocalArmazenado);
-            this.localArmazenadoPanel.Controls.Add(this.panel10);
-            this.localArmazenadoPanel.Controls.Add(this.txtLocalArmazenado);
-            this.localArmazenadoPanel.Location = new System.Drawing.Point(479, 81);
-            this.localArmazenadoPanel.Name = "localArmazenadoPanel";
-            this.localArmazenadoPanel.Size = new System.Drawing.Size(232, 70);
-            this.localArmazenadoPanel.TabIndex = 5;
-            // 
-            // lblLocalArmazenado
-            // 
-            this.lblLocalArmazenado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLocalArmazenado.AutoSize = true;
-            this.lblLocalArmazenado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocalArmazenado.ForeColor = System.Drawing.Color.White;
-            this.lblLocalArmazenado.Location = new System.Drawing.Point(4, 6);
-            this.lblLocalArmazenado.Name = "lblLocalArmazenado";
-            this.lblLocalArmazenado.Size = new System.Drawing.Size(177, 17);
-            this.lblLocalArmazenado.TabIndex = 4;
-            this.lblLocalArmazenado.Text = "Local de Armazenamento";
-            // 
-            // panel10
-            // 
-            this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel10.BackColor = System.Drawing.Color.Black;
-            this.panel10.Location = new System.Drawing.Point(7, 43);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(143, 1);
-            this.panel10.TabIndex = 5;
-            // 
-            // txtLocalArmazenado
-            // 
-            this.txtLocalArmazenado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLocalArmazenado.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtLocalArmazenado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
-            this.txtLocalArmazenado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
-            this.txtLocalArmazenado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtLocalArmazenado.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLocalArmazenado.ForeColor = System.Drawing.Color.White;
-            this.txtLocalArmazenado.Location = new System.Drawing.Point(7, 27);
-            this.txtLocalArmazenado.Name = "txtLocalArmazenado";
-            this.txtLocalArmazenado.Size = new System.Drawing.Size(143, 15);
-            this.txtLocalArmazenado.TabIndex = 3;
-            this.txtLocalArmazenado.Enter += new System.EventHandler(this.txtLocalArmazenado_Enter);
-            this.txtLocalArmazenado.Leave += new System.EventHandler(this.txtLocalArmazenado_Leave);
-            // 
             // codBarrasPanel
             // 
             this.codBarrasPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -268,9 +159,9 @@
             this.codBarrasPanel.Controls.Add(this.lblCodBarras);
             this.codBarrasPanel.Controls.Add(this.panel8);
             this.codBarrasPanel.Controls.Add(this.txtCodBarras);
-            this.codBarrasPanel.Location = new System.Drawing.Point(3, 81);
+            this.codBarrasPanel.Location = new System.Drawing.Point(3, 53);
             this.codBarrasPanel.Name = "codBarrasPanel";
-            this.codBarrasPanel.Size = new System.Drawing.Size(232, 70);
+            this.codBarrasPanel.Size = new System.Drawing.Size(229, 50);
             this.codBarrasPanel.TabIndex = 3;
             // 
             // lblCodBarras
@@ -278,7 +169,7 @@
             this.lblCodBarras.AutoSize = true;
             this.lblCodBarras.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodBarras.ForeColor = System.Drawing.Color.White;
-            this.lblCodBarras.Location = new System.Drawing.Point(3, 3);
+            this.lblCodBarras.Location = new System.Drawing.Point(3, 10);
             this.lblCodBarras.Name = "lblCodBarras";
             this.lblCodBarras.Size = new System.Drawing.Size(137, 20);
             this.lblCodBarras.TabIndex = 4;
@@ -286,23 +177,27 @@
             // 
             // panel8
             // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.BackColor = System.Drawing.Color.Black;
-            this.panel8.Location = new System.Drawing.Point(7, 38);
+            this.panel8.Location = new System.Drawing.Point(7, 45);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(200, 1);
+            this.panel8.Size = new System.Drawing.Size(208, 1);
             this.panel8.TabIndex = 5;
             // 
             // txtCodBarras
             // 
+            this.txtCodBarras.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCodBarras.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtCodBarras.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
             this.txtCodBarras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
             this.txtCodBarras.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodBarras.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodBarras.ForeColor = System.Drawing.Color.White;
-            this.txtCodBarras.Location = new System.Drawing.Point(7, 21);
+            this.txtCodBarras.Location = new System.Drawing.Point(7, 29);
             this.txtCodBarras.Name = "txtCodBarras";
-            this.txtCodBarras.Size = new System.Drawing.Size(200, 19);
+            this.txtCodBarras.Size = new System.Drawing.Size(208, 19);
             this.txtCodBarras.TabIndex = 3;
             this.txtCodBarras.Enter += new System.EventHandler(this.txtCodBarras_Enter);
             this.txtCodBarras.Leave += new System.EventHandler(this.txtCodBarras_Leave);
@@ -314,9 +209,9 @@
             this.quantidadePanel.Controls.Add(this.txtQuantidade);
             this.quantidadePanel.Controls.Add(this.lblQuantidade);
             this.quantidadePanel.Controls.Add(this.panel6);
-            this.quantidadePanel.Location = new System.Drawing.Point(479, 3);
+            this.quantidadePanel.Location = new System.Drawing.Point(458, 3);
             this.quantidadePanel.Name = "quantidadePanel";
-            this.quantidadePanel.Size = new System.Drawing.Size(232, 72);
+            this.quantidadePanel.Size = new System.Drawing.Size(265, 44);
             this.quantidadePanel.TabIndex = 2;
             // 
             // txtQuantidade
@@ -327,14 +222,14 @@
             this.txtQuantidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtQuantidade.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuantidade.ForeColor = System.Drawing.Color.White;
-            this.txtQuantidade.Location = new System.Drawing.Point(7, 20);
+            this.txtQuantidade.Location = new System.Drawing.Point(7, 21);
             this.txtQuantidade.Maximum = new decimal(new int[] {
             2147483647,
             0,
             0,
             0});
             this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(143, 22);
+            this.txtQuantidade.Size = new System.Drawing.Size(224, 22);
             this.txtQuantidade.TabIndex = 3;
             this.txtQuantidade.Enter += new System.EventHandler(this.txtQuantidade_Enter);
             this.txtQuantidade.Leave += new System.EventHandler(this.txtQuantidade_Leave);
@@ -357,7 +252,7 @@
             this.panel6.BackColor = System.Drawing.Color.Black;
             this.panel6.Location = new System.Drawing.Point(7, 39);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(143, 1);
+            this.panel6.Size = new System.Drawing.Size(224, 1);
             this.panel6.TabIndex = 5;
             // 
             // precoPanel
@@ -367,9 +262,9 @@
             this.precoPanel.Controls.Add(this.lblPreco);
             this.precoPanel.Controls.Add(this.panel4);
             this.precoPanel.Controls.Add(this.txtPreco);
-            this.precoPanel.Location = new System.Drawing.Point(241, 3);
+            this.precoPanel.Location = new System.Drawing.Point(238, 3);
             this.precoPanel.Name = "precoPanel";
-            this.precoPanel.Size = new System.Drawing.Size(232, 72);
+            this.precoPanel.Size = new System.Drawing.Size(214, 44);
             this.precoPanel.TabIndex = 1;
             // 
             // lblPreco
@@ -390,7 +285,7 @@
             this.panel4.BackColor = System.Drawing.Color.Black;
             this.panel4.Location = new System.Drawing.Point(7, 39);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(192, 1);
+            this.panel4.Size = new System.Drawing.Size(171, 1);
             this.panel4.TabIndex = 5;
             // 
             // txtPreco
@@ -403,9 +298,9 @@
             this.txtPreco.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPreco.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPreco.ForeColor = System.Drawing.Color.White;
-            this.txtPreco.Location = new System.Drawing.Point(7, 22);
+            this.txtPreco.Location = new System.Drawing.Point(7, 23);
             this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(192, 19);
+            this.txtPreco.Size = new System.Drawing.Size(171, 19);
             this.txtPreco.TabIndex = 3;
             this.txtPreco.Enter += new System.EventHandler(this.txtPreco_Enter);
             this.txtPreco.Leave += new System.EventHandler(this.txtPreco_Leave);
@@ -419,7 +314,7 @@
             this.nomeProdutoPanel.Controls.Add(this.txtNomeProduto);
             this.nomeProdutoPanel.Location = new System.Drawing.Point(3, 3);
             this.nomeProdutoPanel.Name = "nomeProdutoPanel";
-            this.nomeProdutoPanel.Size = new System.Drawing.Size(232, 72);
+            this.nomeProdutoPanel.Size = new System.Drawing.Size(229, 44);
             this.nomeProdutoPanel.TabIndex = 0;
             // 
             // lblNomeProduto
@@ -435,26 +330,198 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(7, 39);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 1);
+            this.panel1.Size = new System.Drawing.Size(208, 1);
             this.panel1.TabIndex = 5;
             // 
             // txtNomeProduto
             // 
+            this.txtNomeProduto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNomeProduto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtNomeProduto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
             this.txtNomeProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
             this.txtNomeProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNomeProduto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeProduto.ForeColor = System.Drawing.Color.White;
-            this.txtNomeProduto.Location = new System.Drawing.Point(7, 22);
+            this.txtNomeProduto.Location = new System.Drawing.Point(7, 23);
             this.txtNomeProduto.Name = "txtNomeProduto";
-            this.txtNomeProduto.Size = new System.Drawing.Size(200, 19);
+            this.txtNomeProduto.Size = new System.Drawing.Size(208, 19);
             this.txtNomeProduto.TabIndex = 3;
             this.txtNomeProduto.Enter += new System.EventHandler(this.txtNomeProduto_Enter);
             this.txtNomeProduto.Leave += new System.EventHandler(this.txtNomeProduto_Leave);
+            // 
+            // panel12
+            // 
+            this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel12.Controls.Add(this.btnCadastrar);
+            this.panel12.Location = new System.Drawing.Point(238, 310);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(214, 42);
+            this.panel12.TabIndex = 8;
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
+            this.btnCadastrar.FlatAppearance.BorderSize = 0;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.Location = new System.Drawing.Point(7, 3);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(171, 36);
+            this.btnCadastrar.TabIndex = 8;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // descricaoPanel
+            // 
+            this.descricaoPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tblCadastrar.SetColumnSpan(this.descricaoPanel, 3);
+            this.descricaoPanel.Controls.Add(this.txtDescricao);
+            this.descricaoPanel.Controls.Add(this.lblDescricao);
+            this.descricaoPanel.Location = new System.Drawing.Point(3, 165);
+            this.descricaoPanel.Name = "descricaoPanel";
+            this.descricaoPanel.Size = new System.Drawing.Size(720, 139);
+            this.descricaoPanel.TabIndex = 7;
+            // 
+            // txtDescricao
+            // 
+            this.txtDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescricao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescricao.Location = new System.Drawing.Point(6, 23);
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(711, 113);
+            this.txtDescricao.TabIndex = 5;
+            this.txtDescricao.Text = "";
+            this.txtDescricao.Enter += new System.EventHandler(this.txtDescricao_Enter);
+            this.txtDescricao.Leave += new System.EventHandler(this.txtDescricao_Leave);
+            // 
+            // lblDescricao
+            // 
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescricao.ForeColor = System.Drawing.Color.White;
+            this.lblDescricao.Location = new System.Drawing.Point(3, 3);
+            this.lblDescricao.Name = "lblDescricao";
+            this.lblDescricao.Size = new System.Drawing.Size(84, 20);
+            this.lblDescricao.TabIndex = 4;
+            this.lblDescricao.Text = "Descrição";
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.lblCodProduto);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.txtCodProduto);
+            this.panel2.Location = new System.Drawing.Point(458, 53);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(265, 50);
+            this.panel2.TabIndex = 6;
+            // 
+            // lblCodProduto
+            // 
+            this.lblCodProduto.AutoSize = true;
+            this.lblCodProduto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodProduto.ForeColor = System.Drawing.Color.White;
+            this.lblCodProduto.Location = new System.Drawing.Point(3, 10);
+            this.lblCodProduto.Name = "lblCodProduto";
+            this.lblCodProduto.Size = new System.Drawing.Size(150, 20);
+            this.lblCodProduto.TabIndex = 4;
+            this.lblCodProduto.Text = "Código do Produto";
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Location = new System.Drawing.Point(7, 45);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(224, 1);
+            this.panel3.TabIndex = 5;
+            // 
+            // txtCodProduto
+            // 
+            this.txtCodProduto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCodProduto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtCodProduto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
+            this.txtCodProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
+            this.txtCodProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodProduto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodProduto.ForeColor = System.Drawing.Color.White;
+            this.txtCodProduto.Location = new System.Drawing.Point(7, 29);
+            this.txtCodProduto.Name = "txtCodProduto";
+            this.txtCodProduto.Size = new System.Drawing.Size(224, 19);
+            this.txtCodProduto.TabIndex = 3;
+            this.txtCodProduto.Enter += new System.EventHandler(this.txtCodProduto_Enter);
+            this.txtCodProduto.Leave += new System.EventHandler(this.txtCodProduto_Leave);
+            // 
+            // localArmazenadoPanel
+            // 
+            this.localArmazenadoPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.localArmazenadoPanel.Controls.Add(this.lblLocalArmazenado);
+            this.localArmazenadoPanel.Controls.Add(this.panel10);
+            this.localArmazenadoPanel.Controls.Add(this.txtLocalArmazenado);
+            this.localArmazenadoPanel.Location = new System.Drawing.Point(238, 109);
+            this.localArmazenadoPanel.Name = "localArmazenadoPanel";
+            this.localArmazenadoPanel.Size = new System.Drawing.Size(214, 50);
+            this.localArmazenadoPanel.TabIndex = 5;
+            // 
+            // lblLocalArmazenado
+            // 
+            this.lblLocalArmazenado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLocalArmazenado.AutoSize = true;
+            this.lblLocalArmazenado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalArmazenado.ForeColor = System.Drawing.Color.White;
+            this.lblLocalArmazenado.Location = new System.Drawing.Point(4, 12);
+            this.lblLocalArmazenado.Name = "lblLocalArmazenado";
+            this.lblLocalArmazenado.Size = new System.Drawing.Size(177, 17);
+            this.lblLocalArmazenado.TabIndex = 4;
+            this.lblLocalArmazenado.Text = "Local de Armazenamento";
+            // 
+            // panel10
+            // 
+            this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel10.BackColor = System.Drawing.Color.Black;
+            this.panel10.Location = new System.Drawing.Point(7, 46);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(171, 1);
+            this.panel10.TabIndex = 5;
+            // 
+            // txtLocalArmazenado
+            // 
+            this.txtLocalArmazenado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtLocalArmazenado.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtLocalArmazenado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
+            this.txtLocalArmazenado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
+            this.txtLocalArmazenado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLocalArmazenado.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLocalArmazenado.ForeColor = System.Drawing.Color.White;
+            this.txtLocalArmazenado.Location = new System.Drawing.Point(7, 31);
+            this.txtLocalArmazenado.Name = "txtLocalArmazenado";
+            this.txtLocalArmazenado.Size = new System.Drawing.Size(171, 15);
+            this.txtLocalArmazenado.TabIndex = 3;
+            this.txtLocalArmazenado.Enter += new System.EventHandler(this.txtLocalArmazenado_Enter);
+            this.txtLocalArmazenado.Leave += new System.EventHandler(this.txtLocalArmazenado_Leave);
             // 
             // UCCadastrar
             // 
@@ -469,11 +536,6 @@
             this.tblCadastrar.ResumeLayout(false);
             this.dataValidadePanel.ResumeLayout(false);
             this.dataValidadePanel.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.descricaoPanel.ResumeLayout(false);
-            this.descricaoPanel.PerformLayout();
-            this.localArmazenadoPanel.ResumeLayout(false);
-            this.localArmazenadoPanel.PerformLayout();
             this.codBarrasPanel.ResumeLayout(false);
             this.codBarrasPanel.PerformLayout();
             this.quantidadePanel.ResumeLayout(false);
@@ -483,6 +545,13 @@
             this.precoPanel.PerformLayout();
             this.nomeProdutoPanel.ResumeLayout(false);
             this.nomeProdutoPanel.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.descricaoPanel.ResumeLayout(false);
+            this.descricaoPanel.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.localArmazenadoPanel.ResumeLayout(false);
+            this.localArmazenadoPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -520,5 +589,9 @@
         private System.Windows.Forms.Panel dataValidadePanel;
         private System.Windows.Forms.DateTimePicker dtValidade;
         private System.Windows.Forms.Label lblDataValidade;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblCodProduto;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox txtCodProduto;
     }
 }

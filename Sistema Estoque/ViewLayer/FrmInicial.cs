@@ -26,11 +26,28 @@ namespace Sistema_Estoque
         {
             InitializeComponent();
 
-            lblTopPanel.Text = "HOME";
+            
             painelLateral.Height = btnHome.Height;
             painelLateral.Top = btnHome.Top;
             ucHome1.BringToFront();
+            btnHome.Font = new Font(btnHome.Font, FontStyle.Bold);
+            btnHome.ForeColor = Color.FromArgb(25, 181, 254);
         }
+
+
+
+        // Código para detectar qual UserControl está na frente
+        private bool UserControlFront(Control control)
+        {
+            if (control.Parent.Controls.GetChildIndex(control) == 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+
 
         private void topPanel_MouseDown(object sender, MouseEventArgs e)
         {
@@ -45,6 +62,8 @@ namespace Sistema_Estoque
 
         }
 
+
+
         private void topLeftPanel_MouseDown(object sender, MouseEventArgs e)
         {
 
@@ -57,6 +76,8 @@ namespace Sistema_Estoque
             #endregion
 
         }
+
+       
 
 
         #region Buttons
@@ -135,20 +156,43 @@ namespace Sistema_Estoque
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            lblTopPanel.Text = "HOME";
+            
             painelLateral.Height = btnHome.Height;
             painelLateral.Top = btnHome.Top;
             ucHome1.BringToFront();
+
+
+            if (UserControlFront(ucHome1))
+            {
+                btnHome.Font = new Font(btnHome.Font,  FontStyle.Bold);
+                btnHome.ForeColor = Color.FromArgb(25, 181, 254);
+
+                btnCadastrarProdutos.Font = new Font(btnCadastrarProdutos.Font, FontStyle.Regular);
+                btnCadastrarProdutos.ForeColor = Color.FromArgb(255, 255, 255);
+            }
+
         }
 
 
 
-        private void btnCadastrar_Click(object sender, EventArgs e)
+        private void btnCadastrarProdutos_Click(object sender, EventArgs e)
         {
-            lblTopPanel.Text = "CADASTRAR PRODUTOS";
-            painelLateral.Height = btnCadastrar.Height;
-            painelLateral.Top = btnCadastrar.Top;
+            
+            painelLateral.Height = btnCadastrarProdutos.Height;
+            painelLateral.Top = btnCadastrarProdutos.Top;
             ucCadastrar1.BringToFront();
+
+
+            if (UserControlFront(ucCadastrar1))
+            {
+                btnCadastrarProdutos.Font = new Font(btnCadastrarProdutos.Font, FontStyle.Bold);
+                btnCadastrarProdutos.ForeColor = Color.FromArgb(25, 181, 254);
+
+                btnHome.Font = new Font(btnHome.Font, FontStyle.Regular);
+                btnHome.ForeColor = Color.FromArgb(255, 255, 255);
+            }
+                
+
         }
 
 
