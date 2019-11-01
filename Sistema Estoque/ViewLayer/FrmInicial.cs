@@ -25,6 +25,7 @@ namespace Sistema_Estoque
         public FrmInicial()
         {
             InitializeComponent();
+
             lblTopPanel.Text = "HOME";
             painelLateral.Height = btnHome.Height;
             painelLateral.Top = btnHome.Top;

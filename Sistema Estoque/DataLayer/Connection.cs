@@ -44,7 +44,6 @@ namespace Sistema_Estoque.DataLayer
                 throw e;
             }
         }
-       
 
     }
 }

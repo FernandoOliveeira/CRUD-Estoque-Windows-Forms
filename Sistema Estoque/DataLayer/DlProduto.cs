@@ -23,7 +23,7 @@ namespace Sistema_Estoque.DataLayer
             command.Parameters.AddWithValue("@localArmazenado", produto.LocalArmazenamento);
             command.Parameters.AddWithValue("@descricao", produto.Descricao);
 
-            uint res = (uint)command.ExecuteNonQuery();
+            int res = command.ExecuteNonQuery();
 
             if (res != 0)
             {
@@ -33,5 +33,6 @@ namespace Sistema_Estoque.DataLayer
             return false;
 
         }
+
     }
 }

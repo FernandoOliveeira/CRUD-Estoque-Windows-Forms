@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Sistema_Estoque.BusinessLayer;
+using Sistema_Estoque.Model;
 
 namespace Sistema_Estoque.ViewLayer
 {
@@ -18,6 +20,8 @@ namespace Sistema_Estoque.ViewLayer
             dtValidade.MinDate = DateTime.Now;
             dtValidade.Value = DateTime.Now;
         }
+
+
 
         private void UCCadastrar_Load(object sender, EventArgs e)
         {
@@ -34,6 +38,46 @@ namespace Sistema_Estoque.ViewLayer
             txtLocalArmazenado.ForeColor = Color.Gray;
             txtDescricao.ForeColor = Color.Gray;
         }
+
+
+        
+        private void LimparCampos()
+        {
+            txtNomeProduto.Text = "";
+            txtPreco.Text = "";
+            txtQuantidade.Value = 0;
+            txtCodBarras.Text = "";
+            dtValidade.Value = DateTime.Now;
+            txtLocalArmazenado.Text = "";
+            txtDescricao.Text = "";
+        }
+
+
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            BlProduto objBlProduto = new BlProduto();
+            Produto objProduto = new Produto();
+
+           
+            objProduto.NomeProduto = txtNomeProduto.Text;
+            objProduto.Preco = double.Parse(txtPreco.Text.Replace(',', '.'));
+            objProduto.Quantidade = (int)txtQuantidade.Value;
+            objProduto.CodBarras = txtCodBarras.Text;
+            objProduto.DataValidade = DateTime.Parse(dtValidade.Text);
+            objProduto.LocalArmazenamento = txtLocalArmazenado.Text;
+            objProduto.Descricao = txtDescricao.Text;
+
+            objBlProduto.AbrirBanco();
+            objBlProduto.CadastrarProduto(objProduto);
+            objBlProduto.FecharBanco(objBlProduto.AbrirBanco());
+            LimparCampos();
+
+            MessageBox.Show("Produto cadastrado com sucesso !", "Produto Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
+
+        }
+
 
         #region PlaceHolder's
 
