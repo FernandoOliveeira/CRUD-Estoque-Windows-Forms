@@ -32,7 +32,9 @@ namespace Sistema_Estoque
             ucHome1.BringToFront();
             btnHome.Font = new Font(btnHome.Font, FontStyle.Bold);
             btnHome.ForeColor = Color.FromArgb(25, 181, 254);
+
         }
+
 
 
 
@@ -198,6 +200,6 @@ namespace Sistema_Estoque
 
 
         #endregion
-        
+
     }
 }

@@ -44,7 +44,6 @@
             this.precoPanel = new System.Windows.Forms.Panel();
             this.lblPreco = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txtPreco = new System.Windows.Forms.TextBox();
             this.nomeProdutoPanel = new System.Windows.Forms.Panel();
             this.lblNomeProduto = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -62,6 +61,7 @@
             this.lblLocalArmazenado = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.txtLocalArmazenado = new System.Windows.Forms.TextBox();
+            this.txtPreco = new System.Windows.Forms.TextBox();
             this.tblCadastrar.SuspendLayout();
             this.dataValidadePanel.SuspendLayout();
             this.codBarrasPanel.SuspendLayout();
@@ -77,6 +77,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
@@ -287,23 +288,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(171, 1);
             this.panel4.TabIndex = 5;
-            // 
-            // txtPreco
-            // 
-            this.txtPreco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPreco.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtPreco.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
-            this.txtPreco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
-            this.txtPreco.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPreco.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPreco.ForeColor = System.Drawing.Color.White;
-            this.txtPreco.Location = new System.Drawing.Point(7, 23);
-            this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(171, 19);
-            this.txtPreco.TabIndex = 3;
-            this.txtPreco.Enter += new System.EventHandler(this.txtPreco_Enter);
-            this.txtPreco.Leave += new System.EventHandler(this.txtPreco_Leave);
             // 
             // nomeProdutoPanel
             // 
@@ -523,6 +507,26 @@
             this.txtLocalArmazenado.Enter += new System.EventHandler(this.txtLocalArmazenado_Enter);
             this.txtLocalArmazenado.Leave += new System.EventHandler(this.txtLocalArmazenado_Leave);
             // 
+            // txtPreco
+            // 
+            this.txtPreco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPreco.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPreco.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
+            this.txtPreco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
+            this.txtPreco.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPreco.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPreco.ForeColor = System.Drawing.Color.White;
+            this.txtPreco.Location = new System.Drawing.Point(7, 23);
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.ShortcutsEnabled = false;
+            this.txtPreco.Size = new System.Drawing.Size(171, 19);
+            this.txtPreco.TabIndex = 3;
+            this.txtPreco.Enter += new System.EventHandler(this.txtPreco_Enter);
+            this.txtPreco.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPreco_KeyDown);
+            this.txtPreco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPreco_KeyPress);
+            this.txtPreco.Leave += new System.EventHandler(this.txtPreco_Leave);
+            // 
             // UCCadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -572,7 +576,6 @@
         private System.Windows.Forms.Panel precoPanel;
         private System.Windows.Forms.Label lblPreco;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox txtPreco;
         private System.Windows.Forms.Panel codBarrasPanel;
         private System.Windows.Forms.Label lblCodBarras;
         private System.Windows.Forms.Panel panel8;
@@ -593,5 +596,6 @@
         private System.Windows.Forms.Label lblCodProduto;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtCodProduto;
+        private System.Windows.Forms.TextBox txtPreco;
     }
 }

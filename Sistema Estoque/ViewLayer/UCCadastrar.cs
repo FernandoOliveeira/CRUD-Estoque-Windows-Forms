@@ -59,26 +59,28 @@ namespace Sistema_Estoque.ViewLayer
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             BlProduto objBlProduto = new BlProduto();
-            Produto objProduto = new Produto();
 
-           
-            objProduto.NomeProduto = txtNomeProduto.Text.Trim();
-            objProduto.Preco = double.Parse(txtPreco.Text.Replace(',', '.').Trim());
-            objProduto.Quantidade = (int)txtQuantidade.Value;
-            objProduto.CodBarras = txtCodBarras.Text.Trim();
-            objProduto.CodProduto = txtCodProduto.Text.Trim();
-            objProduto.DataValidade = DateTime.Parse(dtValidade.Text);
-            objProduto.LocalArmazenamento = txtLocalArmazenado.Text.Trim();
-            objProduto.Descricao = txtDescricao.Text.Trim();
+            Produto objProduto = new Produto
+            {
+                NomeProduto = txtNomeProduto.Text.Trim(),
+                Preco = double.Parse(txtPreco.Text.Replace('.', ',').Trim()),
+                Quantidade = (int)txtQuantidade.Value,
+                CodBarras = txtCodBarras.Text.Trim(),
+                CodProduto = txtCodProduto.Text.Trim(),
+                DataValidade = DateTime.Parse(dtValidade.Text),
+                LocalArmazenamento = txtLocalArmazenado.Text.Trim(),
+                Descricao = txtDescricao.Text.Trim()
+            };
+
 
             objBlProduto.AbrirBanco();
             objBlProduto.CadastrarProduto(objProduto);
             objBlProduto.FecharBanco(objBlProduto.AbrirBanco());
-            LimparCampos();
-
-            MessageBox.Show("Produto cadastrado com sucesso !", "Produto Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             
 
+            MessageBox.Show("Produto cadastrado com sucesso !", "Produto Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            LimparCampos();
         }
 
 
@@ -231,8 +233,52 @@ namespace Sistema_Estoque.ViewLayer
 
 
 
+
         #endregion
 
-     
+        private void txtPreco_KeyDown(object sender, KeyEventArgs e)
+        {
+            /*if ( e.KeyValue >= 48 && e.KeyValue <= 57)
+            {
+                
+            }
+            else if (e.KeyValue == 8)
+            {
+                
+            }
+            else if (e.KeyValue == 44) 
+            {
+
+            }
+            else if (e.KeyValue == 127)
+            {
+
+            }
+            else if (e.KeyValue >= 96 && e.KeyValue <= 105)
+            {
+                
+            }
+            else
+            {
+                e.SuppressKeyPress = true;
+            }*/
+
+
+        }
+
+        private void txtPreco_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && 
+                (e.KeyChar != ','))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf(',') > -1))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

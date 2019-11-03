@@ -30,7 +30,6 @@
         {
             this.dashboard = new System.Windows.Forms.Panel();
             this.topLeftPanel = new System.Windows.Forms.Panel();
-            this.lblTopLeftPanel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.painelLateral = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
@@ -38,6 +37,7 @@
             this.btnCadastrarProdutos = new System.Windows.Forms.Button();
             this.btnVenda = new System.Windows.Forms.Button();
             this.btnEntrada = new System.Windows.Forms.Button();
+            this.lblTopLeftPanel = new System.Windows.Forms.Label();
             this.topPanel = new System.Windows.Forms.Panel();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnMaximizar = new System.Windows.Forms.Button();
@@ -70,17 +70,6 @@
             this.topLeftPanel.TabIndex = 2;
             this.topLeftPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topLeftPanel_MouseDown);
             // 
-            // lblTopLeftPanel
-            // 
-            this.lblTopLeftPanel.AutoSize = true;
-            this.lblTopLeftPanel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTopLeftPanel.ForeColor = System.Drawing.Color.White;
-            this.lblTopLeftPanel.Location = new System.Drawing.Point(3, 3);
-            this.lblTopLeftPanel.Name = "lblTopLeftPanel";
-            this.lblTopLeftPanel.Size = new System.Drawing.Size(221, 21);
-            this.lblTopLeftPanel.TabIndex = 0;
-            this.lblTopLeftPanel.Text = "CRUD - Sistema de Estoque";
-            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -102,9 +91,9 @@
             // 
             this.painelLateral.AutoSize = true;
             this.painelLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
-            this.painelLateral.Location = new System.Drawing.Point(2, 108);
+            this.painelLateral.Location = new System.Drawing.Point(3, 108);
             this.painelLateral.Name = "painelLateral";
-            this.painelLateral.Size = new System.Drawing.Size(10, 56);
+            this.painelLateral.Size = new System.Drawing.Size(10, 41);
             this.painelLateral.TabIndex = 3;
             // 
             // btnHome
@@ -115,9 +104,9 @@
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Location = new System.Drawing.Point(2, 108);
+            this.btnHome.Location = new System.Drawing.Point(23, 108);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(222, 56);
+            this.btnHome.Size = new System.Drawing.Size(181, 41);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
@@ -131,9 +120,9 @@
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.ForeColor = System.Drawing.Color.White;
-            this.btnConsultar.Location = new System.Drawing.Point(2, 262);
+            this.btnConsultar.Location = new System.Drawing.Point(23, 262);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(222, 56);
+            this.btnConsultar.Size = new System.Drawing.Size(181, 41);
             this.btnConsultar.TabIndex = 2;
             this.btnConsultar.Text = "Consultar Produtos";
             this.btnConsultar.UseVisualStyleBackColor = false;
@@ -146,9 +135,9 @@
             this.btnCadastrarProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrarProdutos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarProdutos.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrarProdutos.Location = new System.Drawing.Point(2, 185);
+            this.btnCadastrarProdutos.Location = new System.Drawing.Point(23, 185);
             this.btnCadastrarProdutos.Name = "btnCadastrarProdutos";
-            this.btnCadastrarProdutos.Size = new System.Drawing.Size(222, 56);
+            this.btnCadastrarProdutos.Size = new System.Drawing.Size(181, 41);
             this.btnCadastrarProdutos.TabIndex = 1;
             this.btnCadastrarProdutos.Text = "Cadastrar Produtos";
             this.btnCadastrarProdutos.UseVisualStyleBackColor = false;
@@ -162,9 +151,9 @@
             this.btnVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVenda.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVenda.ForeColor = System.Drawing.Color.White;
-            this.btnVenda.Location = new System.Drawing.Point(2, 416);
+            this.btnVenda.Location = new System.Drawing.Point(23, 416);
             this.btnVenda.Name = "btnVenda";
-            this.btnVenda.Size = new System.Drawing.Size(222, 56);
+            this.btnVenda.Size = new System.Drawing.Size(181, 41);
             this.btnVenda.TabIndex = 4;
             this.btnVenda.Text = "Venda de Produtos";
             this.btnVenda.UseVisualStyleBackColor = false;
@@ -177,12 +166,23 @@
             this.btnEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntrada.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrada.ForeColor = System.Drawing.Color.White;
-            this.btnEntrada.Location = new System.Drawing.Point(2, 339);
+            this.btnEntrada.Location = new System.Drawing.Point(23, 339);
             this.btnEntrada.Name = "btnEntrada";
-            this.btnEntrada.Size = new System.Drawing.Size(222, 56);
+            this.btnEntrada.Size = new System.Drawing.Size(181, 41);
             this.btnEntrada.TabIndex = 3;
             this.btnEntrada.Text = "Entrada de Produtos";
             this.btnEntrada.UseVisualStyleBackColor = false;
+            // 
+            // lblTopLeftPanel
+            // 
+            this.lblTopLeftPanel.AutoSize = true;
+            this.lblTopLeftPanel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTopLeftPanel.ForeColor = System.Drawing.Color.White;
+            this.lblTopLeftPanel.Location = new System.Drawing.Point(3, 3);
+            this.lblTopLeftPanel.Name = "lblTopLeftPanel";
+            this.lblTopLeftPanel.Size = new System.Drawing.Size(221, 21);
+            this.lblTopLeftPanel.TabIndex = 0;
+            this.lblTopLeftPanel.Text = "CRUD - Sistema de Estoque";
             // 
             // topPanel
             // 
@@ -269,7 +269,7 @@
             this.ucHome1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ucHome1.Name = "ucHome1";
             this.ucHome1.Size = new System.Drawing.Size(768, 504);
-            this.ucHome1.TabIndex = 3;
+            this.ucHome1.TabIndex = 5;
             // 
             // ucCadastrar1
             // 
@@ -289,11 +289,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
             this.ClientSize = new System.Drawing.Size(1000, 545);
-            this.Controls.Add(this.ucCadastrar1);
             this.Controls.Add(this.ucHome1);
+            this.Controls.Add(this.ucCadastrar1);
             this.Controls.Add(this.footerPanel);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.dashboard);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -327,8 +328,8 @@
         private System.Windows.Forms.Panel painelLateral;
         private System.Windows.Forms.Panel footerPanel;
         private System.Windows.Forms.Label lblTopLeftPanel;
-        private ViewLayer.UCHome ucHome1;
         private ViewLayer.UCCadastrar ucCadastrar1;
+        private ViewLayer.UCHome ucHome1;
     }
 }
 
