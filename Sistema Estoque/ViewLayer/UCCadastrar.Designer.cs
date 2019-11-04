@@ -44,6 +44,7 @@
             this.precoPanel = new System.Windows.Forms.Panel();
             this.lblPreco = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txtPreco = new System.Windows.Forms.TextBox();
             this.nomeProdutoPanel = new System.Windows.Forms.Panel();
             this.lblNomeProduto = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -61,7 +62,6 @@
             this.lblLocalArmazenado = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.txtLocalArmazenado = new System.Windows.Forms.TextBox();
-            this.txtPreco = new System.Windows.Forms.TextBox();
             this.tblCadastrar.SuspendLayout();
             this.dataValidadePanel.SuspendLayout();
             this.codBarrasPanel.SuspendLayout();
@@ -77,13 +77,12 @@
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(211, 0);
+            this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(316, 39);
+            this.label2.Size = new System.Drawing.Size(745, 39);
             this.label2.TabIndex = 1;
             this.label2.Text = "Cadastrar Produtos";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -135,7 +134,7 @@
             this.dtValidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtValidade.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtValidade.Location = new System.Drawing.Point(7, 26);
+            this.dtValidade.Location = new System.Drawing.Point(7, 30);
             this.dtValidade.Name = "dtValidade";
             this.dtValidade.Size = new System.Drawing.Size(171, 22);
             this.dtValidade.TabIndex = 6;
@@ -145,11 +144,11 @@
             this.lblDataValidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDataValidade.AutoSize = true;
-            this.lblDataValidade.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataValidade.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataValidade.ForeColor = System.Drawing.Color.White;
-            this.lblDataValidade.Location = new System.Drawing.Point(4, 6);
+            this.lblDataValidade.Location = new System.Drawing.Point(4, 10);
             this.lblDataValidade.Name = "lblDataValidade";
-            this.lblDataValidade.Size = new System.Drawing.Size(125, 17);
+            this.lblDataValidade.Size = new System.Drawing.Size(140, 20);
             this.lblDataValidade.TabIndex = 5;
             this.lblDataValidade.Text = "Data de Validade";
             // 
@@ -181,7 +180,7 @@
             this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.BackColor = System.Drawing.Color.Black;
-            this.panel8.Location = new System.Drawing.Point(7, 45);
+            this.panel8.Location = new System.Drawing.Point(7, 46);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(208, 1);
             this.panel8.TabIndex = 5;
@@ -288,6 +287,25 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(171, 1);
             this.panel4.TabIndex = 5;
+            // 
+            // txtPreco
+            // 
+            this.txtPreco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPreco.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtPreco.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
+            this.txtPreco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
+            this.txtPreco.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPreco.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPreco.ForeColor = System.Drawing.Color.White;
+            this.txtPreco.Location = new System.Drawing.Point(7, 23);
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.ShortcutsEnabled = false;
+            this.txtPreco.Size = new System.Drawing.Size(171, 19);
+            this.txtPreco.TabIndex = 3;
+            this.txtPreco.Enter += new System.EventHandler(this.txtPreco_Enter);
+            this.txtPreco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPreco_KeyPress);
+            this.txtPreco.Leave += new System.EventHandler(this.txtPreco_Leave);
             // 
             // nomeProdutoPanel
             // 
@@ -433,7 +451,7 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(7, 45);
+            this.panel3.Location = new System.Drawing.Point(7, 46);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(224, 1);
             this.panel3.TabIndex = 5;
@@ -472,11 +490,11 @@
             this.lblLocalArmazenado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLocalArmazenado.AutoSize = true;
-            this.lblLocalArmazenado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalArmazenado.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocalArmazenado.ForeColor = System.Drawing.Color.White;
-            this.lblLocalArmazenado.Location = new System.Drawing.Point(4, 12);
+            this.lblLocalArmazenado.Location = new System.Drawing.Point(4, 7);
             this.lblLocalArmazenado.Name = "lblLocalArmazenado";
-            this.lblLocalArmazenado.Size = new System.Drawing.Size(177, 17);
+            this.lblLocalArmazenado.Size = new System.Drawing.Size(198, 20);
             this.lblLocalArmazenado.TabIndex = 4;
             this.lblLocalArmazenado.Text = "Local de Armazenamento";
             // 
@@ -498,34 +516,14 @@
             this.txtLocalArmazenado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
             this.txtLocalArmazenado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
             this.txtLocalArmazenado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtLocalArmazenado.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLocalArmazenado.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLocalArmazenado.ForeColor = System.Drawing.Color.White;
-            this.txtLocalArmazenado.Location = new System.Drawing.Point(7, 31);
+            this.txtLocalArmazenado.Location = new System.Drawing.Point(7, 30);
             this.txtLocalArmazenado.Name = "txtLocalArmazenado";
-            this.txtLocalArmazenado.Size = new System.Drawing.Size(171, 15);
+            this.txtLocalArmazenado.Size = new System.Drawing.Size(171, 19);
             this.txtLocalArmazenado.TabIndex = 3;
             this.txtLocalArmazenado.Enter += new System.EventHandler(this.txtLocalArmazenado_Enter);
             this.txtLocalArmazenado.Leave += new System.EventHandler(this.txtLocalArmazenado_Leave);
-            // 
-            // txtPreco
-            // 
-            this.txtPreco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPreco.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtPreco.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
-            this.txtPreco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
-            this.txtPreco.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPreco.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPreco.ForeColor = System.Drawing.Color.White;
-            this.txtPreco.Location = new System.Drawing.Point(7, 23);
-            this.txtPreco.Name = "txtPreco";
-            this.txtPreco.ShortcutsEnabled = false;
-            this.txtPreco.Size = new System.Drawing.Size(171, 19);
-            this.txtPreco.TabIndex = 3;
-            this.txtPreco.Enter += new System.EventHandler(this.txtPreco_Enter);
-            this.txtPreco.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPreco_KeyDown);
-            this.txtPreco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPreco_KeyPress);
-            this.txtPreco.Leave += new System.EventHandler(this.txtPreco_Leave);
             // 
             // UCCadastrar
             // 
@@ -557,7 +555,6 @@
             this.localArmazenadoPanel.ResumeLayout(false);
             this.localArmazenadoPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

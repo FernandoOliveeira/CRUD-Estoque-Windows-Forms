@@ -84,6 +84,24 @@ namespace Sistema_Estoque.ViewLayer
         }
 
 
+        // Permite apenas números no campo Preco
+        private void txtPreco_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != ','))
+            {
+                e.Handled = true;
+            }
+
+            // Permite apenas um separador decimal
+            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf(',') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+
+
         #region PlaceHolder's
 
 
@@ -192,7 +210,6 @@ namespace Sistema_Estoque.ViewLayer
             if (txtLocalArmazenado.Text == "Local de armazenamento")
             {
                 txtLocalArmazenado.Text = "";
-                txtLocalArmazenado.Font = new Font("Century Gothic", 11);
                 txtLocalArmazenado.ForeColor = Color.White;
             }
         }
@@ -201,7 +218,6 @@ namespace Sistema_Estoque.ViewLayer
         {
             if (txtLocalArmazenado.Text == "")
             {
-                txtLocalArmazenado.Font = new Font("Century Gothic", 9);
                 txtLocalArmazenado.Text = "Local de armazenamento";
                 txtLocalArmazenado.ForeColor = Color.Gray;
             }
@@ -229,56 +245,9 @@ namespace Sistema_Estoque.ViewLayer
 
 
 
-
-
-
-
-
         #endregion
 
-        private void txtPreco_KeyDown(object sender, KeyEventArgs e)
-        {
-            /*if ( e.KeyValue >= 48 && e.KeyValue <= 57)
-            {
-                
-            }
-            else if (e.KeyValue == 8)
-            {
-                
-            }
-            else if (e.KeyValue == 44) 
-            {
 
-            }
-            else if (e.KeyValue == 127)
-            {
-
-            }
-            else if (e.KeyValue >= 96 && e.KeyValue <= 105)
-            {
-                
-            }
-            else
-            {
-                e.SuppressKeyPress = true;
-            }*/
-
-
-        }
-
-        private void txtPreco_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && 
-                (e.KeyChar != ','))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf(',') > -1))
-            {
-                e.Handled = true;
-            }
-        }
+        
     }
 }

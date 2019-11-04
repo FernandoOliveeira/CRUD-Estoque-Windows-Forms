@@ -43,8 +43,9 @@
             this.btnMaximizar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.footerPanel = new System.Windows.Forms.Panel();
-            this.ucHome1 = new Sistema_Estoque.ViewLayer.UCHome();
             this.ucCadastrar1 = new Sistema_Estoque.ViewLayer.UCCadastrar();
+            this.ucConsultar1 = new Sistema_Estoque.ViewLayer.UCConsultar();
+            this.ucHome1 = new Sistema_Estoque.ViewLayer.UCHome();
             this.dashboard.SuspendLayout();
             this.panel1.SuspendLayout();
             this.topPanel.SuspendLayout();
@@ -126,6 +127,7 @@
             this.btnConsultar.TabIndex = 2;
             this.btnConsultar.Text = "Consultar Produtos";
             this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // btnCadastrarProdutos
             // 
@@ -261,16 +263,6 @@
             this.footerPanel.Size = new System.Drawing.Size(768, 13);
             this.footerPanel.TabIndex = 2;
             // 
-            // ucHome1
-            // 
-            this.ucHome1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
-            this.ucHome1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucHome1.Location = new System.Drawing.Point(232, 28);
-            this.ucHome1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ucHome1.Name = "ucHome1";
-            this.ucHome1.Size = new System.Drawing.Size(768, 504);
-            this.ucHome1.TabIndex = 5;
-            // 
             // ucCadastrar1
             // 
             this.ucCadastrar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -283,6 +275,28 @@
             this.ucCadastrar1.Size = new System.Drawing.Size(756, 504);
             this.ucCadastrar1.TabIndex = 4;
             // 
+            // ucConsultar1
+            // 
+            this.ucConsultar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucConsultar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
+            this.ucConsultar1.Location = new System.Drawing.Point(232, 28);
+            this.ucConsultar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ucConsultar1.Name = "ucConsultar1";
+            this.ucConsultar1.Size = new System.Drawing.Size(756, 504);
+            this.ucConsultar1.TabIndex = 6;
+            // 
+            // ucHome1
+            // 
+            this.ucHome1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
+            this.ucHome1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucHome1.Location = new System.Drawing.Point(232, 28);
+            this.ucHome1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ucHome1.Name = "ucHome1";
+            this.ucHome1.Size = new System.Drawing.Size(768, 504);
+            this.ucHome1.TabIndex = 7;
+            // 
             // FrmInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -290,6 +304,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
             this.ClientSize = new System.Drawing.Size(1000, 545);
             this.Controls.Add(this.ucHome1);
+            this.Controls.Add(this.ucConsultar1);
             this.Controls.Add(this.ucCadastrar1);
             this.Controls.Add(this.footerPanel);
             this.Controls.Add(this.topPanel);
@@ -329,6 +344,7 @@
         private System.Windows.Forms.Panel footerPanel;
         private System.Windows.Forms.Label lblTopLeftPanel;
         private ViewLayer.UCCadastrar ucCadastrar1;
+        private ViewLayer.UCConsultar ucConsultar1;
         private ViewLayer.UCHome ucHome1;
     }
 }

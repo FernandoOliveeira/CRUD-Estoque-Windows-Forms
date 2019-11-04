@@ -1,6 +1,7 @@
 ﻿using Sistema_Estoque.Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -33,6 +34,18 @@ namespace Sistema_Estoque.DataLayer
 
             return false;
 
+        }
+
+        public DataTable ConsultarProdutos()
+        {
+            DataTable consultaProduto = new DataTable();
+
+            string queryStr = "SELECT * FROM PRODUTOS";
+            SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
+            SqlDataReader reader = command.ExecuteReader();
+            consultaProduto.Load(reader);
+
+            return consultaProduto;
         }
 
     }

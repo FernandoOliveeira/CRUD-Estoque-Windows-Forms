@@ -66,6 +66,12 @@
     <Compile Include="ViewLayer\UCCadastrar.Designer.cs">
       <DependentUpon>UCCadastrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewLayer\UCConsultar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewLayer\UCConsultar.Designer.cs">
+      <DependentUpon>UCConsultar.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewLayer\UCHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </Compile>
     <EmbeddedResource Include="ViewLayer\UCCadastrar.resx">
       <DependentUpon>UCCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewLayer\UCConsultar.resx">
+      <DependentUpon>UCConsultar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewLayer\UCHome.resx">
       <DependentUpon>UCHome.cs</DependentUpon>

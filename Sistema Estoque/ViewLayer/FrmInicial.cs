@@ -169,8 +169,13 @@ namespace Sistema_Estoque
                 btnHome.Font = new Font(btnHome.Font,  FontStyle.Bold);
                 btnHome.ForeColor = Color.FromArgb(25, 181, 254);
 
+
+
                 btnCadastrarProdutos.Font = new Font(btnCadastrarProdutos.Font, FontStyle.Regular);
                 btnCadastrarProdutos.ForeColor = Color.FromArgb(255, 255, 255);
+
+                btnConsultar.Font = new Font(btnConsultar.Font, FontStyle.Regular);
+                btnConsultar.ForeColor = Color.FromArgb(255, 255, 255);
             }
 
         }
@@ -190,13 +195,41 @@ namespace Sistema_Estoque
                 btnCadastrarProdutos.Font = new Font(btnCadastrarProdutos.Font, FontStyle.Bold);
                 btnCadastrarProdutos.ForeColor = Color.FromArgb(25, 181, 254);
 
+
+
                 btnHome.Font = new Font(btnHome.Font, FontStyle.Regular);
                 btnHome.ForeColor = Color.FromArgb(255, 255, 255);
+
+                btnConsultar.Font = new Font(btnConsultar.Font, FontStyle.Regular);
+                btnConsultar.ForeColor = Color.FromArgb(255, 255, 255);
             }
                 
 
         }
 
+
+
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            painelLateral.Height = btnConsultar.Height;
+            painelLateral.Top = btnConsultar.Top;
+            ucConsultar1.BringToFront();
+
+            if (UserControlFront(ucConsultar1))
+            {
+                btnConsultar.Font = new Font(btnCadastrarProdutos.Font, FontStyle.Bold);
+                btnConsultar.ForeColor = Color.FromArgb(25, 181, 254);
+
+
+
+                btnHome.Font = new Font(btnHome.Font, FontStyle.Regular);
+                btnHome.ForeColor = Color.FromArgb(255, 255, 255);
+
+                btnCadastrarProdutos.Font = new Font(btnCadastrarProdutos.Font, FontStyle.Regular);
+                btnCadastrarProdutos.ForeColor = Color.FromArgb(255, 255, 255);
+            }
+        }
 
 
         #endregion
