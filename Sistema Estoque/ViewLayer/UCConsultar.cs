@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Sistema_Estoque.BusinessLayer;
 
 namespace Sistema_Estoque.ViewLayer
 {
@@ -22,7 +23,9 @@ namespace Sistema_Estoque.ViewLayer
 
         private void UCConsultar_Load(object sender, EventArgs e)
         {
-           
+            BlProduto objBlProduto = new BlProduto();
+
+            dgvConsulta.DataSource = objBlProduto.ConsultarProdutos();
         }
 
 

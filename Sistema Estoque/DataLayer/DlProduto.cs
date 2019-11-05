@@ -48,5 +48,19 @@ namespace Sistema_Estoque.DataLayer
             return consultaProduto;
         }
 
+        public DataTable ConsultarProdutoNome()
+        {
+            /*
+            DataTable consultaProduto = new DataTable();
+
+            string queryStr = "SELECT * FROM PRODUTOS WHERE NOME LIKE";
+            SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
+            SqlDataReader reader = command.ExecuteReader();
+            consultaProduto.Load(reader);
+
+            return consultaProduto;
+            */
+        }
+
     }
 }
