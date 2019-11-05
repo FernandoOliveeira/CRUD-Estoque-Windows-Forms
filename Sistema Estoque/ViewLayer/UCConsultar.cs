@@ -18,19 +18,25 @@ namespace Sistema_Estoque.ViewLayer
             InitializeComponent();
         }
 
+        public UCConsultar(UCCadastrar obj)
+        {
+            this.objCadastrar = obj;
+            InitializeComponent();
+        }
 
+        UCCadastrar objCadastrar;
 
 
         private void UCConsultar_Load(object sender, EventArgs e)
         {
-            BlProduto objBlProduto = new BlProduto();
 
+            BlProduto objBlProduto = new BlProduto();
             dgvConsulta.DataSource = objBlProduto.ConsultarProdutos();
+
         }
 
 
-
-
+        
         private void rdbConsultarNome_CheckedChanged(object sender, EventArgs e)
         {
             txtConsultarNome.Focus();
@@ -54,6 +60,22 @@ namespace Sistema_Estoque.ViewLayer
             }
         }
 
+        private void txtConsultarNome_TextChanged(object sender, EventArgs e)
+        {
+            BlProduto objBlProduto = new BlProduto();
+
+            if (txtConsultarNome.Text.Length != 0)
+            {
+                dgvConsulta.DataSource = objBlProduto.ConsultarProdutosNome(txtConsultarNome.Text);
+            }
+            else
+            {
+                dgvConsulta.DataSource = objBlProduto.ConsultarProdutos();
+            }
+        }
+
+
+
         private void rdbConsultarCodigo_CheckedChanged(object sender, EventArgs e)
         {
             txtConsultarCodigo.Focus();
@@ -76,6 +98,21 @@ namespace Sistema_Estoque.ViewLayer
 
             }
         }
+
+        private void txtConsultarCodigo_TextChanged(object sender, EventArgs e)
+        {
+            BlProduto objBlProduto = new BlProduto();
+
+            if (txtConsultarCodigo.Text.Length != 0)
+            {
+                dgvConsulta.DataSource = objBlProduto.ConsultarProdutosCodigo(txtConsultarCodigo.Text);
+            }
+            else
+            {
+                dgvConsulta.DataSource = objBlProduto.ConsultarProdutos();
+            }
+        }
+
 
         private void rdbConsultarCodBarras_CheckedChanged(object sender, EventArgs e)
         {
@@ -103,6 +140,18 @@ namespace Sistema_Estoque.ViewLayer
             }
         }
 
-        
+        private void txtCodBarras_TextChanged(object sender, EventArgs e)
+        {
+            BlProduto objBlProduto = new BlProduto();
+
+            if (txtCodBarras.Text.Length != 0)
+            {
+                dgvConsulta.DataSource = objBlProduto.ConsultarProdutosCodBarras(txtCodBarras.Text);
+            }
+            else
+            {
+                dgvConsulta.DataSource = objBlProduto.ConsultarProdutos();
+            }
+        }
     }
 }

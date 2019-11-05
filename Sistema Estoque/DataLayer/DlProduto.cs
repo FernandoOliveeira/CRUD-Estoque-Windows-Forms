@@ -40,7 +40,7 @@ namespace Sistema_Estoque.DataLayer
         {
             DataTable consultaProduto = new DataTable();
 
-            string queryStr = "SELECT * FROM PRODUTOS";
+            string queryStr = "SELECT NOME, PRECO, QUANTIDADE, DATA_VALIDADE, COD_BARRAS, COD_PRODUTO, LOCAL_ARMAZENADO,  DESCRICAO, DATA_CADASTRO FROM PRODUTOS ORDER BY ID_PRODUTOS";
             SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
             SqlDataReader reader = command.ExecuteReader();
             consultaProduto.Load(reader);
@@ -48,18 +48,45 @@ namespace Sistema_Estoque.DataLayer
             return consultaProduto;
         }
 
-        public DataTable ConsultarProdutoNome()
+        public DataTable ConsultarProdutosNome(string nome)
         {
-            /*
+            
             DataTable consultaProduto = new DataTable();
 
-            string queryStr = "SELECT * FROM PRODUTOS WHERE NOME LIKE";
+            string queryStr = "SELECT NOME, PRECO, QUANTIDADE, DATA_VALIDADE, COD_BARRAS, COD_PRODUTO, LOCAL_ARMAZENADO,  DESCRICAO, DATA_CADASTRO FROM PRODUTOS WHERE NOME LIKE '%" + nome +"%' ORDER BY NOME ";
             SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
             SqlDataReader reader = command.ExecuteReader();
             consultaProduto.Load(reader);
 
             return consultaProduto;
-            */
+            
+        }
+
+
+        public DataTable ConsultarProdutosCodigo(string codigo)
+        {
+
+            DataTable consultaProduto = new DataTable();
+
+            string queryStr = "SELECT NOME, PRECO, QUANTIDADE, DATA_VALIDADE, COD_BARRAS, COD_PRODUTO, LOCAL_ARMAZENADO,  DESCRICAO, DATA_CADASTRO FROM PRODUTOS WHERE COD_PRODUTO LIKE '%" + codigo + "%' ORDER BY COD_PRODUTO ";
+            SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
+            SqlDataReader reader = command.ExecuteReader();
+            consultaProduto.Load(reader);
+
+            return consultaProduto;
+
+        }
+
+        public DataTable ConsultarProdutosCodBarras(string codBarras)
+        {
+            DataTable consultaProduto = new DataTable();
+
+            string queryStr = "SELECT NOME, PRECO, QUANTIDADE, DATA_VALIDADE, COD_BARRAS, COD_PRODUTO, LOCAL_ARMAZENADO,  DESCRICAO, DATA_CADASTRO FROM PRODUTOS WHERE COD_BARRAS LIKE '%" + codBarras + "%' ORDER BY COD_BARRAS";
+            SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
+            SqlDataReader reader = command.ExecuteReader();
+            consultaProduto.Load(reader);
+
+            return consultaProduto;
         }
 
     }
