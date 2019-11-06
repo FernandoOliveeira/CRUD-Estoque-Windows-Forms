@@ -232,7 +232,19 @@ namespace Sistema_Estoque
         }
 
 
+
+
+
         #endregion
 
+        private void btnVenda_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEntrada_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

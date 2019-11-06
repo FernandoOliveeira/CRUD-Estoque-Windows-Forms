@@ -43,9 +43,9 @@
             this.btnMaximizar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.footerPanel = new System.Windows.Forms.Panel();
-            this.ucCadastrar1 = new Sistema_Estoque.ViewLayer.UCCadastrar();
-            this.ucConsultar1 = new Sistema_Estoque.ViewLayer.UCConsultar();
             this.ucHome1 = new Sistema_Estoque.ViewLayer.UCHome();
+            this.ucConsultar1 = new Sistema_Estoque.ViewLayer.UCConsultar();
+            this.ucCadastrar1 = new Sistema_Estoque.ViewLayer.UCCadastrar();
             this.dashboard.SuspendLayout();
             this.panel1.SuspendLayout();
             this.topPanel.SuspendLayout();
@@ -121,7 +121,7 @@
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.ForeColor = System.Drawing.Color.White;
-            this.btnConsultar.Location = new System.Drawing.Point(23, 262);
+            this.btnConsultar.Location = new System.Drawing.Point(23, 248);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(181, 41);
             this.btnConsultar.TabIndex = 2;
@@ -137,7 +137,7 @@
             this.btnCadastrarProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrarProdutos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarProdutos.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrarProdutos.Location = new System.Drawing.Point(23, 185);
+            this.btnCadastrarProdutos.Location = new System.Drawing.Point(23, 178);
             this.btnCadastrarProdutos.Name = "btnCadastrarProdutos";
             this.btnCadastrarProdutos.Size = new System.Drawing.Size(181, 41);
             this.btnCadastrarProdutos.TabIndex = 1;
@@ -153,12 +153,13 @@
             this.btnVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVenda.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVenda.ForeColor = System.Drawing.Color.White;
-            this.btnVenda.Location = new System.Drawing.Point(23, 416);
+            this.btnVenda.Location = new System.Drawing.Point(23, 388);
             this.btnVenda.Name = "btnVenda";
             this.btnVenda.Size = new System.Drawing.Size(181, 41);
             this.btnVenda.TabIndex = 4;
             this.btnVenda.Text = "Venda de Produtos";
             this.btnVenda.UseVisualStyleBackColor = false;
+            this.btnVenda.Click += new System.EventHandler(this.btnVenda_Click);
             // 
             // btnEntrada
             // 
@@ -168,12 +169,13 @@
             this.btnEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntrada.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrada.ForeColor = System.Drawing.Color.White;
-            this.btnEntrada.Location = new System.Drawing.Point(23, 339);
+            this.btnEntrada.Location = new System.Drawing.Point(23, 318);
             this.btnEntrada.Name = "btnEntrada";
             this.btnEntrada.Size = new System.Drawing.Size(181, 41);
             this.btnEntrada.TabIndex = 3;
             this.btnEntrada.Text = "Entrada de Produtos";
             this.btnEntrada.UseVisualStyleBackColor = false;
+            this.btnEntrada.Click += new System.EventHandler(this.btnEntrada_Click);
             // 
             // lblTopLeftPanel
             // 
@@ -263,17 +265,15 @@
             this.footerPanel.Size = new System.Drawing.Size(768, 13);
             this.footerPanel.TabIndex = 2;
             // 
-            // ucCadastrar1
+            // ucHome1
             // 
-            this.ucCadastrar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucCadastrar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
-            this.ucCadastrar1.Location = new System.Drawing.Point(232, 28);
-            this.ucCadastrar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ucCadastrar1.Name = "ucCadastrar1";
-            this.ucCadastrar1.Size = new System.Drawing.Size(756, 504);
-            this.ucCadastrar1.TabIndex = 4;
+            this.ucHome1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
+            this.ucHome1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucHome1.Location = new System.Drawing.Point(232, 28);
+            this.ucHome1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ucHome1.Name = "ucHome1";
+            this.ucHome1.Size = new System.Drawing.Size(768, 504);
+            this.ucHome1.TabIndex = 7;
             // 
             // ucConsultar1
             // 
@@ -287,15 +287,17 @@
             this.ucConsultar1.Size = new System.Drawing.Size(756, 504);
             this.ucConsultar1.TabIndex = 6;
             // 
-            // ucHome1
+            // ucCadastrar1
             // 
-            this.ucHome1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
-            this.ucHome1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucHome1.Location = new System.Drawing.Point(232, 28);
-            this.ucHome1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ucHome1.Name = "ucHome1";
-            this.ucHome1.Size = new System.Drawing.Size(768, 504);
-            this.ucHome1.TabIndex = 7;
+            this.ucCadastrar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucCadastrar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
+            this.ucCadastrar1.Location = new System.Drawing.Point(232, 28);
+            this.ucCadastrar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ucCadastrar1.Name = "ucCadastrar1";
+            this.ucCadastrar1.Size = new System.Drawing.Size(756, 504);
+            this.ucCadastrar1.TabIndex = 4;
             // 
             // FrmInicial
             // 

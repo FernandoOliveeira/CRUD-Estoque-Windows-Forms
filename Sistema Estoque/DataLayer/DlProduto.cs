@@ -40,7 +40,7 @@ namespace Sistema_Estoque.DataLayer
         {
             DataTable consultaProduto = new DataTable();
 
-            string queryStr = "SELECT NOME, PRECO, QUANTIDADE, DATA_VALIDADE, COD_BARRAS, COD_PRODUTO, LOCAL_ARMAZENADO,  DESCRICAO, DATA_CADASTRO FROM PRODUTOS ORDER BY ID_PRODUTOS";
+            string queryStr = "SELECT ID_PRODUTOS, NOME, PRECO, QUANTIDADE, DATA_VALIDADE, COD_BARRAS, COD_PRODUTO, LOCAL_ARMAZENADO,  DESCRICAO, DATA_CADASTRO FROM PRODUTOS ORDER BY ID_PRODUTOS";
             SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
             SqlDataReader reader = command.ExecuteReader();
             consultaProduto.Load(reader);
@@ -53,7 +53,7 @@ namespace Sistema_Estoque.DataLayer
             
             DataTable consultaProduto = new DataTable();
 
-            string queryStr = "SELECT NOME, PRECO, QUANTIDADE, DATA_VALIDADE, COD_BARRAS, COD_PRODUTO, LOCAL_ARMAZENADO,  DESCRICAO, DATA_CADASTRO FROM PRODUTOS WHERE NOME LIKE '%" + nome +"%' ORDER BY NOME ";
+            string queryStr = "SELECT ID_PRODUTOS, NOME, PRECO, QUANTIDADE, DATA_VALIDADE, COD_BARRAS, COD_PRODUTO, LOCAL_ARMAZENADO,  DESCRICAO, DATA_CADASTRO FROM PRODUTOS WHERE NOME LIKE '%" + nome +"%' ORDER BY NOME ";
             SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
             SqlDataReader reader = command.ExecuteReader();
             consultaProduto.Load(reader);
@@ -68,7 +68,7 @@ namespace Sistema_Estoque.DataLayer
 
             DataTable consultaProduto = new DataTable();
 
-            string queryStr = "SELECT NOME, PRECO, QUANTIDADE, DATA_VALIDADE, COD_BARRAS, COD_PRODUTO, LOCAL_ARMAZENADO,  DESCRICAO, DATA_CADASTRO FROM PRODUTOS WHERE COD_PRODUTO LIKE '%" + codigo + "%' ORDER BY COD_PRODUTO ";
+            string queryStr = "SELECT ID_PRODUTOS, NOME, PRECO, QUANTIDADE, DATA_VALIDADE, COD_BARRAS, COD_PRODUTO, LOCAL_ARMAZENADO,  DESCRICAO, DATA_CADASTRO FROM PRODUTOS WHERE COD_PRODUTO LIKE '%" + codigo + "%' ORDER BY COD_PRODUTO ";
             SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
             SqlDataReader reader = command.ExecuteReader();
             consultaProduto.Load(reader);
@@ -81,7 +81,7 @@ namespace Sistema_Estoque.DataLayer
         {
             DataTable consultaProduto = new DataTable();
 
-            string queryStr = "SELECT NOME, PRECO, QUANTIDADE, DATA_VALIDADE, COD_BARRAS, COD_PRODUTO, LOCAL_ARMAZENADO,  DESCRICAO, DATA_CADASTRO FROM PRODUTOS WHERE COD_BARRAS LIKE '%" + codBarras + "%' ORDER BY COD_BARRAS";
+            string queryStr = "SELECT ID_PRODUTOS, NOME, PRECO, QUANTIDADE, DATA_VALIDADE, COD_BARRAS, COD_PRODUTO, LOCAL_ARMAZENADO,  DESCRICAO, DATA_CADASTRO FROM PRODUTOS WHERE COD_BARRAS LIKE '%" + codBarras + "%' ORDER BY COD_BARRAS";
             SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
             SqlDataReader reader = command.ExecuteReader();
             consultaProduto.Load(reader);

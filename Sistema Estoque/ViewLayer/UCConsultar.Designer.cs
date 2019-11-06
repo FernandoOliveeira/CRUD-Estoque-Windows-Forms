@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -42,7 +43,22 @@
             this.txtCodBarras = new System.Windows.Forms.TextBox();
             this.rdbConsultarCodBarras = new System.Windows.Forms.RadioButton();
             this.consultarCodBarrasPanelLine = new System.Windows.Forms.Panel();
+            this.eSTOQUEDataSet = new Sistema_Estoque.ESTOQUEDataSet();
+            this.pRODUTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pRODUTOSTableAdapter = new Sistema_Estoque.ESTOQUEDataSetTableAdapters.PRODUTOSTableAdapter();
+            this.nOMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRECODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qUANTIDADEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cODBARRASDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cODPRODUTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dATAVALIDADEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lOCALARMAZENADODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dESCRICAODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dATACADASTRODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ATUALIZAR = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eSTOQUEDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUTOSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -66,19 +82,32 @@
             this.dgvConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvConsulta.AutoGenerateColumns = false;
             this.dgvConsulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvConsulta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(241)))), ((int)(((byte)(227)))));
             this.dgvConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvConsulta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(166)))), ((int)(((byte)(157)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(121)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvConsulta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsulta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nOMEDataGridViewTextBoxColumn,
+            this.pRECODataGridViewTextBoxColumn,
+            this.qUANTIDADEDataGridViewTextBoxColumn,
+            this.cODBARRASDataGridViewTextBoxColumn,
+            this.cODPRODUTODataGridViewTextBoxColumn,
+            this.dATAVALIDADEDataGridViewTextBoxColumn,
+            this.lOCALARMAZENADODataGridViewTextBoxColumn,
+            this.dESCRICAODataGridViewTextBoxColumn,
+            this.dATACADASTRODataGridViewTextBoxColumn,
+            this.ATUALIZAR});
+            this.dgvConsulta.DataSource = this.pRODUTOSBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(241)))), ((int)(((byte)(227)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -93,7 +122,7 @@
             this.dgvConsulta.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(166)))), ((int)(((byte)(157)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -102,6 +131,7 @@
             this.dgvConsulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvConsulta.Size = new System.Drawing.Size(621, 139);
             this.dgvConsulta.TabIndex = 0;
+            this.dgvConsulta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsulta_CellContentClick);
             // 
             // consultarNomePanelLine
             // 
@@ -225,6 +255,92 @@
             this.consultarCodBarrasPanelLine.Size = new System.Drawing.Size(191, 1);
             this.consultarCodBarrasPanelLine.TabIndex = 4;
             // 
+            // eSTOQUEDataSet
+            // 
+            this.eSTOQUEDataSet.DataSetName = "ESTOQUEDataSet";
+            this.eSTOQUEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pRODUTOSBindingSource
+            // 
+            this.pRODUTOSBindingSource.DataMember = "PRODUTOS";
+            this.pRODUTOSBindingSource.DataSource = this.eSTOQUEDataSet;
+            // 
+            // pRODUTOSTableAdapter
+            // 
+            this.pRODUTOSTableAdapter.ClearBeforeFill = true;
+            // 
+            // nOMEDataGridViewTextBoxColumn
+            // 
+            this.nOMEDataGridViewTextBoxColumn.DataPropertyName = "NOME";
+            this.nOMEDataGridViewTextBoxColumn.HeaderText = "NOME";
+            this.nOMEDataGridViewTextBoxColumn.Name = "nOMEDataGridViewTextBoxColumn";
+            this.nOMEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pRECODataGridViewTextBoxColumn
+            // 
+            this.pRECODataGridViewTextBoxColumn.DataPropertyName = "PRECO";
+            this.pRECODataGridViewTextBoxColumn.HeaderText = "PRECO";
+            this.pRECODataGridViewTextBoxColumn.Name = "pRECODataGridViewTextBoxColumn";
+            this.pRECODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // qUANTIDADEDataGridViewTextBoxColumn
+            // 
+            this.qUANTIDADEDataGridViewTextBoxColumn.DataPropertyName = "QUANTIDADE";
+            this.qUANTIDADEDataGridViewTextBoxColumn.HeaderText = "QUANTIDADE";
+            this.qUANTIDADEDataGridViewTextBoxColumn.Name = "qUANTIDADEDataGridViewTextBoxColumn";
+            this.qUANTIDADEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cODBARRASDataGridViewTextBoxColumn
+            // 
+            this.cODBARRASDataGridViewTextBoxColumn.DataPropertyName = "COD_BARRAS";
+            this.cODBARRASDataGridViewTextBoxColumn.HeaderText = "COD_BARRAS";
+            this.cODBARRASDataGridViewTextBoxColumn.Name = "cODBARRASDataGridViewTextBoxColumn";
+            this.cODBARRASDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cODPRODUTODataGridViewTextBoxColumn
+            // 
+            this.cODPRODUTODataGridViewTextBoxColumn.DataPropertyName = "COD_PRODUTO";
+            this.cODPRODUTODataGridViewTextBoxColumn.HeaderText = "COD_PRODUTO";
+            this.cODPRODUTODataGridViewTextBoxColumn.Name = "cODPRODUTODataGridViewTextBoxColumn";
+            this.cODPRODUTODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dATAVALIDADEDataGridViewTextBoxColumn
+            // 
+            this.dATAVALIDADEDataGridViewTextBoxColumn.DataPropertyName = "DATA_VALIDADE";
+            this.dATAVALIDADEDataGridViewTextBoxColumn.HeaderText = "DATA_VALIDADE";
+            this.dATAVALIDADEDataGridViewTextBoxColumn.Name = "dATAVALIDADEDataGridViewTextBoxColumn";
+            this.dATAVALIDADEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lOCALARMAZENADODataGridViewTextBoxColumn
+            // 
+            this.lOCALARMAZENADODataGridViewTextBoxColumn.DataPropertyName = "LOCAL_ARMAZENADO";
+            this.lOCALARMAZENADODataGridViewTextBoxColumn.HeaderText = "LOCAL_ARMAZENADO";
+            this.lOCALARMAZENADODataGridViewTextBoxColumn.Name = "lOCALARMAZENADODataGridViewTextBoxColumn";
+            this.lOCALARMAZENADODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dESCRICAODataGridViewTextBoxColumn
+            // 
+            this.dESCRICAODataGridViewTextBoxColumn.DataPropertyName = "DESCRICAO";
+            this.dESCRICAODataGridViewTextBoxColumn.HeaderText = "DESCRICAO";
+            this.dESCRICAODataGridViewTextBoxColumn.Name = "dESCRICAODataGridViewTextBoxColumn";
+            this.dESCRICAODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dATACADASTRODataGridViewTextBoxColumn
+            // 
+            this.dATACADASTRODataGridViewTextBoxColumn.DataPropertyName = "DATA_CADASTRO";
+            this.dATACADASTRODataGridViewTextBoxColumn.HeaderText = "DATA_CADASTRO";
+            this.dATACADASTRODataGridViewTextBoxColumn.Name = "dATACADASTRODataGridViewTextBoxColumn";
+            this.dATACADASTRODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ATUALIZAR
+            // 
+            this.ATUALIZAR.DataPropertyName = "ATUALIZAR";
+            this.ATUALIZAR.HeaderText = "ATUALIZAR";
+            this.ATUALIZAR.Name = "ATUALIZAR";
+            this.ATUALIZAR.ReadOnly = true;
+            this.ATUALIZAR.Text = "ATUALIZAR";
+            this.ATUALIZAR.UseColumnTextForButtonValue = true;
+            // 
             // UCConsultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,6 +361,8 @@
             this.Size = new System.Drawing.Size(745, 513);
             this.Load += new System.EventHandler(this.UCConsultar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eSTOQUEDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUTOSBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,5 +381,18 @@
         private System.Windows.Forms.TextBox txtCodBarras;
         private System.Windows.Forms.RadioButton rdbConsultarCodBarras;
         private System.Windows.Forms.Panel consultarCodBarrasPanelLine;
+        private System.Windows.Forms.BindingSource pRODUTOSBindingSource;
+        private ESTOQUEDataSet eSTOQUEDataSet;
+        private ESTOQUEDataSetTableAdapters.PRODUTOSTableAdapter pRODUTOSTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nOMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pRECODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qUANTIDADEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cODBARRASDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cODPRODUTODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dATAVALIDADEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lOCALARMAZENADODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dESCRICAODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dATACADASTRODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn ATUALIZAR;
     }
 }
