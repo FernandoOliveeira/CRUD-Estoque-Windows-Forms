@@ -37,7 +37,6 @@ namespace Sistema_Estoque
 
         }
 
-        UcAtualizar UcAtualizar = new UcAtualizar();
 
 
         // Código para detectar qual UserControl está na frente
@@ -53,7 +52,7 @@ namespace Sistema_Estoque
 
 
 
-        private void topPanel_MouseDown(object sender, MouseEventArgs e)
+        private void ArrastarTela_MouseDown(object sender, MouseEventArgs e)
         {
             #region código para tornar o form "arrastavel"
             if (e.Button == MouseButtons.Left)
@@ -66,22 +65,6 @@ namespace Sistema_Estoque
 
         }
 
-
-
-        private void topLeftPanel_MouseDown(object sender, MouseEventArgs e)
-        {
-
-            #region código para tornar o form "arrastavel"
-            if (e.Button == MouseButtons.Left)
-            {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
-            }
-            #endregion
-
-        }
-
-       
 
 
         #region Buttons
@@ -248,10 +231,10 @@ namespace Sistema_Estoque
 
         }
 
+
+
+
         #endregion
-
-
-
 
     }
 }

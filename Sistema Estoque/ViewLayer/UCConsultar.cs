@@ -14,7 +14,6 @@ namespace Sistema_Estoque.ViewLayer
 {
     public partial class UCConsultar : UserControl 
     {
-        UcAtualizar UcAtualizar = new UcAtualizar();
 
 
         public UCConsultar()
@@ -36,8 +35,8 @@ namespace Sistema_Estoque.ViewLayer
         private void UCConsultar_Load(object sender, EventArgs e)
         {
 
-            //BlProduto objBlProduto = new BlProduto();
-            //dgvConsulta.DataSource = objBlProduto.ConsultarProdutos();
+            BlProduto objBlProduto = new BlProduto();
+            dgvConsulta.DataSource = objBlProduto.ConsultarProdutos();
 
         }
 
@@ -169,19 +168,11 @@ namespace Sistema_Estoque.ViewLayer
         {
             if (dgvConsulta.Columns[e.ColumnIndex].Name == "ATUALIZAR")
             {
-                if (MessageBox.Show("Deseja Atualizar este item", "Atualizar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                string idProduto = dgvConsulta.SelectedRows[0].Cells[1].Value.ToString();
+
+                if (MessageBox.Show("Deseja atualizar este item ?\n" + idProduto.ToUpper(), "Atualizar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
-
-                    UcAtualizar UcAtualizar = new UcAtualizar();
-                    UcAtualizar.Location = new Point(0, 0);
-                    Controls.Add(UcAtualizar);
-
-                    UcAtualizar.Dock = DockStyle.Fill;
-
-                    lblTitulo.Text = "Atualizar Produtos";
-
-                    UcAtualizar.BringToFront();
-
+                    
 
                 }
             }

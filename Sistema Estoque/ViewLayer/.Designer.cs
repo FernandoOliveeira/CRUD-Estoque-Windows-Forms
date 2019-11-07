@@ -37,16 +37,15 @@
             this.btnCadastrarProdutos = new System.Windows.Forms.Button();
             this.btnVenda = new System.Windows.Forms.Button();
             this.btnEntrada = new System.Windows.Forms.Button();
-            this.lblTopLeftPanel = new System.Windows.Forms.Label();
+            this.lblTopPanel = new System.Windows.Forms.Label();
             this.topPanel = new System.Windows.Forms.Panel();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnMaximizar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.footerPanel = new System.Windows.Forms.Panel();
-            this.ucHome1 = new Sistema_Estoque.ViewLayer.UCHome();
-            this.ucCadastrar1 = new Sistema_Estoque.ViewLayer.UCCadastrar();
-            this.ucAtualizar1 = new Sistema_Estoque.ViewLayer.UcAtualizar();
             this.ucConsultar1 = new Sistema_Estoque.ViewLayer.UCConsultar();
+            this.ucCadastrar1 = new Sistema_Estoque.ViewLayer.UCCadastrar();
+            this.ucHome1 = new Sistema_Estoque.ViewLayer.UCHome();
             this.dashboard.SuspendLayout();
             this.panel1.SuspendLayout();
             this.topPanel.SuspendLayout();
@@ -60,7 +59,7 @@
             this.dashboard.Dock = System.Windows.Forms.DockStyle.Left;
             this.dashboard.Location = new System.Drawing.Point(0, 0);
             this.dashboard.Name = "dashboard";
-            this.dashboard.Size = new System.Drawing.Size(232, 545);
+            this.dashboard.Size = new System.Drawing.Size(232, 664);
             this.dashboard.TabIndex = 0;
             // 
             // topLeftPanel
@@ -70,7 +69,7 @@
             this.topLeftPanel.Name = "topLeftPanel";
             this.topLeftPanel.Size = new System.Drawing.Size(232, 28);
             this.topLeftPanel.TabIndex = 2;
-            this.topLeftPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topLeftPanel_MouseDown);
+            this.topLeftPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ArrastarTela_MouseDown);
             // 
             // panel1
             // 
@@ -86,7 +85,7 @@
             this.panel1.Controls.Add(this.btnEntrada);
             this.panel1.Location = new System.Drawing.Point(3, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(229, 505);
+            this.panel1.Size = new System.Drawing.Size(229, 624);
             this.panel1.TabIndex = 3;
             // 
             // painelLateral
@@ -95,7 +94,7 @@
             this.painelLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
             this.painelLateral.Location = new System.Drawing.Point(3, 108);
             this.painelLateral.Name = "painelLateral";
-            this.painelLateral.Size = new System.Drawing.Size(10, 41);
+            this.painelLateral.Size = new System.Drawing.Size(5, 41);
             this.painelLateral.TabIndex = 3;
             // 
             // btnHome
@@ -178,30 +177,31 @@
             this.btnEntrada.UseVisualStyleBackColor = false;
             this.btnEntrada.Click += new System.EventHandler(this.btnEntrada_Click);
             // 
-            // lblTopLeftPanel
+            // lblTopPanel
             // 
-            this.lblTopLeftPanel.AutoSize = true;
-            this.lblTopLeftPanel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTopLeftPanel.ForeColor = System.Drawing.Color.White;
-            this.lblTopLeftPanel.Location = new System.Drawing.Point(3, 3);
-            this.lblTopLeftPanel.Name = "lblTopLeftPanel";
-            this.lblTopLeftPanel.Size = new System.Drawing.Size(221, 21);
-            this.lblTopLeftPanel.TabIndex = 0;
-            this.lblTopLeftPanel.Text = "CRUD - Sistema de Estoque";
+            this.lblTopPanel.AutoSize = true;
+            this.lblTopPanel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTopPanel.ForeColor = System.Drawing.Color.White;
+            this.lblTopPanel.Location = new System.Drawing.Point(3, 3);
+            this.lblTopPanel.Name = "lblTopPanel";
+            this.lblTopPanel.Size = new System.Drawing.Size(221, 21);
+            this.lblTopPanel.TabIndex = 0;
+            this.lblTopPanel.Text = "CRUD - Sistema de Estoque";
+            this.lblTopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ArrastarTela_MouseDown);
             // 
             // topPanel
             // 
             this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.topPanel.Controls.Add(this.lblTopLeftPanel);
+            this.topPanel.Controls.Add(this.lblTopPanel);
             this.topPanel.Controls.Add(this.btnMinimizar);
             this.topPanel.Controls.Add(this.btnMaximizar);
             this.topPanel.Controls.Add(this.btnSair);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(232, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(768, 28);
+            this.topPanel.Size = new System.Drawing.Size(944, 28);
             this.topPanel.TabIndex = 1;
-            this.topPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseDown);
+            this.topPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ArrastarTela_MouseDown);
             // 
             // btnMinimizar
             // 
@@ -211,7 +211,7 @@
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimizar.ForeColor = System.Drawing.Color.White;
-            this.btnMinimizar.Location = new System.Drawing.Point(675, 0);
+            this.btnMinimizar.Location = new System.Drawing.Point(851, 0);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(31, 28);
             this.btnMinimizar.TabIndex = 7;
@@ -229,7 +229,7 @@
             this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaximizar.ForeColor = System.Drawing.Color.White;
-            this.btnMaximizar.Location = new System.Drawing.Point(706, 0);
+            this.btnMaximizar.Location = new System.Drawing.Point(882, 0);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(31, 28);
             this.btnMaximizar.TabIndex = 6;
@@ -247,7 +247,7 @@
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.Color.White;
-            this.btnSair.Location = new System.Drawing.Point(737, 0);
+            this.btnSair.Location = new System.Drawing.Point(913, 0);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(31, 28);
             this.btnSair.TabIndex = 5;
@@ -261,41 +261,10 @@
             // 
             this.footerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.footerPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.footerPanel.Location = new System.Drawing.Point(232, 532);
+            this.footerPanel.Location = new System.Drawing.Point(232, 651);
             this.footerPanel.Name = "footerPanel";
-            this.footerPanel.Size = new System.Drawing.Size(768, 13);
+            this.footerPanel.Size = new System.Drawing.Size(944, 13);
             this.footerPanel.TabIndex = 2;
-            // 
-            // ucHome1
-            // 
-            this.ucHome1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
-            this.ucHome1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucHome1.Location = new System.Drawing.Point(232, 28);
-            this.ucHome1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ucHome1.Name = "ucHome1";
-            this.ucHome1.Size = new System.Drawing.Size(768, 504);
-            this.ucHome1.TabIndex = 3;
-            // 
-            // ucCadastrar1
-            // 
-            this.ucCadastrar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
-            this.ucCadastrar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucCadastrar1.Location = new System.Drawing.Point(232, 28);
-            this.ucCadastrar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ucCadastrar1.Name = "ucCadastrar1";
-            this.ucCadastrar1.Size = new System.Drawing.Size(768, 504);
-            this.ucCadastrar1.TabIndex = 4;
-            // 
-            // ucAtualizar1
-            // 
-            this.ucAtualizar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
-            this.ucAtualizar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucAtualizar1.Location = new System.Drawing.Point(232, 28);
-            this.ucAtualizar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ucAtualizar1.Name = "ucAtualizar1";
-            this.ucAtualizar1.Size = new System.Drawing.Size(768, 504);
-            this.ucAtualizar1.TabIndex = 5;
-            this.ucAtualizar1.UcCadastrar = null;
             // 
             // ucConsultar1
             // 
@@ -304,17 +273,36 @@
             this.ucConsultar1.Location = new System.Drawing.Point(232, 28);
             this.ucConsultar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ucConsultar1.Name = "ucConsultar1";
-            this.ucConsultar1.Size = new System.Drawing.Size(768, 504);
-            this.ucConsultar1.TabIndex = 6;
+            this.ucConsultar1.Size = new System.Drawing.Size(944, 623);
+            this.ucConsultar1.TabIndex = 5;
+            // 
+            // ucCadastrar1
+            // 
+            this.ucCadastrar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
+            this.ucCadastrar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucCadastrar1.Location = new System.Drawing.Point(232, 28);
+            this.ucCadastrar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ucCadastrar1.Name = "ucCadastrar1";
+            this.ucCadastrar1.Size = new System.Drawing.Size(944, 623);
+            this.ucCadastrar1.TabIndex = 4;
+            // 
+            // ucHome1
+            // 
+            this.ucHome1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
+            this.ucHome1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucHome1.Location = new System.Drawing.Point(232, 28);
+            this.ucHome1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ucHome1.Name = "ucHome1";
+            this.ucHome1.Size = new System.Drawing.Size(944, 623);
+            this.ucHome1.TabIndex = 3;
             // 
             // FrmInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
-            this.ClientSize = new System.Drawing.Size(1000, 545);
+            this.ClientSize = new System.Drawing.Size(1176, 664);
             this.Controls.Add(this.ucConsultar1);
-            this.Controls.Add(this.ucAtualizar1);
             this.Controls.Add(this.ucCadastrar1);
             this.Controls.Add(this.ucHome1);
             this.Controls.Add(this.footerPanel);
@@ -353,10 +341,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel painelLateral;
         private System.Windows.Forms.Panel footerPanel;
-        private System.Windows.Forms.Label lblTopLeftPanel;
+        private System.Windows.Forms.Label lblTopPanel;
         private ViewLayer.UCHome ucHome1;
         private ViewLayer.UCCadastrar ucCadastrar1;
-        private ViewLayer.UcAtualizar ucAtualizar1;
         private ViewLayer.UCConsultar ucConsultar1;
     }
 }

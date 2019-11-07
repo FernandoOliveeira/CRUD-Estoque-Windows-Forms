@@ -49,6 +49,8 @@
             this.lblNomeProduto = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtNomeProduto = new System.Windows.Forms.TextBox();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.descricaoPanel = new System.Windows.Forms.Panel();
             this.txtDescricao = new System.Windows.Forms.RichTextBox();
             this.lblDescricao = new System.Windows.Forms.Label();
@@ -60,8 +62,6 @@
             this.lblLocalArmazenado = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.txtLocalArmazenado = new System.Windows.Forms.TextBox();
-            this.btnCadastrar = new System.Windows.Forms.Button();
-            this.panel12 = new System.Windows.Forms.Panel();
             this.tblCadastrar.SuspendLayout();
             this.dataValidadePanel.SuspendLayout();
             this.codBarrasPanel.SuspendLayout();
@@ -69,10 +69,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).BeginInit();
             this.precoPanel.SuspendLayout();
             this.nomeProdutoPanel.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.descricaoPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.localArmazenadoPanel.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -82,7 +82,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(745, 39);
+            this.label2.Size = new System.Drawing.Size(745, 55);
             this.label2.TabIndex = 1;
             this.label2.Text = "Cadastrar Produtos";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -103,7 +103,7 @@
             this.tblCadastrar.Controls.Add(this.panel2, 2, 1);
             this.tblCadastrar.Controls.Add(this.localArmazenadoPanel, 1, 2);
             this.tblCadastrar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblCadastrar.Location = new System.Drawing.Point(0, 39);
+            this.tblCadastrar.Location = new System.Drawing.Point(0, 55);
             this.tblCadastrar.Name = "tblCadastrar";
             this.tblCadastrar.RowCount = 5;
             this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.28665F));
@@ -112,7 +112,7 @@
             this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.23127F));
             this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblCadastrar.Size = new System.Drawing.Size(745, 474);
+            this.tblCadastrar.Size = new System.Drawing.Size(745, 458);
             this.tblCadastrar.TabIndex = 2;
             // 
             // dataValidadePanel
@@ -122,9 +122,9 @@
             this.dataValidadePanel.Controls.Add(this.dtValidade);
             this.dataValidadePanel.Controls.Add(this.lblDataValidade);
             this.dataValidadePanel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataValidadePanel.Location = new System.Drawing.Point(244, 72);
+            this.dataValidadePanel.Location = new System.Drawing.Point(244, 70);
             this.dataValidadePanel.Name = "dataValidadePanel";
-            this.dataValidadePanel.Size = new System.Drawing.Size(237, 72);
+            this.dataValidadePanel.Size = new System.Drawing.Size(237, 69);
             this.dataValidadePanel.TabIndex = 4;
             // 
             // dtValidade
@@ -158,9 +158,9 @@
             this.codBarrasPanel.Controls.Add(this.lblCodBarras);
             this.codBarrasPanel.Controls.Add(this.panel8);
             this.codBarrasPanel.Controls.Add(this.txtCodBarras);
-            this.codBarrasPanel.Location = new System.Drawing.Point(3, 72);
+            this.codBarrasPanel.Location = new System.Drawing.Point(3, 70);
             this.codBarrasPanel.Name = "codBarrasPanel";
-            this.codBarrasPanel.Size = new System.Drawing.Size(235, 72);
+            this.codBarrasPanel.Size = new System.Drawing.Size(235, 69);
             this.codBarrasPanel.TabIndex = 3;
             // 
             // lblCodBarras
@@ -210,7 +210,7 @@
             this.quantidadePanel.Controls.Add(this.panel6);
             this.quantidadePanel.Location = new System.Drawing.Point(487, 3);
             this.quantidadePanel.Name = "quantidadePanel";
-            this.quantidadePanel.Size = new System.Drawing.Size(255, 63);
+            this.quantidadePanel.Size = new System.Drawing.Size(255, 61);
             this.quantidadePanel.TabIndex = 2;
             // 
             // txtQuantidade
@@ -264,7 +264,7 @@
             this.precoPanel.Controls.Add(this.txtPreco);
             this.precoPanel.Location = new System.Drawing.Point(244, 3);
             this.precoPanel.Name = "precoPanel";
-            this.precoPanel.Size = new System.Drawing.Size(237, 63);
+            this.precoPanel.Size = new System.Drawing.Size(237, 61);
             this.precoPanel.TabIndex = 1;
             // 
             // lblPreco
@@ -317,7 +317,7 @@
             this.nomeProdutoPanel.Controls.Add(this.txtNomeProduto);
             this.nomeProdutoPanel.Location = new System.Drawing.Point(3, 3);
             this.nomeProdutoPanel.Name = "nomeProdutoPanel";
-            this.nomeProdutoPanel.Size = new System.Drawing.Size(235, 63);
+            this.nomeProdutoPanel.Size = new System.Drawing.Size(235, 61);
             this.nomeProdutoPanel.TabIndex = 0;
             // 
             // lblNomeProduto
@@ -358,6 +358,33 @@
             this.txtNomeProduto.Enter += new System.EventHandler(this.txtNomeProduto_Enter);
             this.txtNomeProduto.Leave += new System.EventHandler(this.txtNomeProduto_Leave);
             // 
+            // panel12
+            // 
+            this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel12.Controls.Add(this.btnCadastrar);
+            this.panel12.Location = new System.Drawing.Point(244, 414);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(237, 41);
+            this.panel12.TabIndex = 8;
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
+            this.btnCadastrar.FlatAppearance.BorderSize = 0;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.Location = new System.Drawing.Point(7, 3);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(194, 36);
+            this.btnCadastrar.TabIndex = 8;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
             // descricaoPanel
             // 
             this.descricaoPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -366,9 +393,9 @@
             this.tblCadastrar.SetColumnSpan(this.descricaoPanel, 3);
             this.descricaoPanel.Controls.Add(this.txtDescricao);
             this.descricaoPanel.Controls.Add(this.lblDescricao);
-            this.descricaoPanel.Location = new System.Drawing.Point(3, 228);
+            this.descricaoPanel.Location = new System.Drawing.Point(3, 220);
             this.descricaoPanel.Name = "descricaoPanel";
-            this.descricaoPanel.Size = new System.Drawing.Size(739, 196);
+            this.descricaoPanel.Size = new System.Drawing.Size(739, 188);
             this.descricaoPanel.TabIndex = 7;
             // 
             // txtDescricao
@@ -380,7 +407,7 @@
             this.txtDescricao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescricao.Location = new System.Drawing.Point(6, 23);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(730, 170);
+            this.txtDescricao.Size = new System.Drawing.Size(730, 162);
             this.txtDescricao.TabIndex = 5;
             this.txtDescricao.Text = "";
             this.txtDescricao.Enter += new System.EventHandler(this.txtDescricao_Enter);
@@ -404,9 +431,9 @@
             this.panel2.Controls.Add(this.lblCodProduto);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.txtCodProduto);
-            this.panel2.Location = new System.Drawing.Point(487, 72);
+            this.panel2.Location = new System.Drawing.Point(487, 70);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(255, 72);
+            this.panel2.Size = new System.Drawing.Size(255, 69);
             this.panel2.TabIndex = 6;
             // 
             // lblCodProduto
@@ -455,9 +482,9 @@
             this.localArmazenadoPanel.Controls.Add(this.lblLocalArmazenado);
             this.localArmazenadoPanel.Controls.Add(this.panel10);
             this.localArmazenadoPanel.Controls.Add(this.txtLocalArmazenado);
-            this.localArmazenadoPanel.Location = new System.Drawing.Point(244, 150);
+            this.localArmazenadoPanel.Location = new System.Drawing.Point(244, 145);
             this.localArmazenadoPanel.Name = "localArmazenadoPanel";
-            this.localArmazenadoPanel.Size = new System.Drawing.Size(237, 72);
+            this.localArmazenadoPanel.Size = new System.Drawing.Size(237, 69);
             this.localArmazenadoPanel.TabIndex = 5;
             // 
             // lblLocalArmazenado
@@ -500,33 +527,6 @@
             this.txtLocalArmazenado.Enter += new System.EventHandler(this.txtLocalArmazenado_Enter);
             this.txtLocalArmazenado.Leave += new System.EventHandler(this.txtLocalArmazenado_Leave);
             // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(181)))), ((int)(((byte)(254)))));
-            this.btnCadastrar.FlatAppearance.BorderSize = 0;
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.Location = new System.Drawing.Point(7, 3);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(194, 36);
-            this.btnCadastrar.TabIndex = 8;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
-            // panel12
-            // 
-            this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel12.Controls.Add(this.btnCadastrar);
-            this.panel12.Location = new System.Drawing.Point(244, 430);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(237, 41);
-            this.panel12.TabIndex = 8;
-            // 
             // UCCadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -549,13 +549,13 @@
             this.precoPanel.PerformLayout();
             this.nomeProdutoPanel.ResumeLayout(false);
             this.nomeProdutoPanel.PerformLayout();
+            this.panel12.ResumeLayout(false);
             this.descricaoPanel.ResumeLayout(false);
             this.descricaoPanel.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.localArmazenadoPanel.ResumeLayout(false);
             this.localArmazenadoPanel.PerformLayout();
-            this.panel12.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

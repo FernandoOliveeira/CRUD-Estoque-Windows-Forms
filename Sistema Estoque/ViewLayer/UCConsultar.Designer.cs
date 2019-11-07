@@ -30,8 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvConsulta = new System.Windows.Forms.DataGridView();
             this.pRODUTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -46,6 +47,7 @@
             this.rdbConsultarCodBarras = new System.Windows.Forms.RadioButton();
             this.consultarCodBarrasPanelLine = new System.Windows.Forms.Panel();
             this.pRODUTOSTableAdapter = new Sistema_Estoque.ESTOQUEDataSetTableAdapters.PRODUTOSTableAdapter();
+            this.ID_PRODUTOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nOMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRECODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.qUANTIDADEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,7 +70,7 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(0, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(745, 39);
+            this.lblTitulo.Size = new System.Drawing.Size(745, 55);
             this.lblTitulo.TabIndex = 2;
             this.lblTitulo.Text = "Consultar Produtos";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -79,9 +81,6 @@
             this.dgvConsulta.AllowUserToDeleteRows = false;
             this.dgvConsulta.AllowUserToOrderColumns = true;
             this.dgvConsulta.AllowUserToResizeRows = false;
-            this.dgvConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvConsulta.AutoGenerateColumns = false;
             this.dgvConsulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvConsulta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(241)))), ((int)(((byte)(227)))));
@@ -97,6 +96,7 @@
             this.dgvConsulta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConsulta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_PRODUTOS,
             this.nOMEDataGridViewTextBoxColumn,
             this.pRECODataGridViewTextBoxColumn,
             this.qUANTIDADEDataGridViewTextBoxColumn,
@@ -108,28 +108,29 @@
             this.dATACADASTRODataGridViewTextBoxColumn,
             this.ATUALIZAR});
             this.dgvConsulta.DataSource = this.pRODUTOSBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(241)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvConsulta.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvConsulta.Location = new System.Drawing.Point(12, 272);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(241)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvConsulta.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvConsulta.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvConsulta.Location = new System.Drawing.Point(0, 292);
             this.dgvConsulta.MultiSelect = false;
             this.dgvConsulta.Name = "dgvConsulta";
             this.dgvConsulta.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(166)))), ((int)(((byte)(157)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConsulta.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(166)))), ((int)(((byte)(157)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsulta.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvConsulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvConsulta.Size = new System.Drawing.Size(621, 139);
+            this.dgvConsulta.Size = new System.Drawing.Size(745, 221);
             this.dgvConsulta.TabIndex = 0;
             this.dgvConsulta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsulta_CellContentClick);
             // 
@@ -149,7 +150,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.consultarNomePanelLine.BackColor = System.Drawing.Color.Black;
             this.consultarNomePanelLine.ForeColor = System.Drawing.Color.Black;
-            this.consultarNomePanelLine.Location = new System.Drawing.Point(12, 114);
+            this.consultarNomePanelLine.Location = new System.Drawing.Point(8, 104);
             this.consultarNomePanelLine.Name = "consultarNomePanelLine";
             this.consultarNomePanelLine.Size = new System.Drawing.Size(191, 1);
             this.consultarNomePanelLine.TabIndex = 2;
@@ -164,7 +165,7 @@
             this.txtConsultarNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtConsultarNome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConsultarNome.ForeColor = System.Drawing.Color.White;
-            this.txtConsultarNome.Location = new System.Drawing.Point(12, 97);
+            this.txtConsultarNome.Location = new System.Drawing.Point(8, 87);
             this.txtConsultarNome.Name = "txtConsultarNome";
             this.txtConsultarNome.Size = new System.Drawing.Size(191, 19);
             this.txtConsultarNome.TabIndex = 1;
@@ -176,7 +177,7 @@
             this.rdbConsultarNome.Checked = true;
             this.rdbConsultarNome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbConsultarNome.ForeColor = System.Drawing.Color.White;
-            this.rdbConsultarNome.Location = new System.Drawing.Point(11, 76);
+            this.rdbConsultarNome.Location = new System.Drawing.Point(7, 66);
             this.rdbConsultarNome.Name = "rdbConsultarNome";
             this.rdbConsultarNome.Size = new System.Drawing.Size(266, 24);
             this.rdbConsultarNome.TabIndex = 0;
@@ -196,7 +197,7 @@
             this.txtConsultarCodigo.Enabled = false;
             this.txtConsultarCodigo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConsultarCodigo.ForeColor = System.Drawing.Color.White;
-            this.txtConsultarCodigo.Location = new System.Drawing.Point(12, 166);
+            this.txtConsultarCodigo.Location = new System.Drawing.Point(8, 156);
             this.txtConsultarCodigo.Name = "txtConsultarCodigo";
             this.txtConsultarCodigo.Size = new System.Drawing.Size(191, 19);
             this.txtConsultarCodigo.TabIndex = 1;
@@ -207,7 +208,7 @@
             this.rdbConsultarCodigo.AutoSize = true;
             this.rdbConsultarCodigo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbConsultarCodigo.ForeColor = System.Drawing.Color.White;
-            this.rdbConsultarCodigo.Location = new System.Drawing.Point(11, 145);
+            this.rdbConsultarCodigo.Location = new System.Drawing.Point(7, 135);
             this.rdbConsultarCodigo.Name = "rdbConsultarCodigo";
             this.rdbConsultarCodigo.Size = new System.Drawing.Size(277, 24);
             this.rdbConsultarCodigo.TabIndex = 0;
@@ -221,7 +222,7 @@
             this.consultarCodigoPanelLine.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.consultarCodigoPanelLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
-            this.consultarCodigoPanelLine.Location = new System.Drawing.Point(12, 183);
+            this.consultarCodigoPanelLine.Location = new System.Drawing.Point(8, 173);
             this.consultarCodigoPanelLine.Name = "consultarCodigoPanelLine";
             this.consultarCodigoPanelLine.Size = new System.Drawing.Size(191, 1);
             this.consultarCodigoPanelLine.TabIndex = 3;
@@ -235,7 +236,7 @@
             this.txtCodBarras.Enabled = false;
             this.txtCodBarras.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodBarras.ForeColor = System.Drawing.Color.White;
-            this.txtCodBarras.Location = new System.Drawing.Point(12, 232);
+            this.txtCodBarras.Location = new System.Drawing.Point(8, 222);
             this.txtCodBarras.Name = "txtCodBarras";
             this.txtCodBarras.Size = new System.Drawing.Size(191, 19);
             this.txtCodBarras.TabIndex = 1;
@@ -246,7 +247,7 @@
             this.rdbConsultarCodBarras.AutoSize = true;
             this.rdbConsultarCodBarras.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbConsultarCodBarras.ForeColor = System.Drawing.Color.White;
-            this.rdbConsultarCodBarras.Location = new System.Drawing.Point(11, 211);
+            this.rdbConsultarCodBarras.Location = new System.Drawing.Point(7, 201);
             this.rdbConsultarCodBarras.Name = "rdbConsultarCodBarras";
             this.rdbConsultarCodBarras.Size = new System.Drawing.Size(264, 24);
             this.rdbConsultarCodBarras.TabIndex = 0;
@@ -260,7 +261,7 @@
             this.consultarCodBarrasPanelLine.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.consultarCodBarrasPanelLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
-            this.consultarCodBarrasPanelLine.Location = new System.Drawing.Point(12, 249);
+            this.consultarCodBarrasPanelLine.Location = new System.Drawing.Point(8, 239);
             this.consultarCodBarrasPanelLine.Name = "consultarCodBarrasPanelLine";
             this.consultarCodBarrasPanelLine.Size = new System.Drawing.Size(191, 1);
             this.consultarCodBarrasPanelLine.TabIndex = 4;
@@ -268,6 +269,14 @@
             // pRODUTOSTableAdapter
             // 
             this.pRODUTOSTableAdapter.ClearBeforeFill = true;
+            // 
+            // ID_PRODUTOS
+            // 
+            this.ID_PRODUTOS.DataPropertyName = "ID_PRODUTOS";
+            this.ID_PRODUTOS.HeaderText = "ID_PRODUTOS";
+            this.ID_PRODUTOS.Name = "ID_PRODUTOS";
+            this.ID_PRODUTOS.ReadOnly = true;
+            this.ID_PRODUTOS.Visible = false;
             // 
             // nOMEDataGridViewTextBoxColumn
             // 
@@ -293,28 +302,28 @@
             // cODBARRASDataGridViewTextBoxColumn
             // 
             this.cODBARRASDataGridViewTextBoxColumn.DataPropertyName = "COD_BARRAS";
-            this.cODBARRASDataGridViewTextBoxColumn.HeaderText = "COD_BARRAS";
+            this.cODBARRASDataGridViewTextBoxColumn.HeaderText = "CÓD. BARRAS";
             this.cODBARRASDataGridViewTextBoxColumn.Name = "cODBARRASDataGridViewTextBoxColumn";
             this.cODBARRASDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cODPRODUTODataGridViewTextBoxColumn
             // 
             this.cODPRODUTODataGridViewTextBoxColumn.DataPropertyName = "COD_PRODUTO";
-            this.cODPRODUTODataGridViewTextBoxColumn.HeaderText = "COD_PRODUTO";
+            this.cODPRODUTODataGridViewTextBoxColumn.HeaderText = "CÓD. PRODUTO";
             this.cODPRODUTODataGridViewTextBoxColumn.Name = "cODPRODUTODataGridViewTextBoxColumn";
             this.cODPRODUTODataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dATAVALIDADEDataGridViewTextBoxColumn
             // 
             this.dATAVALIDADEDataGridViewTextBoxColumn.DataPropertyName = "DATA_VALIDADE";
-            this.dATAVALIDADEDataGridViewTextBoxColumn.HeaderText = "DATA_VALIDADE";
+            this.dATAVALIDADEDataGridViewTextBoxColumn.HeaderText = "DATA DE VALIDADE";
             this.dATAVALIDADEDataGridViewTextBoxColumn.Name = "dATAVALIDADEDataGridViewTextBoxColumn";
             this.dATAVALIDADEDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // lOCALARMAZENADODataGridViewTextBoxColumn
             // 
             this.lOCALARMAZENADODataGridViewTextBoxColumn.DataPropertyName = "LOCAL_ARMAZENADO";
-            this.lOCALARMAZENADODataGridViewTextBoxColumn.HeaderText = "LOCAL_ARMAZENADO";
+            this.lOCALARMAZENADODataGridViewTextBoxColumn.HeaderText = "LOCAL ARMAZENADO";
             this.lOCALARMAZENADODataGridViewTextBoxColumn.Name = "lOCALARMAZENADODataGridViewTextBoxColumn";
             this.lOCALARMAZENADODataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -328,14 +337,18 @@
             // dATACADASTRODataGridViewTextBoxColumn
             // 
             this.dATACADASTRODataGridViewTextBoxColumn.DataPropertyName = "DATA_CADASTRO";
-            this.dATACADASTRODataGridViewTextBoxColumn.HeaderText = "DATA_CADASTRO";
+            this.dATACADASTRODataGridViewTextBoxColumn.HeaderText = "DATA DO CADASTRO";
             this.dATACADASTRODataGridViewTextBoxColumn.Name = "dATACADASTRODataGridViewTextBoxColumn";
             this.dATACADASTRODataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ATUALIZAR
             // 
             this.ATUALIZAR.DataPropertyName = "ATUALIZAR";
-            this.ATUALIZAR.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(241)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ATUALIZAR.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ATUALIZAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ATUALIZAR.HeaderText = "ATUALIZAR";
             this.ATUALIZAR.Name = "ATUALIZAR";
             this.ATUALIZAR.ReadOnly = true;
@@ -385,6 +398,7 @@
         private System.Windows.Forms.BindingSource pRODUTOSBindingSource;
         private ESTOQUEDataSet eSTOQUEDataSet;
         private ESTOQUEDataSetTableAdapters.PRODUTOSTableAdapter pRODUTOSTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_PRODUTOS;
         private System.Windows.Forms.DataGridViewTextBoxColumn nOMEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pRECODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn qUANTIDADEDataGridViewTextBoxColumn;

@@ -60,27 +60,38 @@ namespace Sistema_Estoque.ViewLayer
         {
             BlProduto objBlProduto = new BlProduto();
 
-            Produto objProduto = new Produto
+            try
             {
-                NomeProduto = txtNomeProduto.Text.Trim(),
-                Preco = double.Parse(txtPreco.Text.Replace('.', ',').Trim()),
-                Quantidade = (int)txtQuantidade.Value,
-                CodBarras = txtCodBarras.Text.Trim(),
-                CodProduto = txtCodProduto.Text.Trim(),
-                DataValidade = DateTime.Parse(dtValidade.Text),
-                LocalArmazenamento = txtLocalArmazenado.Text.Trim(),
-                Descricao = txtDescricao.Text.Trim()
-            };
+                Produto objProduto = new Produto
+                {
+                    NomeProduto = txtNomeProduto.Text.Trim(),
+                    Preco = double.Parse(txtPreco.Text.Replace('.', ',').Trim()),
+                    Quantidade = (int)txtQuantidade.Value,
+                    CodBarras = txtCodBarras.Text.Trim(),
+                    CodProduto = txtCodProduto.Text.Trim(),
+                    DataValidade = DateTime.Parse(dtValidade.Text),
+                    LocalArmazenamento = txtLocalArmazenado.Text.Trim(),
+                    Descricao = txtDescricao.Text.Trim()
+                };
 
 
-            objBlProduto.AbrirBanco();
-            objBlProduto.CadastrarProduto(objProduto);
-            objBlProduto.FecharBanco(objBlProduto.AbrirBanco());
+                objBlProduto.AbrirBanco();
+                objBlProduto.CadastrarProduto(objProduto);
+                objBlProduto.FecharBanco(objBlProduto.AbrirBanco());
+
+
+                MessageBox.Show("Produto cadastrado com sucesso !", "Produto Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                LimparCampos();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Um ou mais campos estão vazios\nPreencha todos os campos antes de continuar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
             
-
-            MessageBox.Show("Produto cadastrado com sucesso !", "Produto Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            LimparCampos();
         }
 
 
