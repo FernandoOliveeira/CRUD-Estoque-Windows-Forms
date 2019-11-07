@@ -9,11 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Sistema_Estoque.BusinessLayer;
 
-namespace Sistema_Estoque.ViewLayer
+
+namespace Sistema_Estoque.ViewLayer 
 {
-    public partial class UCConsultar : UserControl
+    public partial class UCConsultar : UserControl 
     {
-        UcAtualizar UcAtualizar{ get; set; }
+        UcAtualizar UcAtualizar = new UcAtualizar();
 
 
         public UCConsultar()
@@ -21,13 +22,15 @@ namespace Sistema_Estoque.ViewLayer
             InitializeComponent();
         }
 
+        UCCadastrar objCadastrar;
+
         public UCConsultar(UCCadastrar obj)
         {
             this.objCadastrar = obj;
             InitializeComponent();
         }
 
-        UCCadastrar objCadastrar;
+
 
 
         private void UCConsultar_Load(object sender, EventArgs e)
@@ -143,6 +146,8 @@ namespace Sistema_Estoque.ViewLayer
             }
         }
 
+
+
         private void txtCodBarras_TextChanged(object sender, EventArgs e)
         {
             BlProduto objBlProduto = new BlProduto();
@@ -157,16 +162,32 @@ namespace Sistema_Estoque.ViewLayer
             }
         }
 
+
+
+
         private void dgvConsulta_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvConsulta.Columns[e.ColumnIndex].Name == "ATUALIZAR")
             {
-                if (MessageBox.Show("Deseja Atualizar este item", "Atualizar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes);
+                if (MessageBox.Show("Deseja Atualizar este item", "Atualizar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
 
+                    UcAtualizar UcAtualizar = new UcAtualizar();
+                    UcAtualizar.Location = new Point(0, 0);
+                    Controls.Add(UcAtualizar);
+
+                    UcAtualizar.Dock = DockStyle.Fill;
+
+                    lblTitulo.Text = "Atualizar Produtos";
+
                     UcAtualizar.BringToFront();
+
+
                 }
             }
         }
+
+
+
     }
 }

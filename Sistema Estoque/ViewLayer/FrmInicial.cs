@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sistema_Estoque.ViewLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +27,7 @@ namespace Sistema_Estoque
         {
             InitializeComponent();
 
+
             
             painelLateral.Height = btnHome.Height;
             painelLateral.Top = btnHome.Top;
@@ -35,7 +37,7 @@ namespace Sistema_Estoque
 
         }
 
-
+        UcAtualizar UcAtualizar = new UcAtualizar();
 
 
         // Código para detectar qual UserControl está na frente
@@ -233,18 +235,23 @@ namespace Sistema_Estoque
 
 
 
-
-
-        #endregion
-
         private void btnVenda_Click(object sender, EventArgs e)
         {
 
         }
 
+
+
+
         private void btnEntrada_Click(object sender, EventArgs e)
         {
 
         }
+
+        #endregion
+
+
+
+
     }
 }

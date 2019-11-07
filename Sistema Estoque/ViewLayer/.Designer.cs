@@ -44,8 +44,9 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.footerPanel = new System.Windows.Forms.Panel();
             this.ucHome1 = new Sistema_Estoque.ViewLayer.UCHome();
-            this.ucConsultar1 = new Sistema_Estoque.ViewLayer.UCConsultar();
             this.ucCadastrar1 = new Sistema_Estoque.ViewLayer.UCCadastrar();
+            this.ucAtualizar1 = new Sistema_Estoque.ViewLayer.UcAtualizar();
+            this.ucConsultar1 = new Sistema_Estoque.ViewLayer.UCConsultar();
             this.dashboard.SuspendLayout();
             this.panel1.SuspendLayout();
             this.topPanel.SuspendLayout();
@@ -273,31 +274,38 @@
             this.ucHome1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ucHome1.Name = "ucHome1";
             this.ucHome1.Size = new System.Drawing.Size(768, 504);
-            this.ucHome1.TabIndex = 7;
-            // 
-            // ucConsultar1
-            // 
-            this.ucConsultar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucConsultar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
-            this.ucConsultar1.Location = new System.Drawing.Point(232, 28);
-            this.ucConsultar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ucConsultar1.Name = "ucConsultar1";
-            this.ucConsultar1.Size = new System.Drawing.Size(756, 504);
-            this.ucConsultar1.TabIndex = 6;
+            this.ucHome1.TabIndex = 3;
             // 
             // ucCadastrar1
             // 
-            this.ucCadastrar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.ucCadastrar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
+            this.ucCadastrar1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucCadastrar1.Location = new System.Drawing.Point(232, 28);
             this.ucCadastrar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ucCadastrar1.Name = "ucCadastrar1";
-            this.ucCadastrar1.Size = new System.Drawing.Size(756, 504);
+            this.ucCadastrar1.Size = new System.Drawing.Size(768, 504);
             this.ucCadastrar1.TabIndex = 4;
+            // 
+            // ucAtualizar1
+            // 
+            this.ucAtualizar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
+            this.ucAtualizar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucAtualizar1.Location = new System.Drawing.Point(232, 28);
+            this.ucAtualizar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ucAtualizar1.Name = "ucAtualizar1";
+            this.ucAtualizar1.Size = new System.Drawing.Size(768, 504);
+            this.ucAtualizar1.TabIndex = 5;
+            this.ucAtualizar1.UcCadastrar = null;
+            // 
+            // ucConsultar1
+            // 
+            this.ucConsultar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
+            this.ucConsultar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucConsultar1.Location = new System.Drawing.Point(232, 28);
+            this.ucConsultar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ucConsultar1.Name = "ucConsultar1";
+            this.ucConsultar1.Size = new System.Drawing.Size(768, 504);
+            this.ucConsultar1.TabIndex = 6;
             // 
             // FrmInicial
             // 
@@ -305,9 +313,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
             this.ClientSize = new System.Drawing.Size(1000, 545);
-            this.Controls.Add(this.ucHome1);
             this.Controls.Add(this.ucConsultar1);
+            this.Controls.Add(this.ucAtualizar1);
             this.Controls.Add(this.ucCadastrar1);
+            this.Controls.Add(this.ucHome1);
             this.Controls.Add(this.footerPanel);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.dashboard);
@@ -345,9 +354,10 @@
         private System.Windows.Forms.Panel painelLateral;
         private System.Windows.Forms.Panel footerPanel;
         private System.Windows.Forms.Label lblTopLeftPanel;
-        private ViewLayer.UCCadastrar ucCadastrar1;
-        private ViewLayer.UCConsultar ucConsultar1;
         private ViewLayer.UCHome ucHome1;
+        private ViewLayer.UCCadastrar ucCadastrar1;
+        private ViewLayer.UcAtualizar ucAtualizar1;
+        private ViewLayer.UCConsultar ucConsultar1;
     }
 }
 

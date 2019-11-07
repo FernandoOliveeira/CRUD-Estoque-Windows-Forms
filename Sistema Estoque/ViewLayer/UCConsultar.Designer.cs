@@ -32,8 +32,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvConsulta = new System.Windows.Forms.DataGridView();
+            this.pRODUTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eSTOQUEDataSet = new Sistema_Estoque.ESTOQUEDataSet();
             this.consultarNomePanelLine = new System.Windows.Forms.Panel();
             this.txtConsultarNome = new System.Windows.Forms.TextBox();
             this.rdbConsultarNome = new System.Windows.Forms.RadioButton();
@@ -43,8 +45,6 @@
             this.txtCodBarras = new System.Windows.Forms.TextBox();
             this.rdbConsultarCodBarras = new System.Windows.Forms.RadioButton();
             this.consultarCodBarrasPanelLine = new System.Windows.Forms.Panel();
-            this.eSTOQUEDataSet = new Sistema_Estoque.ESTOQUEDataSet();
-            this.pRODUTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pRODUTOSTableAdapter = new Sistema_Estoque.ESTOQUEDataSetTableAdapters.PRODUTOSTableAdapter();
             this.nOMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRECODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,21 +57,21 @@
             this.dATACADASTRODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ATUALIZAR = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eSTOQUEDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUTOSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eSTOQUEDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // label2
+            // lblTitulo
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(745, 39);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Consultar Produtos";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTitulo.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(0, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(745, 39);
+            this.lblTitulo.TabIndex = 2;
+            this.lblTitulo.Text = "Consultar Produtos";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvConsulta
             // 
@@ -132,6 +132,16 @@
             this.dgvConsulta.Size = new System.Drawing.Size(621, 139);
             this.dgvConsulta.TabIndex = 0;
             this.dgvConsulta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsulta_CellContentClick);
+            // 
+            // pRODUTOSBindingSource
+            // 
+            this.pRODUTOSBindingSource.DataMember = "PRODUTOS";
+            this.pRODUTOSBindingSource.DataSource = this.eSTOQUEDataSet;
+            // 
+            // eSTOQUEDataSet
+            // 
+            this.eSTOQUEDataSet.DataSetName = "ESTOQUEDataSet";
+            this.eSTOQUEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // consultarNomePanelLine
             // 
@@ -255,16 +265,6 @@
             this.consultarCodBarrasPanelLine.Size = new System.Drawing.Size(191, 1);
             this.consultarCodBarrasPanelLine.TabIndex = 4;
             // 
-            // eSTOQUEDataSet
-            // 
-            this.eSTOQUEDataSet.DataSetName = "ESTOQUEDataSet";
-            this.eSTOQUEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pRODUTOSBindingSource
-            // 
-            this.pRODUTOSBindingSource.DataMember = "PRODUTOS";
-            this.pRODUTOSBindingSource.DataSource = this.eSTOQUEDataSet;
-            // 
             // pRODUTOSTableAdapter
             // 
             this.pRODUTOSTableAdapter.ClearBeforeFill = true;
@@ -335,6 +335,7 @@
             // ATUALIZAR
             // 
             this.ATUALIZAR.DataPropertyName = "ATUALIZAR";
+            this.ATUALIZAR.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ATUALIZAR.HeaderText = "ATUALIZAR";
             this.ATUALIZAR.Name = "ATUALIZAR";
             this.ATUALIZAR.ReadOnly = true;
@@ -349,7 +350,7 @@
             this.Controls.Add(this.dgvConsulta);
             this.Controls.Add(this.consultarNomePanelLine);
             this.Controls.Add(this.rdbConsultarCodBarras);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.txtConsultarCodigo);
             this.Controls.Add(this.rdbConsultarNome);
             this.Controls.Add(this.consultarCodBarrasPanelLine);
@@ -361,8 +362,8 @@
             this.Size = new System.Drawing.Size(745, 513);
             this.Load += new System.EventHandler(this.UCConsultar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eSTOQUEDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUTOSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eSTOQUEDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,7 +371,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.DataGridView dgvConsulta;
         private System.Windows.Forms.Panel consultarNomePanelLine;
         private System.Windows.Forms.TextBox txtConsultarNome;

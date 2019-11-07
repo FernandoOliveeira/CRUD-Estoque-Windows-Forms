@@ -16,5 +16,13 @@ namespace Sistema_Estoque.ViewLayer
         {
             InitializeComponent();
         }
+
+        public UCCadastrar UcCadastrar { get; set; }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            
+            this.Parent.Controls.Remove(this);
+        }
     }
 }
