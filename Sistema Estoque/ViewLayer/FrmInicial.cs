@@ -27,7 +27,7 @@ namespace Sistema_Estoque
         {
             InitializeComponent();
 
-
+            this.Text = "CRUD - Sistema Estoque";
             
             painelLateral.Height = btnHome.Height;
             painelLateral.Top = btnHome.Top;
@@ -37,6 +37,7 @@ namespace Sistema_Estoque
 
         }
 
+        
 
 
         // Código para detectar qual UserControl está na frente

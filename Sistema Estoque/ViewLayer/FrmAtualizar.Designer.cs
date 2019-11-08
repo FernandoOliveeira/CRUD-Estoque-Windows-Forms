@@ -1,13 +1,13 @@
 ﻿namespace Sistema_Estoque.ViewLayer
 {
-    partial class UCCadastrar
+    partial class FrmAtualizar
     {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,14 +20,19 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
+        #region Windows Form Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
+            this.topPanel = new System.Windows.Forms.Panel();
+            this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnMaximizar = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.lblTopPanel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tblCadastrar = new System.Windows.Forms.TableLayoutPanel();
             this.dataValidadePanel = new System.Windows.Forms.Panel();
@@ -62,6 +67,7 @@
             this.lblLocalArmazenado = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.txtLocalArmazenado = new System.Windows.Forms.TextBox();
+            this.topPanel.SuspendLayout();
             this.tblCadastrar.SuspendLayout();
             this.dataValidadePanel.SuspendLayout();
             this.codBarrasPanel.SuspendLayout();
@@ -75,16 +81,96 @@
             this.localArmazenadoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
+            // topPanel
+            // 
+            this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.topPanel.Controls.Add(this.lblTopPanel);
+            this.topPanel.Controls.Add(this.btnMinimizar);
+            this.topPanel.Controls.Add(this.btnMaximizar);
+            this.topPanel.Controls.Add(this.btnSair);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(1152, 28);
+            this.topPanel.TabIndex = 0;
+            this.topPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ArrastarTela_MouseDown);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnMinimizar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimizar.ForeColor = System.Drawing.Color.White;
+            this.btnMinimizar.Location = new System.Drawing.Point(1059, 0);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(31, 28);
+            this.btnMinimizar.TabIndex = 10;
+            this.btnMinimizar.Text = "—";
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            this.btnMinimizar.MouseEnter += new System.EventHandler(this.btnMinimizar_MouseEnter);
+            this.btnMinimizar.MouseLeave += new System.EventHandler(this.btnMinimizar_MouseLeave);
+            // 
+            // btnMaximizar
+            // 
+            this.btnMaximizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnMaximizar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMaximizar.FlatAppearance.BorderSize = 0;
+            this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaximizar.ForeColor = System.Drawing.Color.White;
+            this.btnMaximizar.Location = new System.Drawing.Point(1090, 0);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(31, 28);
+            this.btnMaximizar.TabIndex = 9;
+            this.btnMaximizar.Text = "☐";
+            this.btnMaximizar.UseVisualStyleBackColor = false;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
+            this.btnMaximizar.MouseEnter += new System.EventHandler(this.btnMaximizar_MouseEnter);
+            this.btnMaximizar.MouseLeave += new System.EventHandler(this.btnMaximizar_MouseLeave);
+            // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnSair.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.ForeColor = System.Drawing.Color.White;
+            this.btnSair.Location = new System.Drawing.Point(1121, 0);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(31, 28);
+            this.btnSair.TabIndex = 8;
+            this.btnSair.Text = "✕";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            this.btnSair.MouseEnter += new System.EventHandler(this.btnSair_MouseEnter);
+            this.btnSair.MouseLeave += new System.EventHandler(this.btnSair_MouseLeave);
+            // 
+            // lblTopPanel
+            // 
+            this.lblTopPanel.AutoSize = true;
+            this.lblTopPanel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTopPanel.ForeColor = System.Drawing.Color.White;
+            this.lblTopPanel.Location = new System.Drawing.Point(3, 4);
+            this.lblTopPanel.Name = "lblTopPanel";
+            this.lblTopPanel.Size = new System.Drawing.Size(376, 21);
+            this.lblTopPanel.TabIndex = 11;
+            this.lblTopPanel.Text = "CRUD - Sistema de Estoque - Atualizar Produtos";
+            this.lblTopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ArrastarTela_MouseDown);
+            // 
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Location = new System.Drawing.Point(0, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(745, 55);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Cadastrar Produtos";
+            this.label2.Size = new System.Drawing.Size(1152, 55);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Atualizar Produtos";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tblCadastrar
@@ -103,17 +189,17 @@
             this.tblCadastrar.Controls.Add(this.panel2, 2, 1);
             this.tblCadastrar.Controls.Add(this.localArmazenadoPanel, 1, 2);
             this.tblCadastrar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblCadastrar.Location = new System.Drawing.Point(0, 55);
+            this.tblCadastrar.Location = new System.Drawing.Point(0, 83);
             this.tblCadastrar.Name = "tblCadastrar";
             this.tblCadastrar.RowCount = 5;
-            this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.28665F));
-            this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.24104F));
+            this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.84492F));
+            this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.64706F));
             this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.24104F));
             this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.23127F));
             this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblCadastrar.Size = new System.Drawing.Size(745, 458);
-            this.tblCadastrar.TabIndex = 2;
+            this.tblCadastrar.Size = new System.Drawing.Size(1152, 517);
+            this.tblCadastrar.TabIndex = 5;
             // 
             // dataValidadePanel
             // 
@@ -122,9 +208,9 @@
             this.dataValidadePanel.Controls.Add(this.dtValidade);
             this.dataValidadePanel.Controls.Add(this.lblDataValidade);
             this.dataValidadePanel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataValidadePanel.Location = new System.Drawing.Point(244, 70);
+            this.dataValidadePanel.Location = new System.Drawing.Point(376, 82);
             this.dataValidadePanel.Name = "dataValidadePanel";
-            this.dataValidadePanel.Size = new System.Drawing.Size(237, 69);
+            this.dataValidadePanel.Size = new System.Drawing.Size(370, 60);
             this.dataValidadePanel.TabIndex = 4;
             // 
             // dtValidade
@@ -134,7 +220,7 @@
             this.dtValidade.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtValidade.Location = new System.Drawing.Point(7, 30);
             this.dtValidade.Name = "dtValidade";
-            this.dtValidade.Size = new System.Drawing.Size(194, 22);
+            this.dtValidade.Size = new System.Drawing.Size(327, 22);
             this.dtValidade.TabIndex = 6;
             // 
             // lblDataValidade
@@ -158,9 +244,9 @@
             this.codBarrasPanel.Controls.Add(this.lblCodBarras);
             this.codBarrasPanel.Controls.Add(this.panel8);
             this.codBarrasPanel.Controls.Add(this.txtCodBarras);
-            this.codBarrasPanel.Location = new System.Drawing.Point(3, 70);
+            this.codBarrasPanel.Location = new System.Drawing.Point(3, 82);
             this.codBarrasPanel.Name = "codBarrasPanel";
-            this.codBarrasPanel.Size = new System.Drawing.Size(235, 69);
+            this.codBarrasPanel.Size = new System.Drawing.Size(367, 77);
             this.codBarrasPanel.TabIndex = 3;
             // 
             // lblCodBarras
@@ -181,7 +267,7 @@
             this.panel8.BackColor = System.Drawing.Color.Black;
             this.panel8.Location = new System.Drawing.Point(7, 46);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(214, 1);
+            this.panel8.Size = new System.Drawing.Size(346, 1);
             this.panel8.TabIndex = 5;
             // 
             // txtCodBarras
@@ -190,16 +276,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCodBarras.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtCodBarras.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
-            this.txtCodBarras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
+            this.txtCodBarras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(115)))), ((int)(((byte)(158)))));
             this.txtCodBarras.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodBarras.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodBarras.ForeColor = System.Drawing.Color.White;
             this.txtCodBarras.Location = new System.Drawing.Point(7, 29);
             this.txtCodBarras.Name = "txtCodBarras";
-            this.txtCodBarras.Size = new System.Drawing.Size(214, 19);
+            this.txtCodBarras.Size = new System.Drawing.Size(346, 19);
             this.txtCodBarras.TabIndex = 3;
-            this.txtCodBarras.Enter += new System.EventHandler(this.txtCodBarras_Enter);
-            this.txtCodBarras.Leave += new System.EventHandler(this.txtCodBarras_Leave);
             // 
             // quantidadePanel
             // 
@@ -209,30 +293,28 @@
             this.quantidadePanel.Controls.Add(this.txtQuantidade);
             this.quantidadePanel.Controls.Add(this.lblQuantidade);
             this.quantidadePanel.Controls.Add(this.panel6);
-            this.quantidadePanel.Location = new System.Drawing.Point(487, 3);
+            this.quantidadePanel.Location = new System.Drawing.Point(752, 3);
             this.quantidadePanel.Name = "quantidadePanel";
-            this.quantidadePanel.Size = new System.Drawing.Size(255, 61);
+            this.quantidadePanel.Size = new System.Drawing.Size(397, 73);
             this.quantidadePanel.TabIndex = 2;
             // 
             // txtQuantidade
             // 
             this.txtQuantidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtQuantidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
+            this.txtQuantidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(115)))), ((int)(((byte)(158)))));
             this.txtQuantidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtQuantidade.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuantidade.ForeColor = System.Drawing.Color.White;
-            this.txtQuantidade.Location = new System.Drawing.Point(7, 21);
+            this.txtQuantidade.Location = new System.Drawing.Point(7, 20);
             this.txtQuantidade.Maximum = new decimal(new int[] {
             2147483647,
             0,
             0,
             0});
             this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(245, 22);
+            this.txtQuantidade.Size = new System.Drawing.Size(387, 22);
             this.txtQuantidade.TabIndex = 3;
-            this.txtQuantidade.Enter += new System.EventHandler(this.txtQuantidade_Enter);
-            this.txtQuantidade.Leave += new System.EventHandler(this.txtQuantidade_Leave);
             // 
             // lblQuantidade
             // 
@@ -252,7 +334,7 @@
             this.panel6.BackColor = System.Drawing.Color.Black;
             this.panel6.Location = new System.Drawing.Point(7, 39);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(245, 1);
+            this.panel6.Size = new System.Drawing.Size(387, 1);
             this.panel6.TabIndex = 5;
             // 
             // precoPanel
@@ -263,9 +345,9 @@
             this.precoPanel.Controls.Add(this.lblPreco);
             this.precoPanel.Controls.Add(this.panel4);
             this.precoPanel.Controls.Add(this.txtPreco);
-            this.precoPanel.Location = new System.Drawing.Point(244, 3);
+            this.precoPanel.Location = new System.Drawing.Point(376, 3);
             this.precoPanel.Name = "precoPanel";
-            this.precoPanel.Size = new System.Drawing.Size(237, 61);
+            this.precoPanel.Size = new System.Drawing.Size(370, 73);
             this.precoPanel.TabIndex = 1;
             // 
             // lblPreco
@@ -286,7 +368,7 @@
             this.panel4.BackColor = System.Drawing.Color.Black;
             this.panel4.Location = new System.Drawing.Point(7, 39);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(194, 1);
+            this.panel4.Size = new System.Drawing.Size(327, 1);
             this.panel4.TabIndex = 5;
             // 
             // txtPreco
@@ -295,18 +377,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPreco.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtPreco.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
-            this.txtPreco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
+            this.txtPreco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(115)))), ((int)(((byte)(158)))));
             this.txtPreco.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPreco.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPreco.ForeColor = System.Drawing.Color.White;
             this.txtPreco.Location = new System.Drawing.Point(7, 23);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.ShortcutsEnabled = false;
-            this.txtPreco.Size = new System.Drawing.Size(194, 19);
+            this.txtPreco.Size = new System.Drawing.Size(327, 19);
             this.txtPreco.TabIndex = 3;
-            this.txtPreco.Enter += new System.EventHandler(this.txtPreco_Enter);
-            this.txtPreco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPreco_KeyPress);
-            this.txtPreco.Leave += new System.EventHandler(this.txtPreco_Leave);
             // 
             // nomeProdutoPanel
             // 
@@ -318,7 +397,7 @@
             this.nomeProdutoPanel.Controls.Add(this.txtNomeProduto);
             this.nomeProdutoPanel.Location = new System.Drawing.Point(3, 3);
             this.nomeProdutoPanel.Name = "nomeProdutoPanel";
-            this.nomeProdutoPanel.Size = new System.Drawing.Size(235, 61);
+            this.nomeProdutoPanel.Size = new System.Drawing.Size(367, 73);
             this.nomeProdutoPanel.TabIndex = 0;
             // 
             // lblNomeProduto
@@ -339,7 +418,7 @@
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(7, 39);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(214, 1);
+            this.panel1.Size = new System.Drawing.Size(346, 1);
             this.panel1.TabIndex = 5;
             // 
             // txtNomeProduto
@@ -348,25 +427,23 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNomeProduto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtNomeProduto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
-            this.txtNomeProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
+            this.txtNomeProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(115)))), ((int)(((byte)(158)))));
             this.txtNomeProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNomeProduto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeProduto.ForeColor = System.Drawing.Color.White;
             this.txtNomeProduto.Location = new System.Drawing.Point(7, 23);
             this.txtNomeProduto.Name = "txtNomeProduto";
-            this.txtNomeProduto.Size = new System.Drawing.Size(214, 19);
+            this.txtNomeProduto.Size = new System.Drawing.Size(346, 19);
             this.txtNomeProduto.TabIndex = 3;
-            this.txtNomeProduto.Enter += new System.EventHandler(this.txtNomeProduto_Enter);
-            this.txtNomeProduto.Leave += new System.EventHandler(this.txtNomeProduto_Leave);
             // 
             // panel12
             // 
             this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel12.Controls.Add(this.btnCadastrar);
-            this.panel12.Location = new System.Drawing.Point(244, 414);
+            this.panel12.Location = new System.Drawing.Point(376, 472);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(237, 41);
+            this.panel12.Size = new System.Drawing.Size(370, 41);
             this.panel12.TabIndex = 8;
             // 
             // btnCadastrar
@@ -380,11 +457,10 @@
             this.btnCadastrar.ForeColor = System.Drawing.Color.White;
             this.btnCadastrar.Location = new System.Drawing.Point(7, 3);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(194, 36);
+            this.btnCadastrar.Size = new System.Drawing.Size(327, 36);
             this.btnCadastrar.TabIndex = 8;
-            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.Text = "Atualizar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // descricaoPanel
             // 
@@ -394,9 +470,9 @@
             this.tblCadastrar.SetColumnSpan(this.descricaoPanel, 3);
             this.descricaoPanel.Controls.Add(this.txtDescricao);
             this.descricaoPanel.Controls.Add(this.lblDescricao);
-            this.descricaoPanel.Location = new System.Drawing.Point(3, 220);
+            this.descricaoPanel.Location = new System.Drawing.Point(3, 250);
             this.descricaoPanel.Name = "descricaoPanel";
-            this.descricaoPanel.Size = new System.Drawing.Size(739, 188);
+            this.descricaoPanel.Size = new System.Drawing.Size(1146, 216);
             this.descricaoPanel.TabIndex = 7;
             // 
             // txtDescricao
@@ -408,11 +484,9 @@
             this.txtDescricao.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescricao.Location = new System.Drawing.Point(6, 23);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(730, 162);
+            this.txtDescricao.Size = new System.Drawing.Size(1137, 190);
             this.txtDescricao.TabIndex = 5;
             this.txtDescricao.Text = "";
-            this.txtDescricao.Enter += new System.EventHandler(this.txtDescricao_Enter);
-            this.txtDescricao.Leave += new System.EventHandler(this.txtDescricao_Leave);
             // 
             // lblDescricao
             // 
@@ -433,9 +507,9 @@
             this.panel2.Controls.Add(this.lblCodProduto);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.txtCodProduto);
-            this.panel2.Location = new System.Drawing.Point(487, 70);
+            this.panel2.Location = new System.Drawing.Point(752, 82);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(255, 69);
+            this.panel2.Size = new System.Drawing.Size(397, 77);
             this.panel2.TabIndex = 6;
             // 
             // lblCodProduto
@@ -456,7 +530,7 @@
             this.panel3.BackColor = System.Drawing.Color.Black;
             this.panel3.Location = new System.Drawing.Point(7, 46);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(245, 1);
+            this.panel3.Size = new System.Drawing.Size(387, 1);
             this.panel3.TabIndex = 5;
             // 
             // txtCodProduto
@@ -465,16 +539,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCodProduto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtCodProduto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
-            this.txtCodProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
+            this.txtCodProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(115)))), ((int)(((byte)(158)))));
             this.txtCodProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodProduto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodProduto.ForeColor = System.Drawing.Color.White;
             this.txtCodProduto.Location = new System.Drawing.Point(7, 29);
             this.txtCodProduto.Name = "txtCodProduto";
-            this.txtCodProduto.Size = new System.Drawing.Size(245, 19);
+            this.txtCodProduto.Size = new System.Drawing.Size(387, 19);
             this.txtCodProduto.TabIndex = 3;
-            this.txtCodProduto.Enter += new System.EventHandler(this.txtCodProduto_Enter);
-            this.txtCodProduto.Leave += new System.EventHandler(this.txtCodProduto_Leave);
             // 
             // localArmazenadoPanel
             // 
@@ -484,9 +556,9 @@
             this.localArmazenadoPanel.Controls.Add(this.lblLocalArmazenado);
             this.localArmazenadoPanel.Controls.Add(this.panel10);
             this.localArmazenadoPanel.Controls.Add(this.txtLocalArmazenado);
-            this.localArmazenadoPanel.Location = new System.Drawing.Point(244, 145);
+            this.localArmazenadoPanel.Location = new System.Drawing.Point(376, 165);
             this.localArmazenadoPanel.Name = "localArmazenadoPanel";
-            this.localArmazenadoPanel.Size = new System.Drawing.Size(237, 69);
+            this.localArmazenadoPanel.Size = new System.Drawing.Size(370, 79);
             this.localArmazenadoPanel.TabIndex = 5;
             // 
             // lblLocalArmazenado
@@ -509,7 +581,7 @@
             this.panel10.BackColor = System.Drawing.Color.Black;
             this.panel10.Location = new System.Drawing.Point(7, 46);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(194, 1);
+            this.panel10.Size = new System.Drawing.Size(327, 1);
             this.panel10.TabIndex = 5;
             // 
             // txtLocalArmazenado
@@ -518,27 +590,31 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLocalArmazenado.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtLocalArmazenado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
-            this.txtLocalArmazenado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
+            this.txtLocalArmazenado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(115)))), ((int)(((byte)(158)))));
             this.txtLocalArmazenado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtLocalArmazenado.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLocalArmazenado.ForeColor = System.Drawing.Color.White;
             this.txtLocalArmazenado.Location = new System.Drawing.Point(7, 30);
             this.txtLocalArmazenado.Name = "txtLocalArmazenado";
-            this.txtLocalArmazenado.Size = new System.Drawing.Size(194, 19);
+            this.txtLocalArmazenado.Size = new System.Drawing.Size(327, 19);
             this.txtLocalArmazenado.TabIndex = 3;
-            this.txtLocalArmazenado.Enter += new System.EventHandler(this.txtLocalArmazenado_Enter);
-            this.txtLocalArmazenado.Leave += new System.EventHandler(this.txtLocalArmazenado_Leave);
             // 
-            // UCCadastrar
+            // FrmAtualizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(115)))), ((int)(((byte)(158)))));
+            this.ClientSize = new System.Drawing.Size(1152, 600);
             this.Controls.Add(this.tblCadastrar);
             this.Controls.Add(this.label2);
-            this.Name = "UCCadastrar";
-            this.Size = new System.Drawing.Size(745, 513);
-            this.Load += new System.EventHandler(this.UCCadastrar_Load);
+            this.Controls.Add(this.topPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FrmAtualizar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Atualizar";
+            this.Load += new System.EventHandler(this.FrmAtualizar_Load);
+            this.topPanel.ResumeLayout(false);
+            this.topPanel.PerformLayout();
             this.tblCadastrar.ResumeLayout(false);
             this.dataValidadePanel.ResumeLayout(false);
             this.dataValidadePanel.PerformLayout();
@@ -564,12 +640,20 @@
 
         #endregion
 
+        private System.Windows.Forms.Panel topPanel;
+        private System.Windows.Forms.Button btnMinimizar;
+        private System.Windows.Forms.Button btnMaximizar;
+        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Label lblTopPanel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tblCadastrar;
-        private System.Windows.Forms.Label lblNomeProduto;
-        private System.Windows.Forms.Panel nomeProdutoPanel;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtNomeProduto;
+        private System.Windows.Forms.Panel dataValidadePanel;
+        private System.Windows.Forms.DateTimePicker dtValidade;
+        private System.Windows.Forms.Label lblDataValidade;
+        private System.Windows.Forms.Panel codBarrasPanel;
+        private System.Windows.Forms.Label lblCodBarras;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.TextBox txtCodBarras;
         private System.Windows.Forms.Panel quantidadePanel;
         private System.Windows.Forms.NumericUpDown txtQuantidade;
         private System.Windows.Forms.Label lblQuantidade;
@@ -577,26 +661,23 @@
         private System.Windows.Forms.Panel precoPanel;
         private System.Windows.Forms.Label lblPreco;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel codBarrasPanel;
-        private System.Windows.Forms.Label lblCodBarras;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox txtCodBarras;
-        private System.Windows.Forms.Panel localArmazenadoPanel;
-        private System.Windows.Forms.Label lblLocalArmazenado;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.TextBox txtLocalArmazenado;
+        private System.Windows.Forms.TextBox txtPreco;
+        private System.Windows.Forms.Panel nomeProdutoPanel;
+        private System.Windows.Forms.Label lblNomeProduto;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtNomeProduto;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Panel descricaoPanel;
         private System.Windows.Forms.RichTextBox txtDescricao;
         private System.Windows.Forms.Label lblDescricao;
-        private System.Windows.Forms.Panel dataValidadePanel;
-        private System.Windows.Forms.DateTimePicker dtValidade;
-        private System.Windows.Forms.Label lblDataValidade;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblCodProduto;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtCodProduto;
-        private System.Windows.Forms.TextBox txtPreco;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Panel localArmazenadoPanel;
+        private System.Windows.Forms.Label lblLocalArmazenado;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.TextBox txtLocalArmazenado;
     }
 }

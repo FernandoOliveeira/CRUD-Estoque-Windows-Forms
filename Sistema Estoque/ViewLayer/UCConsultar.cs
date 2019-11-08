@@ -35,8 +35,8 @@ namespace Sistema_Estoque.ViewLayer
         private void UCConsultar_Load(object sender, EventArgs e)
         {
 
-            BlProduto objBlProduto = new BlProduto();
-            dgvConsulta.DataSource = objBlProduto.ConsultarProdutos();
+            //BlProduto objBlProduto = new BlProduto();
+            //dgvConsulta.DataSource = objBlProduto.ConsultarProdutos();
 
         }
 
@@ -168,11 +168,39 @@ namespace Sistema_Estoque.ViewLayer
         {
             if (dgvConsulta.Columns[e.ColumnIndex].Name == "ATUALIZAR")
             {
+
                 string idProduto = dgvConsulta.SelectedRows[0].Cells[1].Value.ToString();
 
                 if (MessageBox.Show("Deseja atualizar este item ?\n" + idProduto.ToUpper(), "Atualizar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
-                    
+                    FrmAtualizar frmAtualizar = new FrmAtualizar();
+
+                    string dataValidade = dgvConsulta.SelectedRows[0].Cells[6].Value.ToString();
+
+                    DateTime dtValidade = Convert.ToDateTime(dataValidade);
+
+
+
+                    frmAtualizar.TxtIdProduto = (int) dgvConsulta.SelectedRows[0].Cells[0].Value;
+
+                    frmAtualizar.TxtNomeProduto = dgvConsulta.SelectedRows[0].Cells[1].Value.ToString();
+
+                    frmAtualizar.TxtPreco = dgvConsulta.SelectedRows[0].Cells[2].Value.ToString();
+
+                    frmAtualizar.TxtQuantidade = (int) dgvConsulta.SelectedRows[0].Cells[3].Value;
+
+                    frmAtualizar.TxtCodBarras = dgvConsulta.SelectedRows[0].Cells[4].Value.ToString();
+
+                    frmAtualizar.TxtCodProduto = dgvConsulta.SelectedRows[0].Cells[5].Value.ToString();
+
+                    frmAtualizar.DtValidade = dtValidade;
+
+                    frmAtualizar.TxtLocalArmazenado = dgvConsulta.SelectedRows[0].Cells[7].Value.ToString();
+
+                    frmAtualizar.TxtDescricao = dgvConsulta.SelectedRows[0].Cells[8].Value.ToString();
+
+
+                    frmAtualizar.Show();
 
                 }
             }

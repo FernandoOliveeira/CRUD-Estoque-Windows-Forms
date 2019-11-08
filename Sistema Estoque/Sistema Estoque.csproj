@@ -56,11 +56,11 @@
       <DependentUpon>ESTOQUEDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Model\Produto.cs" />
-    <Compile Include="ViewLayer\Atualizar.cs">
+    <Compile Include="ViewLayer\FrmAtualizar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewLayer\Atualizar.Designer.cs">
-      <DependentUpon>Atualizar.cs</DependentUpon>
+    <Compile Include="ViewLayer\FrmAtualizar.Designer.cs">
+      <DependentUpon>FrmAtualizar.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewLayer\FrmInicial.cs">
       <SubType>Form</SubType>
@@ -89,8 +89,8 @@
     <Compile Include="ViewLayer\UCHome.Designer.cs">
       <DependentUpon>UCHome.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ViewLayer\Atualizar.resx">
-      <DependentUpon>Atualizar.cs</DependentUpon>
+    <EmbeddedResource Include="ViewLayer\FrmAtualizar.resx">
+      <DependentUpon>FrmAtualizar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewLayer\FrmInicial.resx">
       <DependentUpon>FrmInicial.cs</DependentUpon>
