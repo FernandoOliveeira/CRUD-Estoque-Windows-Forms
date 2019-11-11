@@ -30,22 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvConsulta = new System.Windows.Forms.DataGridView();
-            this.ID_PRODUTOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nOMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pRECODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qUANTIDADEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cODBARRASDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cODPRODUTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dATAVALIDADEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lOCALARMAZENADODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dESCRICAODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dATACADASTRODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ATUALIZAR = new System.Windows.Forms.DataGridViewButtonColumn();
             this.pRODUTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eSTOQUEDataSet = new Sistema_Estoque.ESTOQUEDataSet();
             this.consultarNomePanelLine = new System.Windows.Forms.Panel();
@@ -58,6 +48,18 @@
             this.rdbConsultarCodBarras = new System.Windows.Forms.RadioButton();
             this.consultarCodBarrasPanelLine = new System.Windows.Forms.Panel();
             this.pRODUTOSTableAdapter = new Sistema_Estoque.ESTOQUEDataSetTableAdapters.PRODUTOSTableAdapter();
+            this.ID_PRODUTOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nOMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRECODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qUANTIDADEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cODBARRASDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cODPRODUTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dATAVALIDADEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lOCALARMAZENADODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dESCRICAODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dATACADASTRODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ATUALIZAR = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.EXCLUIR = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUTOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eSTOQUEDataSet)).BeginInit();
@@ -107,118 +109,34 @@
             this.lOCALARMAZENADODataGridViewTextBoxColumn,
             this.dESCRICAODataGridViewTextBoxColumn,
             this.dATACADASTRODataGridViewTextBoxColumn,
-            this.ATUALIZAR});
+            this.ATUALIZAR,
+            this.EXCLUIR});
             this.dgvConsulta.DataSource = this.pRODUTOSBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(241)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvConsulta.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(241)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvConsulta.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvConsulta.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvConsulta.Location = new System.Drawing.Point(0, 292);
             this.dgvConsulta.MultiSelect = false;
             this.dgvConsulta.Name = "dgvConsulta";
             this.dgvConsulta.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(166)))), ((int)(((byte)(157)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConsulta.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(166)))), ((int)(((byte)(157)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsulta.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvConsulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvConsulta.Size = new System.Drawing.Size(745, 221);
             this.dgvConsulta.TabIndex = 0;
             this.dgvConsulta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsulta_CellContentClick);
-            // 
-            // ID_PRODUTOS
-            // 
-            this.ID_PRODUTOS.DataPropertyName = "ID_PRODUTOS";
-            this.ID_PRODUTOS.HeaderText = "ID_PRODUTOS";
-            this.ID_PRODUTOS.Name = "ID_PRODUTOS";
-            this.ID_PRODUTOS.ReadOnly = true;
-            this.ID_PRODUTOS.Visible = false;
-            // 
-            // nOMEDataGridViewTextBoxColumn
-            // 
-            this.nOMEDataGridViewTextBoxColumn.DataPropertyName = "NOME";
-            this.nOMEDataGridViewTextBoxColumn.HeaderText = "NOME";
-            this.nOMEDataGridViewTextBoxColumn.Name = "nOMEDataGridViewTextBoxColumn";
-            this.nOMEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pRECODataGridViewTextBoxColumn
-            // 
-            this.pRECODataGridViewTextBoxColumn.DataPropertyName = "PRECO";
-            this.pRECODataGridViewTextBoxColumn.HeaderText = "PRECO";
-            this.pRECODataGridViewTextBoxColumn.Name = "pRECODataGridViewTextBoxColumn";
-            this.pRECODataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // qUANTIDADEDataGridViewTextBoxColumn
-            // 
-            this.qUANTIDADEDataGridViewTextBoxColumn.DataPropertyName = "QUANTIDADE";
-            this.qUANTIDADEDataGridViewTextBoxColumn.HeaderText = "QUANTIDADE";
-            this.qUANTIDADEDataGridViewTextBoxColumn.Name = "qUANTIDADEDataGridViewTextBoxColumn";
-            this.qUANTIDADEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cODBARRASDataGridViewTextBoxColumn
-            // 
-            this.cODBARRASDataGridViewTextBoxColumn.DataPropertyName = "COD_BARRAS";
-            this.cODBARRASDataGridViewTextBoxColumn.HeaderText = "CÓD. BARRAS";
-            this.cODBARRASDataGridViewTextBoxColumn.Name = "cODBARRASDataGridViewTextBoxColumn";
-            this.cODBARRASDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cODPRODUTODataGridViewTextBoxColumn
-            // 
-            this.cODPRODUTODataGridViewTextBoxColumn.DataPropertyName = "COD_PRODUTO";
-            this.cODPRODUTODataGridViewTextBoxColumn.HeaderText = "CÓD. PRODUTO";
-            this.cODPRODUTODataGridViewTextBoxColumn.Name = "cODPRODUTODataGridViewTextBoxColumn";
-            this.cODPRODUTODataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dATAVALIDADEDataGridViewTextBoxColumn
-            // 
-            this.dATAVALIDADEDataGridViewTextBoxColumn.DataPropertyName = "DATA_VALIDADE";
-            this.dATAVALIDADEDataGridViewTextBoxColumn.HeaderText = "DATA DE VALIDADE";
-            this.dATAVALIDADEDataGridViewTextBoxColumn.Name = "dATAVALIDADEDataGridViewTextBoxColumn";
-            this.dATAVALIDADEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lOCALARMAZENADODataGridViewTextBoxColumn
-            // 
-            this.lOCALARMAZENADODataGridViewTextBoxColumn.DataPropertyName = "LOCAL_ARMAZENADO";
-            this.lOCALARMAZENADODataGridViewTextBoxColumn.HeaderText = "LOCAL ARMAZENADO";
-            this.lOCALARMAZENADODataGridViewTextBoxColumn.Name = "lOCALARMAZENADODataGridViewTextBoxColumn";
-            this.lOCALARMAZENADODataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dESCRICAODataGridViewTextBoxColumn
-            // 
-            this.dESCRICAODataGridViewTextBoxColumn.DataPropertyName = "DESCRICAO";
-            this.dESCRICAODataGridViewTextBoxColumn.HeaderText = "DESCRICAO";
-            this.dESCRICAODataGridViewTextBoxColumn.Name = "dESCRICAODataGridViewTextBoxColumn";
-            this.dESCRICAODataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dATACADASTRODataGridViewTextBoxColumn
-            // 
-            this.dATACADASTRODataGridViewTextBoxColumn.DataPropertyName = "DATA_CADASTRO";
-            this.dATACADASTRODataGridViewTextBoxColumn.HeaderText = "DATA DO CADASTRO";
-            this.dATACADASTRODataGridViewTextBoxColumn.Name = "dATACADASTRODataGridViewTextBoxColumn";
-            this.dATACADASTRODataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ATUALIZAR
-            // 
-            this.ATUALIZAR.DataPropertyName = "ATUALIZAR";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(241)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ATUALIZAR.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ATUALIZAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ATUALIZAR.HeaderText = "ATUALIZAR";
-            this.ATUALIZAR.Name = "ATUALIZAR";
-            this.ATUALIZAR.ReadOnly = true;
-            this.ATUALIZAR.Text = "ATUALIZAR";
-            this.ATUALIZAR.UseColumnTextForButtonValue = true;
             // 
             // pRODUTOSBindingSource
             // 
@@ -358,6 +276,111 @@
             // 
             this.pRODUTOSTableAdapter.ClearBeforeFill = true;
             // 
+            // ID_PRODUTOS
+            // 
+            this.ID_PRODUTOS.DataPropertyName = "ID_PRODUTOS";
+            this.ID_PRODUTOS.HeaderText = "ID_PRODUTOS";
+            this.ID_PRODUTOS.Name = "ID_PRODUTOS";
+            this.ID_PRODUTOS.ReadOnly = true;
+            this.ID_PRODUTOS.Visible = false;
+            // 
+            // nOMEDataGridViewTextBoxColumn
+            // 
+            this.nOMEDataGridViewTextBoxColumn.DataPropertyName = "NOME";
+            this.nOMEDataGridViewTextBoxColumn.HeaderText = "NOME";
+            this.nOMEDataGridViewTextBoxColumn.Name = "nOMEDataGridViewTextBoxColumn";
+            this.nOMEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pRECODataGridViewTextBoxColumn
+            // 
+            this.pRECODataGridViewTextBoxColumn.DataPropertyName = "PRECO";
+            this.pRECODataGridViewTextBoxColumn.HeaderText = "PRECO";
+            this.pRECODataGridViewTextBoxColumn.Name = "pRECODataGridViewTextBoxColumn";
+            this.pRECODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // qUANTIDADEDataGridViewTextBoxColumn
+            // 
+            this.qUANTIDADEDataGridViewTextBoxColumn.DataPropertyName = "QUANTIDADE";
+            this.qUANTIDADEDataGridViewTextBoxColumn.HeaderText = "QUANTIDADE";
+            this.qUANTIDADEDataGridViewTextBoxColumn.Name = "qUANTIDADEDataGridViewTextBoxColumn";
+            this.qUANTIDADEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cODBARRASDataGridViewTextBoxColumn
+            // 
+            this.cODBARRASDataGridViewTextBoxColumn.DataPropertyName = "COD_BARRAS";
+            this.cODBARRASDataGridViewTextBoxColumn.HeaderText = "CÓD. BARRAS";
+            this.cODBARRASDataGridViewTextBoxColumn.Name = "cODBARRASDataGridViewTextBoxColumn";
+            this.cODBARRASDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cODPRODUTODataGridViewTextBoxColumn
+            // 
+            this.cODPRODUTODataGridViewTextBoxColumn.DataPropertyName = "COD_PRODUTO";
+            this.cODPRODUTODataGridViewTextBoxColumn.HeaderText = "CÓD. PRODUTO";
+            this.cODPRODUTODataGridViewTextBoxColumn.Name = "cODPRODUTODataGridViewTextBoxColumn";
+            this.cODPRODUTODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dATAVALIDADEDataGridViewTextBoxColumn
+            // 
+            this.dATAVALIDADEDataGridViewTextBoxColumn.DataPropertyName = "DATA_VALIDADE";
+            this.dATAVALIDADEDataGridViewTextBoxColumn.HeaderText = "DATA DE VALIDADE";
+            this.dATAVALIDADEDataGridViewTextBoxColumn.Name = "dATAVALIDADEDataGridViewTextBoxColumn";
+            this.dATAVALIDADEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lOCALARMAZENADODataGridViewTextBoxColumn
+            // 
+            this.lOCALARMAZENADODataGridViewTextBoxColumn.DataPropertyName = "LOCAL_ARMAZENADO";
+            this.lOCALARMAZENADODataGridViewTextBoxColumn.HeaderText = "LOCAL ARMAZENADO";
+            this.lOCALARMAZENADODataGridViewTextBoxColumn.Name = "lOCALARMAZENADODataGridViewTextBoxColumn";
+            this.lOCALARMAZENADODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dESCRICAODataGridViewTextBoxColumn
+            // 
+            this.dESCRICAODataGridViewTextBoxColumn.DataPropertyName = "DESCRICAO";
+            this.dESCRICAODataGridViewTextBoxColumn.HeaderText = "DESCRICAO";
+            this.dESCRICAODataGridViewTextBoxColumn.Name = "dESCRICAODataGridViewTextBoxColumn";
+            this.dESCRICAODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dATACADASTRODataGridViewTextBoxColumn
+            // 
+            this.dATACADASTRODataGridViewTextBoxColumn.DataPropertyName = "DATA_CADASTRO";
+            this.dATACADASTRODataGridViewTextBoxColumn.HeaderText = "DATA DO CADASTRO";
+            this.dATACADASTRODataGridViewTextBoxColumn.Name = "dATACADASTRODataGridViewTextBoxColumn";
+            this.dATACADASTRODataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ATUALIZAR
+            // 
+            this.ATUALIZAR.DataPropertyName = "ATUALIZAR";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(160)))), ((int)(((byte)(71)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(160)))), ((int)(((byte)(71)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.ATUALIZAR.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ATUALIZAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ATUALIZAR.HeaderText = "ATUALIZAR";
+            this.ATUALIZAR.Name = "ATUALIZAR";
+            this.ATUALIZAR.ReadOnly = true;
+            this.ATUALIZAR.Text = "ATUALIZAR";
+            this.ATUALIZAR.UseColumnTextForButtonValue = true;
+            // 
+            // EXCLUIR
+            // 
+            this.EXCLUIR.DataPropertyName = "EXCLUIR";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(57)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.EXCLUIR.DefaultCellStyle = dataGridViewCellStyle3;
+            this.EXCLUIR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EXCLUIR.HeaderText = "EXCLUIR";
+            this.EXCLUIR.Name = "EXCLUIR";
+            this.EXCLUIR.ReadOnly = true;
+            this.EXCLUIR.Text = "EXCLUIR";
+            this.EXCLUIR.UseColumnTextForButtonValue = true;
+            // 
             // UCConsultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -412,5 +435,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dESCRICAODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dATACADASTRODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn ATUALIZAR;
+        private System.Windows.Forms.DataGridViewButtonColumn EXCLUIR;
     }
 }

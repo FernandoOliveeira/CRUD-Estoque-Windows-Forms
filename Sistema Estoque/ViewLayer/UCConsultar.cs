@@ -35,8 +35,8 @@ namespace Sistema_Estoque.ViewLayer
         private void UCConsultar_Load(object sender, EventArgs e)
         {
 
-            //BlProduto objBlProduto = new BlProduto();
-            //dgvConsulta.DataSource = objBlProduto.ConsultarProdutos();
+            BlProduto objBlProduto = new BlProduto();
+            dgvConsulta.DataSource = objBlProduto.ConsultarProdutos();
 
         }
 
@@ -171,7 +171,7 @@ namespace Sistema_Estoque.ViewLayer
 
                 string idProduto = dgvConsulta.SelectedRows[0].Cells[1].Value.ToString();
 
-                if (MessageBox.Show("Deseja atualizar este item ?\n" + idProduto.ToUpper(), "Atualizar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                if (MessageBox.Show("Deseja atualizar este item ?\n\n" + idProduto.ToUpper(), "Atualizar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
                     FrmAtualizar frmAtualizar = new FrmAtualizar();
 
@@ -200,7 +200,20 @@ namespace Sistema_Estoque.ViewLayer
                     frmAtualizar.TxtDescricao = dgvConsulta.SelectedRows[0].Cells[8].Value.ToString();
 
 
+                    //MessageBox.Show("id: " + frmAtualizar.TxtIdProduto + ", Nome: " + frmAtualizar.TxtNomeProduto + ", Preço: " + frmAtualizar.TxtPreco + ", Quantidade: " + frmAtualizar.TxtQuantidade + ", CodBarras: " + frmAtualizar.TxtCodBarras + ", CodProduto: " + frmAtualizar.TxtCodProduto + ", DataValidade: " + frmAtualizar.DtValidade + ", LocalArmazenado: " + frmAtualizar.TxtLocalArmazenado + ", Descrição: " + frmAtualizar.TxtDescricao);
+
+
                     frmAtualizar.Show();
+
+                }
+            }
+
+            if (dgvConsulta.Columns[e.ColumnIndex].Name == "EXCLUIR")
+            {
+                string idProduto = dgvConsulta.SelectedRows[0].Cells[1].Value.ToString();
+
+                if (MessageBox.Show("Deseja realmente excluir este item ?\n\n" + idProduto.ToUpper() + "\n\n(Os dados serão excluídos permanentemente)", "Atualizar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                {
 
                 }
             }

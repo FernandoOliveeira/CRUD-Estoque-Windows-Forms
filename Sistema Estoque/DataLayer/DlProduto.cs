@@ -11,7 +11,7 @@ namespace Sistema_Estoque.DataLayer
 {
     class DlProduto : Connection
     {
-        public bool CadastrarProduto(Produto produto)
+        public bool CadastrarProdutos(Produto produto)
         {
             string querystr = "INSERT INTO PRODUTOS VALUES(@nomeProduto, @preco, @quantidade, @codBarras, @codProduto, @dataValidade, @localArmazenado, @descricao)";
 
@@ -62,7 +62,6 @@ namespace Sistema_Estoque.DataLayer
             
         }
 
-
         public DataTable ConsultarProdutosCodigo(string codigo)
         {
 
@@ -87,6 +86,49 @@ namespace Sistema_Estoque.DataLayer
             consultaProduto.Load(reader);
 
             return consultaProduto;
+        }
+
+        public bool AtualizarProdutos(Produto produto)
+        {
+            string queryStr = "UPDATE PRODUTOS SET NOME= @nomeProduto, PRECO = @preco, QUANTIDADE = @quantidade, COD_BARRAS = @codBarras, COD_PRODUTO = @codProduto, DATA_VALIDADE =  @dataValidade, LOCAL_ARMAZENADO = @localArmazenado, DESCRICAO = @descricao WHERE ID_PRODUTOS = @idProduto";
+
+            SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
+            command.Parameters.AddWithValue("@nomeProduto", produto.NomeProduto);
+            command.Parameters.AddWithValue("@preco", produto.Preco);
+            command.Parameters.AddWithValue("@quantidade", produto.Quantidade);
+            command.Parameters.AddWithValue("@codBarras", produto.CodBarras);
+            command.Parameters.AddWithValue("@codProduto", produto.CodProduto);
+            command.Parameters.AddWithValue("@dataValidade", produto.DataValidade);
+            command.Parameters.AddWithValue("@localArmazenado", produto.LocalArmazenamento);
+            command.Parameters.AddWithValue("@descricao", produto.Descricao);
+            command.Parameters.AddWithValue("@idProduto", produto.IdProduto);
+
+            int res = command.ExecuteNonQuery();
+
+            if (res != 0)
+            {
+                return true;
+            }
+
+            return false;
+
+        }
+
+        public bool ExcluirProdutos(Produto produto)
+        {
+            string queryStr = "DELETE FROM PRODUTOS WHERE ID_PRODUTOS = @idProduto";
+
+            SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
+            command.Parameters.AddWithValue("@idProduto", produto.IdProduto);
+
+            int res = command.ExecuteNonQuery();
+
+            if (res != 0)
+            {
+                return true;
+            }
+
+            return false;
         }
 
     }

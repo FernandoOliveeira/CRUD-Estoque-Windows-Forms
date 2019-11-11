@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Sistema_Estoque.BusinessLayer;
+using Sistema_Estoque.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +25,7 @@ namespace Sistema_Estoque.ViewLayer
         public static extern bool ReleaseCapture();
         #endregion
 
+
         public int TxtIdProduto { get; set; }
         public string TxtNomeProduto { get; set; }
         public string TxtPreco { get; set; }
@@ -32,9 +35,6 @@ namespace Sistema_Estoque.ViewLayer
         public string TxtCodProduto { get; set; }
         public string TxtLocalArmazenado { get; set; }
         public string TxtDescricao { get; set; }
-
-
-
 
 
         public FrmAtualizar()
@@ -149,8 +149,49 @@ namespace Sistema_Estoque.ViewLayer
         }
 
 
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            BlProduto objBlProduto = new BlProduto();
+
+            try
+            {
+                Produto objProduto = new Produto
+                {
+                    NomeProduto = txtNomeProduto.Text.Trim(),
+                    Preco = double.Parse(txtPreco.Text.Replace('.', ',').Trim()),
+                    Quantidade = (int)txtQuantidade.Value,
+                    CodBarras = txtCodBarras.Text.Trim(),
+                    CodProduto = txtCodProduto.Text.Trim(),
+                    DataValidade = DateTime.Parse(dtValidade.Text),
+                    LocalArmazenamento = txtLocalArmazenado.Text.Trim(),
+                    Descricao = txtDescricao.Text.Trim(),
+                    IdProduto = TxtIdProduto
+                    
+                };
+
+
+                objBlProduto.AbrirBanco();
+                objBlProduto.AtualizarProdutos(objProduto);
+                objBlProduto.FecharBanco(objBlProduto.AbrirBanco());
+
+
+                MessageBox.Show("Produto atualizado com sucesso !", "Produto Atualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.Close();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Um ou mais campos estão vazios\nPreencha todos os campos antes de continuar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+        }
+
+
         #endregion
 
-        
+
     }
 }

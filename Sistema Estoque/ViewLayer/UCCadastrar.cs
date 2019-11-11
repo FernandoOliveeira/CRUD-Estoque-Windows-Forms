@@ -76,7 +76,7 @@ namespace Sistema_Estoque.ViewLayer
 
 
                 objBlProduto.AbrirBanco();
-                objBlProduto.CadastrarProduto(objProduto);
+                objBlProduto.CadastrarProdutos(objProduto);
                 objBlProduto.FecharBanco(objBlProduto.AbrirBanco());
 
 

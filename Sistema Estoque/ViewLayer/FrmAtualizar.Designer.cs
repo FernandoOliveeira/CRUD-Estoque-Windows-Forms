@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.topPanel = new System.Windows.Forms.Panel();
+            this.lblTopPanel = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnMaximizar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            this.lblTopPanel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tblCadastrar = new System.Windows.Forms.TableLayoutPanel();
             this.dataValidadePanel = new System.Windows.Forms.Panel();
@@ -95,6 +95,18 @@
             this.topPanel.TabIndex = 0;
             this.topPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ArrastarTela_MouseDown);
             // 
+            // lblTopPanel
+            // 
+            this.lblTopPanel.AutoSize = true;
+            this.lblTopPanel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTopPanel.ForeColor = System.Drawing.Color.White;
+            this.lblTopPanel.Location = new System.Drawing.Point(3, 4);
+            this.lblTopPanel.Name = "lblTopPanel";
+            this.lblTopPanel.Size = new System.Drawing.Size(376, 21);
+            this.lblTopPanel.TabIndex = 11;
+            this.lblTopPanel.Text = "CRUD - Sistema de Estoque - Atualizar Produtos";
+            this.lblTopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ArrastarTela_MouseDown);
+            // 
             // btnMinimizar
             // 
             this.btnMinimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
@@ -149,18 +161,6 @@
             this.btnSair.MouseEnter += new System.EventHandler(this.btnSair_MouseEnter);
             this.btnSair.MouseLeave += new System.EventHandler(this.btnSair_MouseLeave);
             // 
-            // lblTopPanel
-            // 
-            this.lblTopPanel.AutoSize = true;
-            this.lblTopPanel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTopPanel.ForeColor = System.Drawing.Color.White;
-            this.lblTopPanel.Location = new System.Drawing.Point(3, 4);
-            this.lblTopPanel.Name = "lblTopPanel";
-            this.lblTopPanel.Size = new System.Drawing.Size(376, 21);
-            this.lblTopPanel.TabIndex = 11;
-            this.lblTopPanel.Text = "CRUD - Sistema de Estoque - Atualizar Produtos";
-            this.lblTopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ArrastarTela_MouseDown);
-            // 
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -210,7 +210,7 @@
             this.dataValidadePanel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataValidadePanel.Location = new System.Drawing.Point(376, 82);
             this.dataValidadePanel.Name = "dataValidadePanel";
-            this.dataValidadePanel.Size = new System.Drawing.Size(370, 60);
+            this.dataValidadePanel.Size = new System.Drawing.Size(370, 77);
             this.dataValidadePanel.TabIndex = 4;
             // 
             // dtValidade
@@ -218,7 +218,7 @@
             this.dtValidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtValidade.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtValidade.Location = new System.Drawing.Point(7, 30);
+            this.dtValidade.Location = new System.Drawing.Point(7, 43);
             this.dtValidade.Name = "dtValidade";
             this.dtValidade.Size = new System.Drawing.Size(327, 22);
             this.dtValidade.TabIndex = 6;
@@ -230,7 +230,7 @@
             this.lblDataValidade.AutoSize = true;
             this.lblDataValidade.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataValidade.ForeColor = System.Drawing.Color.White;
-            this.lblDataValidade.Location = new System.Drawing.Point(4, 10);
+            this.lblDataValidade.Location = new System.Drawing.Point(4, 3);
             this.lblDataValidade.Name = "lblDataValidade";
             this.lblDataValidade.Size = new System.Drawing.Size(140, 20);
             this.lblDataValidade.TabIndex = 5;
@@ -254,7 +254,7 @@
             this.lblCodBarras.AutoSize = true;
             this.lblCodBarras.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodBarras.ForeColor = System.Drawing.Color.White;
-            this.lblCodBarras.Location = new System.Drawing.Point(3, 10);
+            this.lblCodBarras.Location = new System.Drawing.Point(4, 3);
             this.lblCodBarras.Name = "lblCodBarras";
             this.lblCodBarras.Size = new System.Drawing.Size(137, 20);
             this.lblCodBarras.TabIndex = 4;
@@ -265,7 +265,7 @@
             this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.BackColor = System.Drawing.Color.Black;
-            this.panel8.Location = new System.Drawing.Point(7, 46);
+            this.panel8.Location = new System.Drawing.Point(7, 55);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(346, 1);
             this.panel8.TabIndex = 5;
@@ -280,7 +280,7 @@
             this.txtCodBarras.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodBarras.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodBarras.ForeColor = System.Drawing.Color.White;
-            this.txtCodBarras.Location = new System.Drawing.Point(7, 29);
+            this.txtCodBarras.Location = new System.Drawing.Point(7, 35);
             this.txtCodBarras.Name = "txtCodBarras";
             this.txtCodBarras.Size = new System.Drawing.Size(346, 19);
             this.txtCodBarras.TabIndex = 3;
@@ -306,7 +306,7 @@
             this.txtQuantidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtQuantidade.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuantidade.ForeColor = System.Drawing.Color.White;
-            this.txtQuantidade.Location = new System.Drawing.Point(7, 20);
+            this.txtQuantidade.Location = new System.Drawing.Point(7, 33);
             this.txtQuantidade.Maximum = new decimal(new int[] {
             2147483647,
             0,
@@ -321,7 +321,7 @@
             this.lblQuantidade.AutoSize = true;
             this.lblQuantidade.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantidade.ForeColor = System.Drawing.Color.White;
-            this.lblQuantidade.Location = new System.Drawing.Point(3, 3);
+            this.lblQuantidade.Location = new System.Drawing.Point(4, 3);
             this.lblQuantidade.Name = "lblQuantidade";
             this.lblQuantidade.Size = new System.Drawing.Size(98, 20);
             this.lblQuantidade.TabIndex = 4;
@@ -332,7 +332,7 @@
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BackColor = System.Drawing.Color.Black;
-            this.panel6.Location = new System.Drawing.Point(7, 39);
+            this.panel6.Location = new System.Drawing.Point(7, 55);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(387, 1);
             this.panel6.TabIndex = 5;
@@ -355,7 +355,7 @@
             this.lblPreco.AutoSize = true;
             this.lblPreco.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPreco.ForeColor = System.Drawing.Color.White;
-            this.lblPreco.Location = new System.Drawing.Point(3, 3);
+            this.lblPreco.Location = new System.Drawing.Point(4, 3);
             this.lblPreco.Name = "lblPreco";
             this.lblPreco.Size = new System.Drawing.Size(53, 20);
             this.lblPreco.TabIndex = 4;
@@ -366,7 +366,7 @@
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(7, 39);
+            this.panel4.Location = new System.Drawing.Point(7, 55);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(327, 1);
             this.panel4.TabIndex = 5;
@@ -381,7 +381,7 @@
             this.txtPreco.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPreco.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPreco.ForeColor = System.Drawing.Color.White;
-            this.txtPreco.Location = new System.Drawing.Point(7, 23);
+            this.txtPreco.Location = new System.Drawing.Point(7, 35);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.ShortcutsEnabled = false;
             this.txtPreco.Size = new System.Drawing.Size(327, 19);
@@ -405,7 +405,7 @@
             this.lblNomeProduto.AutoSize = true;
             this.lblNomeProduto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeProduto.ForeColor = System.Drawing.Color.White;
-            this.lblNomeProduto.Location = new System.Drawing.Point(3, 3);
+            this.lblNomeProduto.Location = new System.Drawing.Point(4, 3);
             this.lblNomeProduto.Name = "lblNomeProduto";
             this.lblNomeProduto.Size = new System.Drawing.Size(139, 20);
             this.lblNomeProduto.TabIndex = 4;
@@ -416,7 +416,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(7, 39);
+            this.panel1.Location = new System.Drawing.Point(7, 55);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(346, 1);
             this.panel1.TabIndex = 5;
@@ -431,7 +431,7 @@
             this.txtNomeProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNomeProduto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeProduto.ForeColor = System.Drawing.Color.White;
-            this.txtNomeProduto.Location = new System.Drawing.Point(7, 23);
+            this.txtNomeProduto.Location = new System.Drawing.Point(7, 35);
             this.txtNomeProduto.Name = "txtNomeProduto";
             this.txtNomeProduto.Size = new System.Drawing.Size(346, 19);
             this.txtNomeProduto.TabIndex = 3;
@@ -455,12 +455,13 @@
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.Location = new System.Drawing.Point(7, 3);
+            this.btnCadastrar.Location = new System.Drawing.Point(8, 3);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(327, 36);
+            this.btnCadastrar.Size = new System.Drawing.Size(326, 36);
             this.btnCadastrar.TabIndex = 8;
             this.btnCadastrar.Text = "Atualizar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // descricaoPanel
             // 
@@ -517,7 +518,7 @@
             this.lblCodProduto.AutoSize = true;
             this.lblCodProduto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodProduto.ForeColor = System.Drawing.Color.White;
-            this.lblCodProduto.Location = new System.Drawing.Point(3, 10);
+            this.lblCodProduto.Location = new System.Drawing.Point(4, 3);
             this.lblCodProduto.Name = "lblCodProduto";
             this.lblCodProduto.Size = new System.Drawing.Size(150, 20);
             this.lblCodProduto.TabIndex = 4;
@@ -528,7 +529,7 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(7, 46);
+            this.panel3.Location = new System.Drawing.Point(7, 55);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(387, 1);
             this.panel3.TabIndex = 5;
@@ -543,7 +544,7 @@
             this.txtCodProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodProduto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodProduto.ForeColor = System.Drawing.Color.White;
-            this.txtCodProduto.Location = new System.Drawing.Point(7, 29);
+            this.txtCodProduto.Location = new System.Drawing.Point(7, 35);
             this.txtCodProduto.Name = "txtCodProduto";
             this.txtCodProduto.Size = new System.Drawing.Size(387, 19);
             this.txtCodProduto.TabIndex = 3;
@@ -568,7 +569,7 @@
             this.lblLocalArmazenado.AutoSize = true;
             this.lblLocalArmazenado.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocalArmazenado.ForeColor = System.Drawing.Color.White;
-            this.lblLocalArmazenado.Location = new System.Drawing.Point(4, 7);
+            this.lblLocalArmazenado.Location = new System.Drawing.Point(4, 3);
             this.lblLocalArmazenado.Name = "lblLocalArmazenado";
             this.lblLocalArmazenado.Size = new System.Drawing.Size(198, 20);
             this.lblLocalArmazenado.TabIndex = 4;
@@ -579,7 +580,7 @@
             this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.BackColor = System.Drawing.Color.Black;
-            this.panel10.Location = new System.Drawing.Point(7, 46);
+            this.panel10.Location = new System.Drawing.Point(7, 55);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(327, 1);
             this.panel10.TabIndex = 5;
@@ -594,7 +595,7 @@
             this.txtLocalArmazenado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtLocalArmazenado.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLocalArmazenado.ForeColor = System.Drawing.Color.White;
-            this.txtLocalArmazenado.Location = new System.Drawing.Point(7, 30);
+            this.txtLocalArmazenado.Location = new System.Drawing.Point(7, 35);
             this.txtLocalArmazenado.Name = "txtLocalArmazenado";
             this.txtLocalArmazenado.Size = new System.Drawing.Size(327, 19);
             this.txtLocalArmazenado.TabIndex = 3;
