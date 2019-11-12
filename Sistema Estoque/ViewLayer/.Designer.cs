@@ -43,9 +43,11 @@
             this.btnMaximizar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.footerPanel = new System.Windows.Forms.Panel();
+            this.ucEntrada1 = new Sistema_Estoque.ViewLayer.UCEntrada();
             this.ucConsultar1 = new Sistema_Estoque.ViewLayer.UCConsultar();
             this.ucCadastrar1 = new Sistema_Estoque.ViewLayer.UCCadastrar();
             this.ucHome1 = new Sistema_Estoque.ViewLayer.UCHome();
+            this.ucVenda1 = new Sistema_Estoque.ViewLayer.UCVenda();
             this.dashboard.SuspendLayout();
             this.panel1.SuspendLayout();
             this.topPanel.SuspendLayout();
@@ -266,6 +268,16 @@
             this.footerPanel.Size = new System.Drawing.Size(944, 13);
             this.footerPanel.TabIndex = 2;
             // 
+            // ucEntrada1
+            // 
+            this.ucEntrada1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
+            this.ucEntrada1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucEntrada1.Location = new System.Drawing.Point(232, 28);
+            this.ucEntrada1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ucEntrada1.Name = "ucEntrada1";
+            this.ucEntrada1.Size = new System.Drawing.Size(944, 623);
+            this.ucEntrada1.TabIndex = 6;
+            // 
             // ucConsultar1
             // 
             this.ucConsultar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
@@ -296,12 +308,24 @@
             this.ucHome1.Size = new System.Drawing.Size(944, 623);
             this.ucHome1.TabIndex = 3;
             // 
+            // ucVenda1
+            // 
+            this.ucVenda1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
+            this.ucVenda1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucVenda1.Location = new System.Drawing.Point(232, 28);
+            this.ucVenda1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ucVenda1.Name = "ucVenda1";
+            this.ucVenda1.Size = new System.Drawing.Size(944, 623);
+            this.ucVenda1.TabIndex = 7;
+            // 
             // FrmInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
             this.ClientSize = new System.Drawing.Size(1176, 664);
+            this.Controls.Add(this.ucVenda1);
+            this.Controls.Add(this.ucEntrada1);
             this.Controls.Add(this.ucConsultar1);
             this.Controls.Add(this.ucCadastrar1);
             this.Controls.Add(this.ucHome1);
@@ -345,6 +369,8 @@
         private ViewLayer.UCHome ucHome1;
         private ViewLayer.UCCadastrar ucCadastrar1;
         private ViewLayer.UCConsultar ucConsultar1;
+        private ViewLayer.UCEntrada ucEntrada1;
+        private ViewLayer.UCVenda ucVenda1;
     }
 }
 

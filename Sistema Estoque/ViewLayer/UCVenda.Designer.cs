@@ -1,6 +1,6 @@
 ﻿namespace Sistema_Estoque.ViewLayer
 {
-    partial class UCHome
+    partial class UCVenda
     {
         /// <summary> 
         /// Required designer variable.
@@ -39,17 +39,17 @@
             this.lblTitulo.Location = new System.Drawing.Point(0, 0);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(745, 55);
-            this.lblTitulo.TabIndex = 3;
-            this.lblTitulo.Text = "Tela Inicial";
+            this.lblTitulo.TabIndex = 4;
+            this.lblTitulo.Text = "Venda de Produtos";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // UCHome
+            // UCVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
             this.Controls.Add(this.lblTitulo);
-            this.Name = "UCHome";
+            this.Name = "UCVenda";
             this.Size = new System.Drawing.Size(745, 513);
             this.ResumeLayout(false);
 

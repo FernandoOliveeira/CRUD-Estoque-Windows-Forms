@@ -13,17 +13,18 @@ namespace Sistema_Estoque.DataLayer
     {
         public bool CadastrarProdutos(Produto produto)
         {
-            string querystr = "INSERT INTO PRODUTOS VALUES(@nomeProduto, @preco, @quantidade, @codBarras, @codProduto, @dataValidade, @localArmazenado, @descricao)";
+            string querystr = "INSERT INTO PRODUTOS VALUES(@nomeProduto, @preco, @quantidade, @codBarras, @codProduto, @dataValidade, @localArmazenado, @descricao, @dataCadastro)";
 
             SqlCommand command = new SqlCommand(querystr, AbrirBanco());
             command.Parameters.AddWithValue("@nomeProduto", produto.NomeProduto);
             command.Parameters.AddWithValue("@preco", produto.Preco);
             command.Parameters.AddWithValue("@quantidade", produto.Quantidade);
             command.Parameters.AddWithValue("@codBarras", produto.CodBarras);
-            command.Parameters.AddWithValue("@codProduto", produto.CodBarras);
+            command.Parameters.AddWithValue("@codProduto", produto.CodProduto);
             command.Parameters.AddWithValue("@dataValidade", produto.DataValidade);
             command.Parameters.AddWithValue("@localArmazenado", produto.LocalArmazenamento);
             command.Parameters.AddWithValue("@descricao", produto.Descricao);
+            command.Parameters.AddWithValue("@dataCadastro", DateTime.Now);
 
             int res = command.ExecuteNonQuery();
 
@@ -40,7 +41,7 @@ namespace Sistema_Estoque.DataLayer
         {
             DataTable consultaProduto = new DataTable();
 
-            string queryStr = "SELECT ID_PRODUTOS, NOME, PRECO, QUANTIDADE, DATA_VALIDADE, COD_BARRAS, COD_PRODUTO, LOCAL_ARMAZENADO,  DESCRICAO, DATA_CADASTRO FROM PRODUTOS ORDER BY ID_PRODUTOS";
+            string queryStr = "SELECT ID_PRODUTOS, NOME, PRECO, QUANTIDADE, DATA_VALIDADE, COD_BARRAS, COD_PRODUTO, LOCAL_ARMAZENADO,  DESCRICAO, DATA_CADASTRO FROM PRODUTOS ORDER BY NOME";
             SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
             SqlDataReader reader = command.ExecuteReader();
             consultaProduto.Load(reader);
@@ -114,12 +115,12 @@ namespace Sistema_Estoque.DataLayer
 
         }
 
-        public bool ExcluirProdutos(Produto produto)
+        public bool ExcluirProdutos(int idProduto)
         {
             string queryStr = "DELETE FROM PRODUTOS WHERE ID_PRODUTOS = @idProduto";
 
             SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
-            command.Parameters.AddWithValue("@idProduto", produto.IdProduto);
+            command.Parameters.AddWithValue("@idProduto", idProduto);
 
             int res = command.ExecuteNonQuery();
 

@@ -162,6 +162,12 @@ namespace Sistema_Estoque
 
                 btnConsultar.Font = new Font(btnConsultar.Font, FontStyle.Regular);
                 btnConsultar.ForeColor = Color.FromArgb(255, 255, 255);
+
+                btnEntrada.Font = new Font(btnEntrada.Font, FontStyle.Regular);
+                btnEntrada.ForeColor = Color.FromArgb(255, 255, 255);
+
+                btnVenda.Font = new Font(btnVenda.Font, FontStyle.Regular);
+                btnVenda.ForeColor = Color.FromArgb(255, 255, 255);
             }
 
         }
@@ -188,6 +194,12 @@ namespace Sistema_Estoque
 
                 btnConsultar.Font = new Font(btnConsultar.Font, FontStyle.Regular);
                 btnConsultar.ForeColor = Color.FromArgb(255, 255, 255);
+
+                btnEntrada.Font = new Font(btnEntrada.Font, FontStyle.Regular);
+                btnEntrada.ForeColor = Color.FromArgb(255, 255, 255);
+
+                btnVenda.Font = new Font(btnVenda.Font, FontStyle.Regular);
+                btnVenda.ForeColor = Color.FromArgb(255, 255, 255);
             }
                 
 
@@ -204,7 +216,7 @@ namespace Sistema_Estoque
 
             if (UserControlFront(ucConsultar1))
             {
-                btnConsultar.Font = new Font(btnCadastrarProdutos.Font, FontStyle.Bold);
+                btnConsultar.Font = new Font(btnConsultar.Font, FontStyle.Bold);
                 btnConsultar.ForeColor = Color.FromArgb(25, 181, 254);
 
 
@@ -214,14 +226,13 @@ namespace Sistema_Estoque
 
                 btnCadastrarProdutos.Font = new Font(btnCadastrarProdutos.Font, FontStyle.Regular);
                 btnCadastrarProdutos.ForeColor = Color.FromArgb(255, 255, 255);
+
+                btnEntrada.Font = new Font(btnEntrada.Font, FontStyle.Regular);
+                btnEntrada.ForeColor = Color.FromArgb(255, 255, 255);
+
+                btnVenda.Font = new Font(btnVenda.Font, FontStyle.Regular);
+                btnVenda.ForeColor = Color.FromArgb(255, 255, 255);
             }
-        }
-
-
-
-        private void btnVenda_Click(object sender, EventArgs e)
-        {
-
         }
 
 
@@ -229,9 +240,60 @@ namespace Sistema_Estoque
 
         private void btnEntrada_Click(object sender, EventArgs e)
         {
+            painelLateral.Height = btnEntrada.Height;
+            painelLateral.Top = btnEntrada.Top;
+            ucEntrada1.BringToFront();
 
+            if (UserControlFront(ucEntrada1))
+            {
+                btnEntrada.Font = new Font(btnEntrada.Font, FontStyle.Bold);
+                btnEntrada.ForeColor = Color.FromArgb(25, 181, 254);
+
+
+
+                btnHome.Font = new Font(btnHome.Font, FontStyle.Regular);
+                btnHome.ForeColor = Color.FromArgb(255, 255, 255);
+
+                btnCadastrarProdutos.Font = new Font(btnCadastrarProdutos.Font, FontStyle.Regular);
+                btnCadastrarProdutos.ForeColor = Color.FromArgb(255, 255, 255);
+
+                btnConsultar.Font = new Font(btnConsultar.Font, FontStyle.Regular);
+                btnConsultar.ForeColor = Color.FromArgb(255, 255, 255);
+
+                btnVenda.Font = new Font(btnVenda.Font, FontStyle.Regular);
+                btnVenda.ForeColor = Color.FromArgb(255, 255, 255);
+            }
         }
 
+
+
+
+        private void btnVenda_Click(object sender, EventArgs e)
+        {
+            painelLateral.Height = btnVenda.Height;
+            painelLateral.Top = btnVenda.Top;
+            ucVenda1.BringToFront();
+
+            if (UserControlFront(ucVenda1))
+            {
+                btnVenda.Font = new Font(btnEntrada.Font, FontStyle.Bold);
+                btnVenda.ForeColor = Color.FromArgb(25, 181, 254);
+
+
+
+                btnHome.Font = new Font(btnHome.Font, FontStyle.Regular);
+                btnHome.ForeColor = Color.FromArgb(255, 255, 255);
+
+                btnCadastrarProdutos.Font = new Font(btnCadastrarProdutos.Font, FontStyle.Regular);
+                btnCadastrarProdutos.ForeColor = Color.FromArgb(255, 255, 255);
+
+                btnConsultar.Font = new Font(btnConsultar.Font, FontStyle.Regular);
+                btnConsultar.ForeColor = Color.FromArgb(255, 255, 255);
+
+                btnEntrada.Font = new Font(btnEntrada.Font, FontStyle.Regular);
+                btnEntrada.ForeColor = Color.FromArgb(255, 255, 255);
+            }
+        }
 
 
 

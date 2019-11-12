@@ -29,12 +29,8 @@ namespace Sistema_Estoque.ViewLayer
             InitializeComponent();
         }
 
-
-
-
         private void UCConsultar_Load(object sender, EventArgs e)
         {
-
             BlProduto objBlProduto = new BlProduto();
             dgvConsulta.DataSource = objBlProduto.ConsultarProdutos();
 
@@ -46,6 +42,9 @@ namespace Sistema_Estoque.ViewLayer
         {
             txtConsultarNome.Focus();
             txtConsultarNome.Text = "";
+
+            BlProduto objBlProduto = new BlProduto();
+            dgvConsulta.DataSource = objBlProduto.ConsultarProdutos();
 
             if (rdbConsultarNome.Checked)
             {
@@ -86,6 +85,9 @@ namespace Sistema_Estoque.ViewLayer
             txtConsultarCodigo.Focus();
             txtConsultarCodigo.Text = "";
 
+            BlProduto objBlProduto = new BlProduto();
+            dgvConsulta.DataSource = objBlProduto.ConsultarProdutos();
+
             if (rdbConsultarCodigo.Checked)
             {
                 txtConsultarCodigo.Enabled = true;
@@ -125,6 +127,9 @@ namespace Sistema_Estoque.ViewLayer
             txtCodBarras.Focus();
             txtCodBarras.Text = "";
 
+            BlProduto objBlProduto = new BlProduto();
+            dgvConsulta.DataSource = objBlProduto.ConsultarProdutos();
+
             if (rdbConsultarCodBarras.Checked)
             {
                 txtCodBarras.Enabled = true;
@@ -144,8 +149,6 @@ namespace Sistema_Estoque.ViewLayer
 
             }
         }
-
-
 
         private void txtCodBarras_TextChanged(object sender, EventArgs e)
         {
@@ -200,9 +203,6 @@ namespace Sistema_Estoque.ViewLayer
                     frmAtualizar.TxtDescricao = dgvConsulta.SelectedRows[0].Cells[8].Value.ToString();
 
 
-                    //MessageBox.Show("id: " + frmAtualizar.TxtIdProduto + ", Nome: " + frmAtualizar.TxtNomeProduto + ", Preço: " + frmAtualizar.TxtPreco + ", Quantidade: " + frmAtualizar.TxtQuantidade + ", CodBarras: " + frmAtualizar.TxtCodBarras + ", CodProduto: " + frmAtualizar.TxtCodProduto + ", DataValidade: " + frmAtualizar.DtValidade + ", LocalArmazenado: " + frmAtualizar.TxtLocalArmazenado + ", Descrição: " + frmAtualizar.TxtDescricao);
-
-
                     frmAtualizar.Show();
 
                 }
@@ -212,8 +212,18 @@ namespace Sistema_Estoque.ViewLayer
             {
                 string idProduto = dgvConsulta.SelectedRows[0].Cells[1].Value.ToString();
 
-                if (MessageBox.Show("Deseja realmente excluir este item ?\n\n" + idProduto.ToUpper() + "\n\n(Os dados serão excluídos permanentemente)", "Atualizar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                if (MessageBox.Show("Deseja realmente excluir este item ?\n\n" + idProduto.ToUpper() + "\n\n(Os dados serão excluídos permanentemente)", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
+                    int idProdutos = int.Parse(dgvConsulta.SelectedRows[0].Cells[0].Value.ToString());
+
+                    BlProduto objBlProduto = new BlProduto();
+
+                    objBlProduto.ExcluirProdutos(idProdutos);
+
+                    MessageBox.Show("Item excluído com sucesso", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
+
+                    dgvConsulta.DataSource = objBlProduto.ConsultarProdutos();
+
 
                 }
             }

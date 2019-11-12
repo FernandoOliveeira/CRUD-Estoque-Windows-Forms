@@ -83,11 +83,23 @@
     <Compile Include="ViewLayer\UCConsultar.Designer.cs">
       <DependentUpon>UCConsultar.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewLayer\UCEntrada.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewLayer\UCEntrada.Designer.cs">
+      <DependentUpon>UCEntrada.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewLayer\UCHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ViewLayer\UCHome.Designer.cs">
       <DependentUpon>UCHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewLayer\UCVenda.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewLayer\UCVenda.Designer.cs">
+      <DependentUpon>UCVenda.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ViewLayer\FrmAtualizar.resx">
       <DependentUpon>FrmAtualizar.cs</DependentUpon>
@@ -110,8 +122,14 @@
     <EmbeddedResource Include="ViewLayer\UCConsultar.resx">
       <DependentUpon>UCConsultar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewLayer\UCEntrada.resx">
+      <DependentUpon>UCEntrada.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewLayer\UCHome.resx">
       <DependentUpon>UCHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewLayer\UCVenda.resx">
+      <DependentUpon>UCVenda.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ESTOQUEDataSet.xsc">
       <DependentUpon>ESTOQUEDataSet.xsd</DependentUpon>
