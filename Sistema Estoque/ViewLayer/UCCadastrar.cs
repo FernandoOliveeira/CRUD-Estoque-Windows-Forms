@@ -25,6 +25,7 @@ namespace Sistema_Estoque.ViewLayer
 
         private void UCCadastrar_Load(object sender, EventArgs e)
         {
+            /*
             txtNomeProduto.Text = "Nome do produto";
             txtPreco.Text = "Preço";
             txtCodBarras.Text = "Código de barras";
@@ -39,6 +40,7 @@ namespace Sistema_Estoque.ViewLayer
             txtLocalArmazenado.ForeColor = Color.Gray;
             txtDescricao.ForeColor = Color.Gray;
             txtCodProduto.ForeColor = Color.Gray;
+            */
         }
 
 
@@ -75,19 +77,33 @@ namespace Sistema_Estoque.ViewLayer
                 };
 
 
-                objBlProduto.AbrirBanco();
-                objBlProduto.CadastrarProdutos(objProduto);
-                objBlProduto.FecharBanco(objBlProduto.AbrirBanco());
+                
+
+                if (objBlProduto.VerificarDadosProduto(objProduto))
+                {
+                    objBlProduto.AbrirBanco();
+                    objBlProduto.CadastrarProdutos(objProduto);
+                    objBlProduto.FecharBanco(objBlProduto.AbrirBanco());
+                    MessageBox.Show("Produto cadastrado com sucesso !", "Produto Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    LimparCampos();
+
+                }
+                else
+                {
+                    
+                    MessageBox.Show("Um ou mais campos estão vazios\nPreencha todos os campos antes de continuar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                
 
 
-                MessageBox.Show("Produto cadastrado com sucesso !", "Produto Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                LimparCampos();
+                
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                MessageBox.Show("Um ou mais campos estão vazios\nPreencha todos os campos antes de continuar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Um ou mais campos estão vazios\nPreencha todos os campos antes de continuar" + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -112,7 +128,7 @@ namespace Sistema_Estoque.ViewLayer
         }
 
 
-
+        /*
         #region PlaceHolder's
 
 
@@ -258,7 +274,7 @@ namespace Sistema_Estoque.ViewLayer
 
         #endregion
 
-
+        */
         
     }
 }

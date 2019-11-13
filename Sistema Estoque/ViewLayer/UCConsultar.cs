@@ -31,8 +31,8 @@ namespace Sistema_Estoque.ViewLayer
 
         private void UCConsultar_Load(object sender, EventArgs e)
         {
-            BlProduto objBlProduto = new BlProduto();
-            dgvConsulta.DataSource = objBlProduto.ConsultarProdutos();
+            //BlProduto objBlProduto = new BlProduto();
+            //dgvConsulta.DataSource = objBlProduto.ConsultarProdutos();
 
         }
 
@@ -220,7 +220,7 @@ namespace Sistema_Estoque.ViewLayer
 
                     objBlProduto.ExcluirProdutos(idProdutos);
 
-                    MessageBox.Show("Item excluído com sucesso", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
+                    MessageBox.Show("Item excluído com sucesso", "Excluir", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
 
                     dgvConsulta.DataSource = objBlProduto.ConsultarProdutos();
 

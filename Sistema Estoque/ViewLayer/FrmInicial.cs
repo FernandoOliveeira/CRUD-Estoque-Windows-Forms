@@ -142,6 +142,7 @@ namespace Sistema_Estoque
 
 
 
+
         private void btnHome_Click(object sender, EventArgs e)
         {
             
@@ -171,7 +172,6 @@ namespace Sistema_Estoque
             }
 
         }
-
 
 
         private void btnCadastrarProdutos_Click(object sender, EventArgs e)
@@ -206,8 +206,6 @@ namespace Sistema_Estoque
         }
 
 
-
-
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             painelLateral.Height = btnConsultar.Height;
@@ -236,8 +234,6 @@ namespace Sistema_Estoque
         }
 
 
-
-
         private void btnEntrada_Click(object sender, EventArgs e)
         {
             painelLateral.Height = btnEntrada.Height;
@@ -264,8 +260,6 @@ namespace Sistema_Estoque
                 btnVenda.ForeColor = Color.FromArgb(255, 255, 255);
             }
         }
-
-
 
 
         private void btnVenda_Click(object sender, EventArgs e)
@@ -298,6 +292,7 @@ namespace Sistema_Estoque
 
 
         #endregion
+
 
     }
 }

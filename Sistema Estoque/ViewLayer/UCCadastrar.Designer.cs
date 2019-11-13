@@ -91,8 +91,8 @@
             // 
             this.tblCadastrar.ColumnCount = 3;
             this.tblCadastrar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.44782F));
-            this.tblCadastrar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.75168F));
-            this.tblCadastrar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.89933F));
+            this.tblCadastrar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.63087F));
+            this.tblCadastrar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.02013F));
             this.tblCadastrar.Controls.Add(this.dataValidadePanel, 1, 1);
             this.tblCadastrar.Controls.Add(this.codBarrasPanel, 0, 1);
             this.tblCadastrar.Controls.Add(this.quantidadePanel, 2, 0);
@@ -124,7 +124,7 @@
             this.dataValidadePanel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataValidadePanel.Location = new System.Drawing.Point(244, 70);
             this.dataValidadePanel.Name = "dataValidadePanel";
-            this.dataValidadePanel.Size = new System.Drawing.Size(237, 69);
+            this.dataValidadePanel.Size = new System.Drawing.Size(251, 69);
             this.dataValidadePanel.TabIndex = 4;
             // 
             // dtValidade
@@ -134,7 +134,7 @@
             this.dtValidade.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtValidade.Location = new System.Drawing.Point(7, 30);
             this.dtValidade.Name = "dtValidade";
-            this.dtValidade.Size = new System.Drawing.Size(194, 22);
+            this.dtValidade.Size = new System.Drawing.Size(208, 22);
             this.dtValidade.TabIndex = 6;
             // 
             // lblDataValidade
@@ -198,8 +198,6 @@
             this.txtCodBarras.Name = "txtCodBarras";
             this.txtCodBarras.Size = new System.Drawing.Size(214, 19);
             this.txtCodBarras.TabIndex = 3;
-            this.txtCodBarras.Enter += new System.EventHandler(this.txtCodBarras_Enter);
-            this.txtCodBarras.Leave += new System.EventHandler(this.txtCodBarras_Leave);
             // 
             // quantidadePanel
             // 
@@ -209,9 +207,9 @@
             this.quantidadePanel.Controls.Add(this.txtQuantidade);
             this.quantidadePanel.Controls.Add(this.lblQuantidade);
             this.quantidadePanel.Controls.Add(this.panel6);
-            this.quantidadePanel.Location = new System.Drawing.Point(487, 3);
+            this.quantidadePanel.Location = new System.Drawing.Point(501, 3);
             this.quantidadePanel.Name = "quantidadePanel";
-            this.quantidadePanel.Size = new System.Drawing.Size(255, 61);
+            this.quantidadePanel.Size = new System.Drawing.Size(241, 61);
             this.quantidadePanel.TabIndex = 2;
             // 
             // txtQuantidade
@@ -229,10 +227,8 @@
             0,
             0});
             this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(245, 22);
+            this.txtQuantidade.Size = new System.Drawing.Size(231, 22);
             this.txtQuantidade.TabIndex = 3;
-            this.txtQuantidade.Enter += new System.EventHandler(this.txtQuantidade_Enter);
-            this.txtQuantidade.Leave += new System.EventHandler(this.txtQuantidade_Leave);
             // 
             // lblQuantidade
             // 
@@ -252,7 +248,7 @@
             this.panel6.BackColor = System.Drawing.Color.Black;
             this.panel6.Location = new System.Drawing.Point(7, 39);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(245, 1);
+            this.panel6.Size = new System.Drawing.Size(231, 1);
             this.panel6.TabIndex = 5;
             // 
             // precoPanel
@@ -265,7 +261,7 @@
             this.precoPanel.Controls.Add(this.txtPreco);
             this.precoPanel.Location = new System.Drawing.Point(244, 3);
             this.precoPanel.Name = "precoPanel";
-            this.precoPanel.Size = new System.Drawing.Size(237, 61);
+            this.precoPanel.Size = new System.Drawing.Size(251, 61);
             this.precoPanel.TabIndex = 1;
             // 
             // lblPreco
@@ -286,7 +282,7 @@
             this.panel4.BackColor = System.Drawing.Color.Black;
             this.panel4.Location = new System.Drawing.Point(7, 39);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(194, 1);
+            this.panel4.Size = new System.Drawing.Size(208, 1);
             this.panel4.TabIndex = 5;
             // 
             // txtPreco
@@ -302,11 +298,9 @@
             this.txtPreco.Location = new System.Drawing.Point(7, 23);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.ShortcutsEnabled = false;
-            this.txtPreco.Size = new System.Drawing.Size(194, 19);
+            this.txtPreco.Size = new System.Drawing.Size(208, 19);
             this.txtPreco.TabIndex = 3;
-            this.txtPreco.Enter += new System.EventHandler(this.txtPreco_Enter);
             this.txtPreco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPreco_KeyPress);
-            this.txtPreco.Leave += new System.EventHandler(this.txtPreco_Leave);
             // 
             // nomeProdutoPanel
             // 
@@ -356,8 +350,6 @@
             this.txtNomeProduto.Name = "txtNomeProduto";
             this.txtNomeProduto.Size = new System.Drawing.Size(214, 19);
             this.txtNomeProduto.TabIndex = 3;
-            this.txtNomeProduto.Enter += new System.EventHandler(this.txtNomeProduto_Enter);
-            this.txtNomeProduto.Leave += new System.EventHandler(this.txtNomeProduto_Leave);
             // 
             // panel12
             // 
@@ -366,7 +358,7 @@
             this.panel12.Controls.Add(this.btnCadastrar);
             this.panel12.Location = new System.Drawing.Point(244, 414);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(237, 41);
+            this.panel12.Size = new System.Drawing.Size(251, 41);
             this.panel12.TabIndex = 8;
             // 
             // btnCadastrar
@@ -380,7 +372,7 @@
             this.btnCadastrar.ForeColor = System.Drawing.Color.White;
             this.btnCadastrar.Location = new System.Drawing.Point(7, 3);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(194, 36);
+            this.btnCadastrar.Size = new System.Drawing.Size(208, 36);
             this.btnCadastrar.TabIndex = 8;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
@@ -411,8 +403,6 @@
             this.txtDescricao.Size = new System.Drawing.Size(730, 162);
             this.txtDescricao.TabIndex = 5;
             this.txtDescricao.Text = "";
-            this.txtDescricao.Enter += new System.EventHandler(this.txtDescricao_Enter);
-            this.txtDescricao.Leave += new System.EventHandler(this.txtDescricao_Leave);
             // 
             // lblDescricao
             // 
@@ -433,9 +423,9 @@
             this.panel2.Controls.Add(this.lblCodProduto);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.txtCodProduto);
-            this.panel2.Location = new System.Drawing.Point(487, 70);
+            this.panel2.Location = new System.Drawing.Point(501, 70);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(255, 69);
+            this.panel2.Size = new System.Drawing.Size(241, 69);
             this.panel2.TabIndex = 6;
             // 
             // lblCodProduto
@@ -456,7 +446,7 @@
             this.panel3.BackColor = System.Drawing.Color.Black;
             this.panel3.Location = new System.Drawing.Point(7, 46);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(245, 1);
+            this.panel3.Size = new System.Drawing.Size(231, 1);
             this.panel3.TabIndex = 5;
             // 
             // txtCodProduto
@@ -471,10 +461,8 @@
             this.txtCodProduto.ForeColor = System.Drawing.Color.White;
             this.txtCodProduto.Location = new System.Drawing.Point(7, 29);
             this.txtCodProduto.Name = "txtCodProduto";
-            this.txtCodProduto.Size = new System.Drawing.Size(245, 19);
+            this.txtCodProduto.Size = new System.Drawing.Size(231, 19);
             this.txtCodProduto.TabIndex = 3;
-            this.txtCodProduto.Enter += new System.EventHandler(this.txtCodProduto_Enter);
-            this.txtCodProduto.Leave += new System.EventHandler(this.txtCodProduto_Leave);
             // 
             // localArmazenadoPanel
             // 
@@ -486,7 +474,7 @@
             this.localArmazenadoPanel.Controls.Add(this.txtLocalArmazenado);
             this.localArmazenadoPanel.Location = new System.Drawing.Point(244, 145);
             this.localArmazenadoPanel.Name = "localArmazenadoPanel";
-            this.localArmazenadoPanel.Size = new System.Drawing.Size(237, 69);
+            this.localArmazenadoPanel.Size = new System.Drawing.Size(251, 69);
             this.localArmazenadoPanel.TabIndex = 5;
             // 
             // lblLocalArmazenado
@@ -509,7 +497,7 @@
             this.panel10.BackColor = System.Drawing.Color.Black;
             this.panel10.Location = new System.Drawing.Point(7, 46);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(194, 1);
+            this.panel10.Size = new System.Drawing.Size(208, 1);
             this.panel10.TabIndex = 5;
             // 
             // txtLocalArmazenado
@@ -524,10 +512,8 @@
             this.txtLocalArmazenado.ForeColor = System.Drawing.Color.White;
             this.txtLocalArmazenado.Location = new System.Drawing.Point(7, 30);
             this.txtLocalArmazenado.Name = "txtLocalArmazenado";
-            this.txtLocalArmazenado.Size = new System.Drawing.Size(194, 19);
+            this.txtLocalArmazenado.Size = new System.Drawing.Size(208, 19);
             this.txtLocalArmazenado.TabIndex = 3;
-            this.txtLocalArmazenado.Enter += new System.EventHandler(this.txtLocalArmazenado_Enter);
-            this.txtLocalArmazenado.Leave += new System.EventHandler(this.txtLocalArmazenado_Leave);
             // 
             // UCCadastrar
             // 

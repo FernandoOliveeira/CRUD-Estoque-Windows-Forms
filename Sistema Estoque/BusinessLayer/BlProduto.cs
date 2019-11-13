@@ -12,25 +12,23 @@ namespace Sistema_Estoque.BusinessLayer
     {
         public bool VerificarDadosProduto(Produto objProduto)
         {
-            bool cadastrar = false;
 
-            if (String.IsNullOrEmpty(objProduto.NomeProduto) &&
-                objProduto.Preco != 0 &&
-                objProduto.Quantidade != 0 &&
-                String.IsNullOrEmpty(objProduto.CodBarras) &&
-                String.IsNullOrEmpty(objProduto.CodProduto) &&
-                String.IsNullOrEmpty(objProduto.DataValidade.ToString()) &&
-                String.IsNullOrEmpty(objProduto.LocalArmazenamento) &&
-                String.IsNullOrEmpty(objProduto.Descricao))
+            if (!String.IsNullOrEmpty(objProduto.NomeProduto) &&
+                !String.IsNullOrEmpty(objProduto.Preco.ToString())  &&
+                !String.IsNullOrEmpty(objProduto.Quantidade.ToString())  &&
+                !String.IsNullOrEmpty(objProduto.CodBarras) &&
+                !String.IsNullOrEmpty(objProduto.CodProduto) &&
+                !String.IsNullOrEmpty(objProduto.DataValidade.ToString()) &&
+                !String.IsNullOrEmpty(objProduto.LocalArmazenamento) &&
+                !String.IsNullOrEmpty(objProduto.Descricao))
             {
 
-                cadastrar = true;
 
-                return cadastrar;
+                return true;
 
             }
 
-            return cadastrar;
+            return false;
         }
     }
 }
