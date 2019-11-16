@@ -31,8 +31,8 @@ namespace Sistema_Estoque.ViewLayer
 
         private void UCConsultar_Load(object sender, EventArgs e)
         {
-            //BlProduto objBlProduto = new BlProduto();
-            //dgvConsulta.DataSource = objBlProduto.ConsultarProdutos();
+            BlProduto objBlProduto = new BlProduto();
+            dgvConsulta.DataSource = objBlProduto.ConsultarProdutos();
 
         }
 

@@ -114,6 +114,7 @@
             this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblCadastrar.Size = new System.Drawing.Size(745, 458);
             this.tblCadastrar.TabIndex = 2;
+            this.tblCadastrar.Paint += new System.Windows.Forms.PaintEventHandler(this.tblCadastrar_Paint);
             // 
             // dataValidadePanel
             // 
@@ -135,7 +136,7 @@
             this.dtValidade.Location = new System.Drawing.Point(7, 30);
             this.dtValidade.Name = "dtValidade";
             this.dtValidade.Size = new System.Drawing.Size(208, 22);
-            this.dtValidade.TabIndex = 6;
+            this.dtValidade.TabIndex = 0;
             // 
             // lblDataValidade
             // 
@@ -197,7 +198,7 @@
             this.txtCodBarras.Location = new System.Drawing.Point(7, 29);
             this.txtCodBarras.Name = "txtCodBarras";
             this.txtCodBarras.Size = new System.Drawing.Size(214, 19);
-            this.txtCodBarras.TabIndex = 3;
+            this.txtCodBarras.TabIndex = 0;
             // 
             // quantidadePanel
             // 
@@ -228,7 +229,7 @@
             0});
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(231, 22);
-            this.txtQuantidade.TabIndex = 3;
+            this.txtQuantidade.TabIndex = 0;
             // 
             // lblQuantidade
             // 
@@ -299,7 +300,7 @@
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.ShortcutsEnabled = false;
             this.txtPreco.Size = new System.Drawing.Size(208, 19);
-            this.txtPreco.TabIndex = 3;
+            this.txtPreco.TabIndex = 0;
             this.txtPreco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPreco_KeyPress);
             // 
             // nomeProdutoPanel
@@ -349,7 +350,7 @@
             this.txtNomeProduto.Location = new System.Drawing.Point(7, 23);
             this.txtNomeProduto.Name = "txtNomeProduto";
             this.txtNomeProduto.Size = new System.Drawing.Size(214, 19);
-            this.txtNomeProduto.TabIndex = 3;
+            this.txtNomeProduto.TabIndex = 0;
             // 
             // panel12
             // 
@@ -373,7 +374,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(7, 3);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(208, 36);
-            this.btnCadastrar.TabIndex = 8;
+            this.btnCadastrar.TabIndex = 0;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
@@ -401,7 +402,7 @@
             this.txtDescricao.Location = new System.Drawing.Point(6, 23);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(730, 162);
-            this.txtDescricao.TabIndex = 5;
+            this.txtDescricao.TabIndex = 0;
             this.txtDescricao.Text = "";
             // 
             // lblDescricao
@@ -426,7 +427,7 @@
             this.panel2.Location = new System.Drawing.Point(501, 70);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(241, 69);
-            this.panel2.TabIndex = 6;
+            this.panel2.TabIndex = 5;
             // 
             // lblCodProduto
             // 
@@ -462,7 +463,7 @@
             this.txtCodProduto.Location = new System.Drawing.Point(7, 29);
             this.txtCodProduto.Name = "txtCodProduto";
             this.txtCodProduto.Size = new System.Drawing.Size(231, 19);
-            this.txtCodProduto.TabIndex = 3;
+            this.txtCodProduto.TabIndex = 0;
             // 
             // localArmazenadoPanel
             // 
@@ -475,7 +476,7 @@
             this.localArmazenadoPanel.Location = new System.Drawing.Point(244, 145);
             this.localArmazenadoPanel.Name = "localArmazenadoPanel";
             this.localArmazenadoPanel.Size = new System.Drawing.Size(251, 69);
-            this.localArmazenadoPanel.TabIndex = 5;
+            this.localArmazenadoPanel.TabIndex = 6;
             // 
             // lblLocalArmazenado
             // 
@@ -513,7 +514,7 @@
             this.txtLocalArmazenado.Location = new System.Drawing.Point(7, 30);
             this.txtLocalArmazenado.Name = "txtLocalArmazenado";
             this.txtLocalArmazenado.Size = new System.Drawing.Size(208, 19);
-            this.txtLocalArmazenado.TabIndex = 3;
+            this.txtLocalArmazenado.TabIndex = 0;
             // 
             // UCCadastrar
             // 

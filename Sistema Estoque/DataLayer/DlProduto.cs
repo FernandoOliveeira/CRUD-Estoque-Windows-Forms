@@ -6,42 +6,19 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Sistema_Estoque.DataLayer
 {
     class DlProduto : Connection
     {
-        public bool CadastrarProdutos(Produto produto)
-        {
-            string querystr = "INSERT INTO PRODUTOS VALUES(@nomeProduto, @preco, @quantidade, @codBarras, @codProduto, @dataValidade, @localArmazenado, @descricao, @dataCadastro)";
-
-            SqlCommand command = new SqlCommand(querystr, AbrirBanco());
-            command.Parameters.AddWithValue("@nomeProduto", produto.NomeProduto);
-            command.Parameters.AddWithValue("@preco", produto.Preco);
-            command.Parameters.AddWithValue("@quantidade", produto.Quantidade);
-            command.Parameters.AddWithValue("@codBarras", produto.CodBarras);
-            command.Parameters.AddWithValue("@codProduto", produto.CodProduto);
-            command.Parameters.AddWithValue("@dataValidade", produto.DataValidade);
-            command.Parameters.AddWithValue("@localArmazenado", produto.LocalArmazenamento);
-            command.Parameters.AddWithValue("@descricao", produto.Descricao);
-            command.Parameters.AddWithValue("@dataCadastro", DateTime.Now);
-
-            int res = command.ExecuteNonQuery();
-
-            if (res != 0)
-            {
-                return true;
-            }
-
-            return false;
-
-        }
 
         public DataTable ConsultarProdutos()
         {
             DataTable consultaProduto = new DataTable();
 
             string queryStr = "SELECT ID_PRODUTOS, NOME, PRECO, QUANTIDADE, DATA_VALIDADE, COD_BARRAS, COD_PRODUTO, LOCAL_ARMAZENADO,  DESCRICAO, DATA_CADASTRO FROM PRODUTOS ORDER BY NOME";
+
             SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
             SqlDataReader reader = command.ExecuteReader();
             consultaProduto.Load(reader);
@@ -49,18 +26,17 @@ namespace Sistema_Estoque.DataLayer
             return consultaProduto;
         }
 
-        public DataTable ConsultarProdutosNome(string nome)
+        public DataTable ConsultarProdutosCodBarras(string codBarras)
         {
-            
             DataTable consultaProduto = new DataTable();
 
-            string queryStr = "SELECT ID_PRODUTOS, NOME, PRECO, QUANTIDADE, DATA_VALIDADE, COD_BARRAS, COD_PRODUTO, LOCAL_ARMAZENADO,  DESCRICAO, DATA_CADASTRO FROM PRODUTOS WHERE NOME LIKE '%" + nome +"%' ORDER BY NOME ";
+            string queryStr = "SELECT ID_PRODUTOS, NOME, PRECO, QUANTIDADE, DATA_VALIDADE, COD_BARRAS, COD_PRODUTO, LOCAL_ARMAZENADO,  DESCRICAO, DATA_CADASTRO FROM PRODUTOS WHERE COD_BARRAS LIKE '%" + codBarras + "%' ORDER BY COD_BARRAS";
+
             SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
             SqlDataReader reader = command.ExecuteReader();
             consultaProduto.Load(reader);
 
             return consultaProduto;
-            
         }
 
         public DataTable ConsultarProdutosCodigo(string codigo)
@@ -69,6 +45,7 @@ namespace Sistema_Estoque.DataLayer
             DataTable consultaProduto = new DataTable();
 
             string queryStr = "SELECT ID_PRODUTOS, NOME, PRECO, QUANTIDADE, DATA_VALIDADE, COD_BARRAS, COD_PRODUTO, LOCAL_ARMAZENADO,  DESCRICAO, DATA_CADASTRO FROM PRODUTOS WHERE COD_PRODUTO LIKE '%" + codigo + "%' ORDER BY COD_PRODUTO ";
+
             SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
             SqlDataReader reader = command.ExecuteReader();
             consultaProduto.Load(reader);
@@ -77,17 +54,22 @@ namespace Sistema_Estoque.DataLayer
 
         }
 
-        public DataTable ConsultarProdutosCodBarras(string codBarras)
+        public DataTable ConsultarProdutosNome(string nome)
         {
+            
             DataTable consultaProduto = new DataTable();
 
-            string queryStr = "SELECT ID_PRODUTOS, NOME, PRECO, QUANTIDADE, DATA_VALIDADE, COD_BARRAS, COD_PRODUTO, LOCAL_ARMAZENADO,  DESCRICAO, DATA_CADASTRO FROM PRODUTOS WHERE COD_BARRAS LIKE '%" + codBarras + "%' ORDER BY COD_BARRAS";
+            string queryStr = "SELECT ID_PRODUTOS, NOME, PRECO, QUANTIDADE, DATA_VALIDADE, COD_BARRAS, COD_PRODUTO, LOCAL_ARMAZENADO,  DESCRICAO, DATA_CADASTRO FROM PRODUTOS WHERE NOME LIKE '%" + nome +"%' ORDER BY NOME ";
+
             SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
             SqlDataReader reader = command.ExecuteReader();
             consultaProduto.Load(reader);
 
             return consultaProduto;
+            
         }
+
+
 
         public bool AtualizarProdutos(Produto produto)
         {
@@ -115,12 +97,71 @@ namespace Sistema_Estoque.DataLayer
 
         }
 
-        public bool ExcluirProdutos(int idProduto)
+        public bool CadastrarProdutos(Produto produto)
         {
-            string queryStr = "DELETE FROM PRODUTOS WHERE ID_PRODUTOS = @idProduto";
+            string querystr = "INSERT INTO PRODUTOS VALUES(@nomeProduto, @preco, @quantidade, @codBarras, @codProduto, @dataValidade, @localArmazenado, @descricao, @dataCadastro)";
+
+            SqlCommand command = new SqlCommand(querystr, AbrirBanco());
+            command.Parameters.AddWithValue("@nomeProduto", produto.NomeProduto);
+            command.Parameters.AddWithValue("@preco", produto.Preco);
+            command.Parameters.AddWithValue("@quantidade", produto.Quantidade);
+            command.Parameters.AddWithValue("@codBarras", produto.CodBarras);
+            command.Parameters.AddWithValue("@codProduto", produto.CodProduto);
+            command.Parameters.AddWithValue("@dataValidade", produto.DataValidade);
+            command.Parameters.AddWithValue("@localArmazenado", produto.LocalArmazenamento);
+            command.Parameters.AddWithValue("@descricao", produto.Descricao);
+            command.Parameters.AddWithValue("@dataCadastro", DateTime.Now);
+
+            int res = command.ExecuteNonQuery();
+
+            if (res != 0)
+            {
+                return true;
+            }
+
+            return false;
+
+        }
+
+        public bool VerificaProdutos(string nome, string codBarras)
+        {
+
+            DataTable consultaProduto = new DataTable();
+
+
+            string queryStr = "SELECT TOP 1 NOME, COD_BARRAS FROM PRODUTOS WHERE NOME = '" + nome + "' OR COD_BARRAS = '" + codBarras + "'";
 
             SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
-            command.Parameters.AddWithValue("@idProduto", idProduto);
+            SqlDataReader reader = command.ExecuteReader();
+
+            consultaProduto.Load(reader);
+
+            string name = null;
+            string codigoBarras = null;
+
+            foreach (DataRow row in consultaProduto.Rows)
+            {
+                name = row["NOME"].ToString();
+                codigoBarras = row["COD_BARRAS"].ToString();
+            }
+
+            //MessageBox.Show("NOME = " + name + "\nCOD BARRAS = " + codigoBarras);
+
+            if (name == nome && codigoBarras == codBarras)
+            {
+                return true;
+            }
+
+            return false;
+
+
+        }
+
+        public bool ExcluirProdutos(int idProduto)
+        {
+            string queryStr = "DELETE FROM PRODUTOS WHERE ID_PRODUTOS = " + idProduto;
+
+            SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
 
             int res = command.ExecuteNonQuery();
 

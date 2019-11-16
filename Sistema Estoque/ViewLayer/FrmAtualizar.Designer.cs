@@ -34,7 +34,7 @@
             this.btnMaximizar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.tblCadastrar = new System.Windows.Forms.TableLayoutPanel();
+            this.tblAtualizar = new System.Windows.Forms.TableLayoutPanel();
             this.dataValidadePanel = new System.Windows.Forms.Panel();
             this.dtValidade = new System.Windows.Forms.DateTimePicker();
             this.lblDataValidade = new System.Windows.Forms.Label();
@@ -68,7 +68,7 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.txtLocalArmazenado = new System.Windows.Forms.TextBox();
             this.topPanel.SuspendLayout();
-            this.tblCadastrar.SuspendLayout();
+            this.tblAtualizar.SuspendLayout();
             this.dataValidadePanel.SuspendLayout();
             this.codBarrasPanel.SuspendLayout();
             this.quantidadePanel.SuspendLayout();
@@ -173,33 +173,33 @@
             this.label2.Text = "Atualizar Produtos";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tblCadastrar
+            // tblAtualizar
             // 
-            this.tblCadastrar.ColumnCount = 3;
-            this.tblCadastrar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.44782F));
-            this.tblCadastrar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.75168F));
-            this.tblCadastrar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.89933F));
-            this.tblCadastrar.Controls.Add(this.dataValidadePanel, 1, 1);
-            this.tblCadastrar.Controls.Add(this.codBarrasPanel, 0, 1);
-            this.tblCadastrar.Controls.Add(this.quantidadePanel, 2, 0);
-            this.tblCadastrar.Controls.Add(this.precoPanel, 1, 0);
-            this.tblCadastrar.Controls.Add(this.nomeProdutoPanel, 0, 0);
-            this.tblCadastrar.Controls.Add(this.panel12, 1, 4);
-            this.tblCadastrar.Controls.Add(this.descricaoPanel, 0, 3);
-            this.tblCadastrar.Controls.Add(this.panel2, 2, 1);
-            this.tblCadastrar.Controls.Add(this.localArmazenadoPanel, 1, 2);
-            this.tblCadastrar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblCadastrar.Location = new System.Drawing.Point(0, 83);
-            this.tblCadastrar.Name = "tblCadastrar";
-            this.tblCadastrar.RowCount = 5;
-            this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.84492F));
-            this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.64706F));
-            this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.24104F));
-            this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.23127F));
-            this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
-            this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblCadastrar.Size = new System.Drawing.Size(1152, 517);
-            this.tblCadastrar.TabIndex = 5;
+            this.tblAtualizar.ColumnCount = 3;
+            this.tblAtualizar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.44782F));
+            this.tblAtualizar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.75168F));
+            this.tblAtualizar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.89933F));
+            this.tblAtualizar.Controls.Add(this.dataValidadePanel, 1, 1);
+            this.tblAtualizar.Controls.Add(this.codBarrasPanel, 0, 1);
+            this.tblAtualizar.Controls.Add(this.quantidadePanel, 2, 0);
+            this.tblAtualizar.Controls.Add(this.precoPanel, 1, 0);
+            this.tblAtualizar.Controls.Add(this.nomeProdutoPanel, 0, 0);
+            this.tblAtualizar.Controls.Add(this.panel12, 1, 4);
+            this.tblAtualizar.Controls.Add(this.descricaoPanel, 0, 3);
+            this.tblAtualizar.Controls.Add(this.panel2, 2, 1);
+            this.tblAtualizar.Controls.Add(this.localArmazenadoPanel, 1, 2);
+            this.tblAtualizar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblAtualizar.Location = new System.Drawing.Point(0, 83);
+            this.tblAtualizar.Name = "tblAtualizar";
+            this.tblAtualizar.RowCount = 5;
+            this.tblAtualizar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.84492F));
+            this.tblAtualizar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.64706F));
+            this.tblAtualizar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.24104F));
+            this.tblAtualizar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.23127F));
+            this.tblAtualizar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tblAtualizar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblAtualizar.Size = new System.Drawing.Size(1152, 517);
+            this.tblAtualizar.TabIndex = 5;
             // 
             // dataValidadePanel
             // 
@@ -468,7 +468,7 @@
             this.descricaoPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tblCadastrar.SetColumnSpan(this.descricaoPanel, 3);
+            this.tblAtualizar.SetColumnSpan(this.descricaoPanel, 3);
             this.descricaoPanel.Controls.Add(this.txtDescricao);
             this.descricaoPanel.Controls.Add(this.lblDescricao);
             this.descricaoPanel.Location = new System.Drawing.Point(3, 250);
@@ -606,7 +606,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(115)))), ((int)(((byte)(158)))));
             this.ClientSize = new System.Drawing.Size(1152, 600);
-            this.Controls.Add(this.tblCadastrar);
+            this.Controls.Add(this.tblAtualizar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.topPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -616,7 +616,7 @@
             this.Load += new System.EventHandler(this.FrmAtualizar_Load);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
-            this.tblCadastrar.ResumeLayout(false);
+            this.tblAtualizar.ResumeLayout(false);
             this.dataValidadePanel.ResumeLayout(false);
             this.dataValidadePanel.PerformLayout();
             this.codBarrasPanel.ResumeLayout(false);
@@ -647,7 +647,7 @@
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Label lblTopPanel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TableLayoutPanel tblCadastrar;
+        private System.Windows.Forms.TableLayoutPanel tblAtualizar;
         private System.Windows.Forms.Panel dataValidadePanel;
         private System.Windows.Forms.DateTimePicker dtValidade;
         private System.Windows.Forms.Label lblDataValidade;

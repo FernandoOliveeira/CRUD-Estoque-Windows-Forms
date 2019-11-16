@@ -25,22 +25,7 @@ namespace Sistema_Estoque.ViewLayer
 
         private void UCCadastrar_Load(object sender, EventArgs e)
         {
-            /*
-            txtNomeProduto.Text = "Nome do produto";
-            txtPreco.Text = "Preço";
-            txtCodBarras.Text = "Código de barras";
-            txtLocalArmazenado.Text = "Local de armazenamento";
-            txtDescricao.Text = "Descrição";
-            txtCodProduto.Text = "Código do produto";
-
-            txtNomeProduto.ForeColor = Color.Gray;
-            txtPreco.ForeColor = Color.Gray;
-            txtQuantidade.ForeColor = Color.Gray;
-            txtCodBarras.ForeColor = Color.Gray;
-            txtLocalArmazenado.ForeColor = Color.Gray;
-            txtDescricao.ForeColor = Color.Gray;
-            txtCodProduto.ForeColor = Color.Gray;
-            */
+           
         }
 
 
@@ -51,6 +36,7 @@ namespace Sistema_Estoque.ViewLayer
             txtPreco.Text = "";
             txtQuantidade.Value = 0;
             txtCodBarras.Text = "";
+            txtCodProduto.Text = "";
             dtValidade.Value = DateTime.Now;
             txtLocalArmazenado.Text = "";
             txtDescricao.Text = "";
@@ -62,51 +48,56 @@ namespace Sistema_Estoque.ViewLayer
         {
             BlProduto objBlProduto = new BlProduto();
 
-            try
+
+
+            if (objBlProduto.VerificaProdutos(txtNomeProduto.Text, txtCodBarras.Text))
             {
-                Produto objProduto = new Produto
-                {
-                    NomeProduto = txtNomeProduto.Text.Trim(),
-                    Preco = double.Parse(txtPreco.Text.Replace('.', ',').Trim()),
-                    Quantidade = (int)txtQuantidade.Value,
-                    CodBarras = txtCodBarras.Text.Trim(),
-                    CodProduto = txtCodProduto.Text.Trim(),
-                    DataValidade = DateTime.Parse(dtValidade.Text),
-                    LocalArmazenamento = txtLocalArmazenado.Text.Trim(),
-                    Descricao = txtDescricao.Text.Trim()
-                };
-
-
-                
-
-                if (objBlProduto.VerificarDadosProduto(objProduto))
-                {
-                    objBlProduto.AbrirBanco();
-                    objBlProduto.CadastrarProdutos(objProduto);
-                    objBlProduto.FecharBanco(objBlProduto.AbrirBanco());
-                    MessageBox.Show("Produto cadastrado com sucesso !", "Produto Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    LimparCampos();
-
-                }
-                else
-                {
-                    
-                    MessageBox.Show("Um ou mais campos estão vazios\nPreencha todos os campos antes de continuar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-                
-
-
-                
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("Um ou mais campos estão vazios\nPreencha todos os campos antes de continuar" + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Já existe um cadastro com este mesmo nome e código de barras", "Cadastrado já existente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
+            else
+            {
+                try
+                {
+                    Produto objProduto = new Produto
+                    {
+                        NomeProduto = txtNomeProduto.Text.Trim(),
+                        Preco = double.Parse(txtPreco.Text.Replace('.', ',').Trim()),
+                        Quantidade = (int)txtQuantidade.Value,
+                        CodBarras = txtCodBarras.Text.Trim(),
+                        CodProduto = txtCodProduto.Text.Trim(),
+                        DataValidade = DateTime.Parse(dtValidade.Text),
+                        LocalArmazenamento = txtLocalArmazenado.Text.Trim(),
+                        Descricao = txtDescricao.Text.Trim()
+                    };
 
+
+
+
+                    if (objBlProduto.VerificarDadosProduto(objProduto))
+                    {
+                        objBlProduto.AbrirBanco();
+                        objBlProduto.CadastrarProdutos(objProduto);
+                        objBlProduto.FecharBanco(objBlProduto.AbrirBanco());
+                        MessageBox.Show("Produto cadastrado com sucesso !", "Produto Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        LimparCampos();
+
+                    }
+                    else
+                    {
+
+                        MessageBox.Show("Um ou mais campos estão vazios\nPreencha todos os campos antes de continuar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Um ou mais campos estão vazios\nPreencha todos os campos antes de continuar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
 
         }
 
@@ -125,6 +116,11 @@ namespace Sistema_Estoque.ViewLayer
             {
                 e.Handled = true;
             }
+        }
+
+        private void tblCadastrar_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
 
@@ -275,6 +271,6 @@ namespace Sistema_Estoque.ViewLayer
         #endregion
 
         */
-        
+
     }
 }

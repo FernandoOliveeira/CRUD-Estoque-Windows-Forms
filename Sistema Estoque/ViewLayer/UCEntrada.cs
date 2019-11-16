@@ -16,5 +16,7 @@ namespace Sistema_Estoque.ViewLayer
         {
             InitializeComponent();
         }
+
+     
     }
 }
