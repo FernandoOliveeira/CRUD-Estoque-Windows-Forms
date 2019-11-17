@@ -114,7 +114,6 @@
             this.tblCadastrar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblCadastrar.Size = new System.Drawing.Size(745, 458);
             this.tblCadastrar.TabIndex = 2;
-            this.tblCadastrar.Paint += new System.Windows.Forms.PaintEventHandler(this.tblCadastrar_Paint);
             // 
             // dataValidadePanel
             // 

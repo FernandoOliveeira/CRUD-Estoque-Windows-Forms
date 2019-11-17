@@ -139,7 +139,7 @@ namespace Sistema_Estoque.DataLayer
             return false;
         }
 
-        public bool VerificarProdutos(string codBarras)
+        public bool VerificarProdutosCodBarras(string codBarras)
         {
 
             DataTable consultaProduto = new DataTable();
@@ -167,10 +167,54 @@ namespace Sistema_Estoque.DataLayer
                 return true;
             }
 
+            FecharBanco(AbrirBanco());
+
             return false;
 
 
         }
+
+        public bool EntrarProdutos(string nome, int quantidade, string codBarras, DateTime dataValidade, string localArmazenado)
+        {
+            DataTable consultarProdutos = new DataTable();
+
+            string queryStr = "SELECT ID_PRODUTOS, NOME, QUANTIDADE, COD_BARRAS, DATA_VALIDADE, LOCAL_ARMAZENADO FROM PRODUTOS WHERE NOME = '" + nome + "' AND COD_BARRAS = '" + codBarras + "'";
+
+            SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
+            SqlDataReader reader = command.ExecuteReader();
+
+            consultarProdutos.Load(reader);
+
+            int idProdutos = 0;
+            int quantity = 0;
+
+            foreach (DataRow row in consultarProdutos.Rows)
+            {
+                idProdutos = int.Parse(row["ID_PRODUTOS"].ToString());
+                quantity = int.Parse(row["QUANTIDADE"].ToString());
+            }
+
+            
+
+            int quantidadeTotal = quantidade + quantity;
+
+
+            string queryEntrarProduto = "UPDATE PRODUTOS SET QUANTIDADE = " + quantidadeTotal + ", DATA_VALIDADE = '" + dataValidade + "', LOCAL_ARMAZENADO = '" + localArmazenado + "' WHERE ID_PRODUTOS = " + idProdutos;
+
+            SqlCommand command2 = new SqlCommand(queryEntrarProduto, AbrirBanco());
+
+            int res = command2.ExecuteNonQuery();
+
+            if (res != 0)
+            {
+                return true;
+            }
+
+            return false;
+
+        }
+
+
 
     }
 }

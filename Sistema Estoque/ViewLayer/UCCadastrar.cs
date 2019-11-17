@@ -50,7 +50,7 @@ namespace Sistema_Estoque.ViewLayer
             BlProduto objBlProduto = new BlProduto();
 
 
-            if (objBlProduto.VerificarProdutos(txtCodBarras.Text.Trim()))
+            if (objBlProduto.VerificarProdutosCodBarras(txtCodBarras.Text.Trim()))
             {
                 MessageBox.Show("Já existe um cadastro com este mesmo código de barras", "Cadastro já existente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -114,11 +114,6 @@ namespace Sistema_Estoque.ViewLayer
             {
                 e.Handled = true;
             }
-        }
-
-        private void tblCadastrar_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
 

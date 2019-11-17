@@ -121,6 +121,7 @@
             this.btnEnviar.TabIndex = 8;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = false;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // panel2
             // 
