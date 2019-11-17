@@ -46,13 +46,13 @@ namespace Sistema_Estoque.ViewLayer
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+
             BlProduto objBlProduto = new BlProduto();
 
 
-
-            if (objBlProduto.VerificaProdutos(txtNomeProduto.Text, txtCodBarras.Text))
+            if (objBlProduto.VerificarProdutos(txtCodBarras.Text.Trim()))
             {
-                MessageBox.Show("Já existe um cadastro com este mesmo nome e código de barras", "Cadastrado já existente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Já existe um cadastro com este mesmo código de barras", "Cadastro já existente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             else
@@ -72,8 +72,6 @@ namespace Sistema_Estoque.ViewLayer
                     };
 
 
-
-
                     if (objBlProduto.VerificarDadosProduto(objProduto))
                     {
                         objBlProduto.AbrirBanco();
@@ -87,7 +85,7 @@ namespace Sistema_Estoque.ViewLayer
                     else
                     {
 
-                        MessageBox.Show("Um ou mais campos estão vazios\nPreencha todos os campos antes de continuar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Um ou mais campos estão vazios\nPreencha todos os campos antes de continuar", "Campos Vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
 
 
@@ -95,7 +93,7 @@ namespace Sistema_Estoque.ViewLayer
                 catch (Exception)
                 {
 
-                    MessageBox.Show("Um ou mais campos estão vazios\nPreencha todos os campos antes de continuar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Um ou mais campos estão vazios\nPreencha todos os campos antes de continuar.", "Campos Vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
 

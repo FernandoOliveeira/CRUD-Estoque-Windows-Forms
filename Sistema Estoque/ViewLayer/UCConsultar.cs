@@ -174,7 +174,7 @@ namespace Sistema_Estoque.ViewLayer
 
                 string idProduto = dgvConsulta.SelectedRows[0].Cells[1].Value.ToString();
 
-                if (MessageBox.Show("Deseja atualizar este item ?\n\n" + idProduto.ToUpper(), "Atualizar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                if (MessageBox.Show("Deseja atualizar este item ?\n" + idProduto.ToUpper(), "Atualizar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
                     FrmAtualizar frmAtualizar = new FrmAtualizar();
 
@@ -212,7 +212,7 @@ namespace Sistema_Estoque.ViewLayer
             {
                 string idProduto = dgvConsulta.SelectedRows[0].Cells[1].Value.ToString();
 
-                if (MessageBox.Show("Deseja realmente excluir este item ?\n\n" + idProduto.ToUpper() + "\n\n(Os dados serão excluídos permanentemente)", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                if (MessageBox.Show("Deseja realmente excluir este item ?\n" + idProduto.ToUpper() + "\n(Os dados serão excluídos permanentemente)", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
                     int idProdutos = int.Parse(dgvConsulta.SelectedRows[0].Cells[0].Value.ToString());
 

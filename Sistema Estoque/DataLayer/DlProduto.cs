@@ -123,40 +123,6 @@ namespace Sistema_Estoque.DataLayer
 
         }
 
-        public bool VerificaProdutos(string nome, string codBarras)
-        {
-
-            DataTable consultaProduto = new DataTable();
-
-
-            string queryStr = "SELECT TOP 1 NOME, COD_BARRAS FROM PRODUTOS WHERE NOME = '" + nome + "' OR COD_BARRAS = '" + codBarras + "'";
-
-            SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
-            SqlDataReader reader = command.ExecuteReader();
-
-            consultaProduto.Load(reader);
-
-            string name = null;
-            string codigoBarras = null;
-
-            foreach (DataRow row in consultaProduto.Rows)
-            {
-                name = row["NOME"].ToString();
-                codigoBarras = row["COD_BARRAS"].ToString();
-            }
-
-            //MessageBox.Show("NOME = " + name + "\nCOD BARRAS = " + codigoBarras);
-
-            if (name == nome && codigoBarras == codBarras)
-            {
-                return true;
-            }
-
-            return false;
-
-
-        }
-
         public bool ExcluirProdutos(int idProduto)
         {
             string queryStr = "DELETE FROM PRODUTOS WHERE ID_PRODUTOS = " + idProduto;
@@ -171,6 +137,39 @@ namespace Sistema_Estoque.DataLayer
             }
 
             return false;
+        }
+
+        public bool VerificarProdutos(string codBarras)
+        {
+
+            DataTable consultaProduto = new DataTable();
+
+
+            string queryStr = "SELECT COD_BARRAS FROM PRODUTOS WHERE COD_BARRAS = '" + codBarras + "'";
+
+            SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
+            SqlDataReader reader = command.ExecuteReader();
+
+            consultaProduto.Load(reader);
+
+            string codigoBarras = " ";
+
+            foreach (DataRow row in consultaProduto.Rows)
+            {
+                codigoBarras = row["COD_BARRAS"].ToString();
+            }
+
+
+            if (codigoBarras == codBarras)
+            {
+                codigoBarras = " ";
+
+                return true;
+            }
+
+            return false;
+
+
         }
 
     }
