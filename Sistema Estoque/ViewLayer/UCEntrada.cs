@@ -18,6 +18,12 @@ namespace Sistema_Estoque.ViewLayer
             InitializeComponent();
         }
 
+        private void UCEntrada_Load(object sender, EventArgs e)
+        {
+            dtValidade.MinDate = DateTime.Now;
+            dtValidade.Value = DateTime.Now;
+        }
+
         public void LimparCampos()
         {
             txtNomeProduto.Text = "";
@@ -31,22 +37,44 @@ namespace Sistema_Estoque.ViewLayer
         {
             BlProduto blProduto = new BlProduto();
 
-            if (blProduto.EntrarProdutos(txtNomeProduto.Text.Trim(), (int)txtQuantidade.Value, txtCodBarras.Text.Trim(), dtValidade.Value, txtLocalArmazenado.Text.Trim()))
+            if (!blProduto.EntrarProdutos(txtNomeProduto.Text.Trim(), (int)txtQuantidade.Value, txtCodBarras.Text.Trim(), dtValidade.Value, txtLocalArmazenado.Text.Trim()) && !(txtQuantidade.Value != 0) && !(txtLocalArmazenado.Text != ""))
             {
-                MessageBox.Show("Entrada realizada com sucesso.", "Entrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Entra nesta condição caso TODOS os inputs estejam vazios
 
-                LimparCampos();
+                MessageBox.Show("Não foi possivel realizar a entrada\nUm ou mais campos estão vazios", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
             else
             {
-                MessageBox.Show("Não foi possivel realizar a entrada", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                LimparCampos();
+                try
+                {
+                    if (blProduto.EntrarProdutos(txtNomeProduto.Text.Trim(), (int)txtQuantidade.Value, txtCodBarras.Text.Trim(), dtValidade.Value, txtLocalArmazenado.Text.Trim()) && txtQuantidade.Value != 0 && txtLocalArmazenado.Text != "")
+                    {
+                        MessageBox.Show("Entrada realizada com sucesso.", "Entrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        LimparCampos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Não foi possivel realizar a entrada\nNome do produto ou código de barras inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    }
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Não Foi possível realizar a entrada\nNome do produto ou código de barras inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
             }
-           
 
-           
+
+
+
 
         }
+
+        
     }
 }

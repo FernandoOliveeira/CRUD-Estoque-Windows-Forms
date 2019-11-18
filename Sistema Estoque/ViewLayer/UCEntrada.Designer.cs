@@ -368,6 +368,7 @@
             this.Controls.Add(this.lblTitulo);
             this.Name = "UCEntrada";
             this.Size = new System.Drawing.Size(745, 513);
+            this.Load += new System.EventHandler(this.UCEntrada_Load);
             this.tblEntrada.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

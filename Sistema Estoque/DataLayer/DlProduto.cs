@@ -174,7 +174,7 @@ namespace Sistema_Estoque.DataLayer
 
         }
 
-        public bool EntrarProdutos(string nome, int quantidade, string codBarras, DateTime dataValidade, string localArmazenado)
+        public bool EntrarProdutos(string nome, int quantidadeEntrada, string codBarras, DateTime dataValidade, string localArmazenado)
         {
             DataTable consultarProdutos = new DataTable();
 
@@ -186,17 +186,17 @@ namespace Sistema_Estoque.DataLayer
             consultarProdutos.Load(reader);
 
             int idProdutos = 0;
-            int quantity = 0;
+            int quantidadeEstoque = 0;
 
             foreach (DataRow row in consultarProdutos.Rows)
             {
                 idProdutos = int.Parse(row["ID_PRODUTOS"].ToString());
-                quantity = int.Parse(row["QUANTIDADE"].ToString());
+                quantidadeEstoque = int.Parse(row["QUANTIDADE"].ToString());
             }
 
             
 
-            int quantidadeTotal = quantidade + quantity;
+            int quantidadeTotal = quantidadeEntrada + quantidadeEstoque;
 
 
             string queryEntrarProduto = "UPDATE PRODUTOS SET QUANTIDADE = " + quantidadeTotal + ", DATA_VALIDADE = '" + dataValidade + "', LOCAL_ARMAZENADO = '" + localArmazenado + "' WHERE ID_PRODUTOS = " + idProdutos;
