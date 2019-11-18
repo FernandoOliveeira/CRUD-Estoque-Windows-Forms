@@ -203,7 +203,7 @@
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(7, 39);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(214, 1);
+            this.panel1.Size = new System.Drawing.Size(225, 1);
             this.panel1.TabIndex = 5;
             // 
             // txtNomeProduto
@@ -218,7 +218,7 @@
             this.txtNomeProduto.ForeColor = System.Drawing.Color.White;
             this.txtNomeProduto.Location = new System.Drawing.Point(7, 23);
             this.txtNomeProduto.Name = "txtNomeProduto";
-            this.txtNomeProduto.Size = new System.Drawing.Size(214, 19);
+            this.txtNomeProduto.Size = new System.Drawing.Size(225, 19);
             this.txtNomeProduto.TabIndex = 3;
             // 
             // dataValidadePanel
@@ -289,7 +289,7 @@
             this.panel10.BackColor = System.Drawing.Color.Black;
             this.panel10.Location = new System.Drawing.Point(7, 46);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(212, 1);
+            this.panel10.Size = new System.Drawing.Size(245, 1);
             this.panel10.TabIndex = 5;
             // 
             // txtLocalArmazenado
@@ -304,7 +304,7 @@
             this.txtLocalArmazenado.ForeColor = System.Drawing.Color.White;
             this.txtLocalArmazenado.Location = new System.Drawing.Point(7, 30);
             this.txtLocalArmazenado.Name = "txtLocalArmazenado";
-            this.txtLocalArmazenado.Size = new System.Drawing.Size(212, 19);
+            this.txtLocalArmazenado.Size = new System.Drawing.Size(245, 19);
             this.txtLocalArmazenado.TabIndex = 3;
             // 
             // quantidadePanel
