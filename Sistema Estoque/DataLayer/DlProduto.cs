@@ -91,8 +91,12 @@ namespace Sistema_Estoque.DataLayer
 
             if (res != 0)
             {
+                FecharBanco(AbrirBanco());
+
                 return true;
             }
+
+            FecharBanco(AbrirBanco());
 
             return false;
 
@@ -117,8 +121,12 @@ namespace Sistema_Estoque.DataLayer
 
             if (res != 0)
             {
+                FecharBanco(AbrirBanco());
+
                 return true;
             }
+
+            FecharBanco(AbrirBanco());
 
             return false;
 
@@ -134,8 +142,12 @@ namespace Sistema_Estoque.DataLayer
 
             if (res != 0)
             {
+                FecharBanco(AbrirBanco());
+
                 return true;
             }
+
+            FecharBanco(AbrirBanco());
 
             return false;
         }
@@ -165,15 +177,46 @@ namespace Sistema_Estoque.DataLayer
             if (codigoBarras == codBarras)
             {
                 codigoBarras = " ";
+                FecharBanco(AbrirBanco());
 
                 return true;
             }
 
             codigoBarras = " ";
-
+            FecharBanco(AbrirBanco());
 
             return false;
 
+
+        }
+
+        public bool VerificarQuantidadeEstoque(string nome, int quantidade, string codProduto)
+        {
+            DataTable consultaEstoque = new DataTable();
+
+            string queryConsultarEstoque = "SELECT QUANTIDADE FROM PRODUTOS WHERE NOME = '" + nome + "' AND COD_PRODUTO = '" + codProduto + "'";
+            SqlCommand command = new SqlCommand(queryConsultarEstoque, AbrirBanco());
+            SqlDataReader reader = command.ExecuteReader();
+
+            consultaEstoque.Load(reader);
+
+            int quantidadeEstoque = 0;
+
+            foreach (DataRow row in consultaEstoque.Rows)
+            {
+                quantidadeEstoque = int.Parse(row["QUANTIDADE"].ToString());
+            }
+
+            if (quantidade > quantidadeEstoque)
+            {
+                FecharBanco(AbrirBanco());
+
+                quantidadeEstoque = 0;
+
+                return true;
+            }
+
+            return false;
 
         }
 
@@ -209,8 +252,12 @@ namespace Sistema_Estoque.DataLayer
 
             if (res != 0)
             {
+                FecharBanco(AbrirBanco());
+
                 return true;
             }
+
+            FecharBanco(AbrirBanco());
 
             return false;
 
@@ -227,21 +274,26 @@ namespace Sistema_Estoque.DataLayer
 
             consultaProdutos.Load(reader);
 
+            // Variáveis que irão receber os valores do banco de dados
             int idProdutos = 0;
             int quantidadeEstoque = 0;
             double preco = 0;
 
+            
             foreach (DataRow row in consultaProdutos.Rows)
             {
+                // Associa os dados do banco e atribui os valores nas respectivas variáveis
                 idProdutos = int.Parse(row["ID_PRODUTOS"].ToString());
                 quantidadeEstoque = int.Parse(row["QUANTIDADE"].ToString());
                 preco = double.Parse(row["PRECO"].ToString());
             }
 
 
+
             int quantidadeVendida = quantidade;
 
             double valorTotalVenda = preco * quantidadeVendida;
+
             int quantidadeTotal = quantidadeEstoque - quantidadeVendida;
 
 
@@ -251,19 +303,24 @@ namespace Sistema_Estoque.DataLayer
             commandVendas.Parameters.AddWithValue("@quantidadeVendida", quantidadeVendida);
             commandVendas.Parameters.AddWithValue("@valorTotalVenda", valorTotalVenda);
             commandVendas.Parameters.AddWithValue("@idProdutos", idProdutos);
-            int resVendas = commandVendas.ExecuteNonQuery();
+            int Vendas = commandVendas.ExecuteNonQuery();
 
 
             string queryAtualizarProduto = "UPDATE PRODUTOS SET QUANTIDADE = " + quantidadeTotal + "WHERE ID_PRODUTOS = " + idProdutos;
             SqlCommand commandAtualizarProduto = new SqlCommand(queryAtualizarProduto, AbrirBanco());
-            int resAtualizarProduto = commandAtualizarProduto.ExecuteNonQuery();
+            int AtualizarProduto = commandAtualizarProduto.ExecuteNonQuery();
 
 
 
-            if (resVendas != 0 && resAtualizarProduto != 0)
+            if (Vendas != 0 && AtualizarProduto != 0)
             {
+                FecharBanco(AbrirBanco());
+
                 return true;
             }
+
+
+            FecharBanco(AbrirBanco());
 
             return false;
         }
