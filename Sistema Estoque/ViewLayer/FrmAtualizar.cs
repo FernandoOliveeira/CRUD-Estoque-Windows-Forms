@@ -174,8 +174,6 @@ namespace Sistema_Estoque.ViewLayer
                 if (objBlProduto.VerificarDadosProduto(objProduto))
                 {
 
-
-
                     objBlProduto.AbrirBanco();
                     objBlProduto.AtualizarProdutos(objProduto);
                     objBlProduto.FecharBanco(objBlProduto.AbrirBanco());
