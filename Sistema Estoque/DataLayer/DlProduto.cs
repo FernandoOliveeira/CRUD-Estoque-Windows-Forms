@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -159,6 +160,7 @@ namespace Sistema_Estoque.DataLayer
                 codigoBarras = row["COD_BARRAS"].ToString();
             }
 
+            FecharBanco(AbrirBanco());
 
             if (codigoBarras == codBarras)
             {
@@ -167,7 +169,8 @@ namespace Sistema_Estoque.DataLayer
                 return true;
             }
 
-            FecharBanco(AbrirBanco());
+            codigoBarras = " ";
+
 
             return false;
 
@@ -194,16 +197,15 @@ namespace Sistema_Estoque.DataLayer
                 quantidadeEstoque = int.Parse(row["QUANTIDADE"].ToString());
             }
 
-            
 
             int quantidadeTotal = quantidadeEntrada + quantidadeEstoque;
 
 
             string queryEntrarProduto = "UPDATE PRODUTOS SET QUANTIDADE = " + quantidadeTotal + ", DATA_VALIDADE = '" + dataValidade + "', LOCAL_ARMAZENADO = '" + localArmazenado + "' WHERE ID_PRODUTOS = " + idProdutos;
 
-            SqlCommand command2 = new SqlCommand(queryEntrarProduto, AbrirBanco());
+            SqlCommand commandEntrarProduto = new SqlCommand(queryEntrarProduto, AbrirBanco());
 
-            int res = command2.ExecuteNonQuery();
+            int res = commandEntrarProduto.ExecuteNonQuery();
 
             if (res != 0)
             {
@@ -214,7 +216,57 @@ namespace Sistema_Estoque.DataLayer
 
         }
 
+        public bool VenderProdutos(string nome, int quantidade, string codProduto)
+        {
+            DataTable consultaProdutos = new DataTable();
 
+            string queryStr = "SELECT ID_PRODUTOS, PRECO, QUANTIDADE FROM PRODUTOS WHERE NOME = '" + nome + "' AND COD_PRODUTO = '" + codProduto + "'";
+
+            SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
+            SqlDataReader reader = command.ExecuteReader();
+
+            consultaProdutos.Load(reader);
+
+            int idProdutos = 0;
+            int quantidadeEstoque = 0;
+            double preco = 0;
+
+            foreach (DataRow row in consultaProdutos.Rows)
+            {
+                idProdutos = int.Parse(row["ID_PRODUTOS"].ToString());
+                quantidadeEstoque = int.Parse(row["QUANTIDADE"].ToString());
+                preco = double.Parse(row["PRECO"].ToString());
+            }
+
+
+            int quantidadeVendida = quantidade;
+
+            double valorTotalVenda = preco * quantidadeVendida;
+            int quantidadeTotal = quantidadeEstoque - quantidadeVendida;
+
+
+            string queryVendas = "INSERT INTO VENDAS(QUANTIDADE_VENDIDA, VALOR_TOTAL_VENDA, ID_PRODUTOS) VALUES( @quantidadeVendida , @valorTotalVenda , @idProdutos )";
+
+            SqlCommand commandVendas = new SqlCommand(queryVendas, AbrirBanco());
+            commandVendas.Parameters.AddWithValue("@quantidadeVendida", quantidadeVendida);
+            commandVendas.Parameters.AddWithValue("@valorTotalVenda", valorTotalVenda);
+            commandVendas.Parameters.AddWithValue("@idProdutos", idProdutos);
+            int resVendas = commandVendas.ExecuteNonQuery();
+
+
+            string queryAtualizarProduto = "UPDATE PRODUTOS SET QUANTIDADE = " + quantidadeTotal + "WHERE ID_PRODUTOS = " + idProdutos;
+            SqlCommand commandAtualizarProduto = new SqlCommand(queryAtualizarProduto, AbrirBanco());
+            int resAtualizarProduto = commandAtualizarProduto.ExecuteNonQuery();
+
+
+
+            if (resVendas != 0 && resAtualizarProduto != 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
 
     }
 }

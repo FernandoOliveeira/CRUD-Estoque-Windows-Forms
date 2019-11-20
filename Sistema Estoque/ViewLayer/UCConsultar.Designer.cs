@@ -48,7 +48,7 @@
             this.rdbConsultarCodBarras = new System.Windows.Forms.RadioButton();
             this.consultarCodBarrasPanelLine = new System.Windows.Forms.Panel();
             this.pRODUTOSTableAdapter = new Sistema_Estoque.ESTOQUEDataSetTableAdapters.PRODUTOSTableAdapter();
-            this.ID_PRODUTOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDPRODUTOSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nOMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRECODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.qUANTIDADEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -99,7 +99,7 @@
             this.dgvConsulta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConsulta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID_PRODUTOS,
+            this.iDPRODUTOSDataGridViewTextBoxColumn,
             this.nOMEDataGridViewTextBoxColumn,
             this.pRECODataGridViewTextBoxColumn,
             this.qUANTIDADEDataGridViewTextBoxColumn,
@@ -276,13 +276,13 @@
             // 
             this.pRODUTOSTableAdapter.ClearBeforeFill = true;
             // 
-            // ID_PRODUTOS
+            // iDPRODUTOSDataGridViewTextBoxColumn
             // 
-            this.ID_PRODUTOS.DataPropertyName = "ID_PRODUTOS";
-            this.ID_PRODUTOS.HeaderText = "ID_PRODUTOS";
-            this.ID_PRODUTOS.Name = "ID_PRODUTOS";
-            this.ID_PRODUTOS.ReadOnly = true;
-            this.ID_PRODUTOS.Visible = false;
+            this.iDPRODUTOSDataGridViewTextBoxColumn.DataPropertyName = "ID_PRODUTOS";
+            this.iDPRODUTOSDataGridViewTextBoxColumn.HeaderText = "ID_PRODUTOS";
+            this.iDPRODUTOSDataGridViewTextBoxColumn.Name = "iDPRODUTOSDataGridViewTextBoxColumn";
+            this.iDPRODUTOSDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDPRODUTOSDataGridViewTextBoxColumn.Visible = false;
             // 
             // nOMEDataGridViewTextBoxColumn
             // 
@@ -308,28 +308,28 @@
             // cODBARRASDataGridViewTextBoxColumn
             // 
             this.cODBARRASDataGridViewTextBoxColumn.DataPropertyName = "COD_BARRAS";
-            this.cODBARRASDataGridViewTextBoxColumn.HeaderText = "CÓD. BARRAS";
+            this.cODBARRASDataGridViewTextBoxColumn.HeaderText = "COD_BARRAS";
             this.cODBARRASDataGridViewTextBoxColumn.Name = "cODBARRASDataGridViewTextBoxColumn";
             this.cODBARRASDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cODPRODUTODataGridViewTextBoxColumn
             // 
             this.cODPRODUTODataGridViewTextBoxColumn.DataPropertyName = "COD_PRODUTO";
-            this.cODPRODUTODataGridViewTextBoxColumn.HeaderText = "CÓD. PRODUTO";
+            this.cODPRODUTODataGridViewTextBoxColumn.HeaderText = "COD_PRODUTO";
             this.cODPRODUTODataGridViewTextBoxColumn.Name = "cODPRODUTODataGridViewTextBoxColumn";
             this.cODPRODUTODataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dATAVALIDADEDataGridViewTextBoxColumn
             // 
             this.dATAVALIDADEDataGridViewTextBoxColumn.DataPropertyName = "DATA_VALIDADE";
-            this.dATAVALIDADEDataGridViewTextBoxColumn.HeaderText = "DATA DE VALIDADE";
+            this.dATAVALIDADEDataGridViewTextBoxColumn.HeaderText = "DATA_VALIDADE";
             this.dATAVALIDADEDataGridViewTextBoxColumn.Name = "dATAVALIDADEDataGridViewTextBoxColumn";
             this.dATAVALIDADEDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // lOCALARMAZENADODataGridViewTextBoxColumn
             // 
             this.lOCALARMAZENADODataGridViewTextBoxColumn.DataPropertyName = "LOCAL_ARMAZENADO";
-            this.lOCALARMAZENADODataGridViewTextBoxColumn.HeaderText = "LOCAL ARMAZENADO";
+            this.lOCALARMAZENADODataGridViewTextBoxColumn.HeaderText = "LOCAL_ARMAZENADO";
             this.lOCALARMAZENADODataGridViewTextBoxColumn.Name = "lOCALARMAZENADODataGridViewTextBoxColumn";
             this.lOCALARMAZENADODataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -343,7 +343,7 @@
             // dATACADASTRODataGridViewTextBoxColumn
             // 
             this.dATACADASTRODataGridViewTextBoxColumn.DataPropertyName = "DATA_CADASTRO";
-            this.dATACADASTRODataGridViewTextBoxColumn.HeaderText = "DATA DO CADASTRO";
+            this.dATACADASTRODataGridViewTextBoxColumn.HeaderText = "DATA_CADASTRO";
             this.dATACADASTRODataGridViewTextBoxColumn.Name = "dATACADASTRODataGridViewTextBoxColumn";
             this.dATACADASTRODataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -424,7 +424,7 @@
         private System.Windows.Forms.BindingSource pRODUTOSBindingSource;
         private ESTOQUEDataSet eSTOQUEDataSet;
         private ESTOQUEDataSetTableAdapters.PRODUTOSTableAdapter pRODUTOSTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_PRODUTOS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDPRODUTOSDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nOMEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pRECODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn qUANTIDADEDataGridViewTextBoxColumn;

@@ -117,7 +117,7 @@
             this.btnEnviar.ForeColor = System.Drawing.Color.White;
             this.btnEnviar.Location = new System.Drawing.Point(8, 2);
             this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Size = new System.Drawing.Size(207, 36);
+            this.btnEnviar.Size = new System.Drawing.Size(226, 36);
             this.btnEnviar.TabIndex = 8;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = false;
@@ -240,7 +240,7 @@
             this.dtValidade.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtValidade.Location = new System.Drawing.Point(7, 30);
             this.dtValidade.Name = "dtValidade";
-            this.dtValidade.Size = new System.Drawing.Size(208, 22);
+            this.dtValidade.Size = new System.Drawing.Size(227, 22);
             this.dtValidade.TabIndex = 6;
             // 
             // lblDataValidade

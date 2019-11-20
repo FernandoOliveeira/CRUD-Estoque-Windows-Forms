@@ -32,10 +32,6 @@
             this.tblVenda = new System.Windows.Forms.TableLayoutPanel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.btnEnviar = new System.Windows.Forms.Button();
-            this.codProdutoPanel = new System.Windows.Forms.Panel();
-            this.lblCodProduto = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txtCodProduto = new System.Windows.Forms.TextBox();
             this.nomeProdutoPanel = new System.Windows.Forms.Panel();
             this.lblNomeProduto = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -44,12 +40,16 @@
             this.txtQuantidade = new System.Windows.Forms.NumericUpDown();
             this.lblQuantidade = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.codProdutoPanel = new System.Windows.Forms.Panel();
+            this.lblCodProduto = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtCodProduto = new System.Windows.Forms.TextBox();
             this.tblVenda.SuspendLayout();
             this.panel12.SuspendLayout();
-            this.codProdutoPanel.SuspendLayout();
             this.nomeProdutoPanel.SuspendLayout();
             this.quantidadePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).BeginInit();
+            this.codProdutoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -108,57 +108,9 @@
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(227, 36);
             this.btnEnviar.TabIndex = 8;
-            this.btnEnviar.Text = "Enviar";
+            this.btnEnviar.Text = "Vender";
             this.btnEnviar.UseVisualStyleBackColor = false;
-            // 
-            // codProdutoPanel
-            // 
-            this.codProdutoPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.codProdutoPanel.Controls.Add(this.lblCodProduto);
-            this.codProdutoPanel.Controls.Add(this.panel3);
-            this.codProdutoPanel.Controls.Add(this.txtCodProduto);
-            this.codProdutoPanel.Location = new System.Drawing.Point(487, 74);
-            this.codProdutoPanel.Name = "codProdutoPanel";
-            this.codProdutoPanel.Size = new System.Drawing.Size(255, 98);
-            this.codProdutoPanel.TabIndex = 2;
-            // 
-            // lblCodProduto
-            // 
-            this.lblCodProduto.AutoSize = true;
-            this.lblCodProduto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodProduto.ForeColor = System.Drawing.Color.White;
-            this.lblCodProduto.Location = new System.Drawing.Point(3, 3);
-            this.lblCodProduto.Name = "lblCodProduto";
-            this.lblCodProduto.Size = new System.Drawing.Size(150, 20);
-            this.lblCodProduto.TabIndex = 4;
-            this.lblCodProduto.Text = "Código do Produto";
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(7, 40);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(245, 1);
-            this.panel3.TabIndex = 5;
-            // 
-            // txtCodProduto
-            // 
-            this.txtCodProduto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCodProduto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtCodProduto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
-            this.txtCodProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
-            this.txtCodProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCodProduto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodProduto.ForeColor = System.Drawing.Color.White;
-            this.txtCodProduto.Location = new System.Drawing.Point(7, 23);
-            this.txtCodProduto.Name = "txtCodProduto";
-            this.txtCodProduto.Size = new System.Drawing.Size(245, 19);
-            this.txtCodProduto.TabIndex = 3;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // nomeProdutoPanel
             // 
@@ -261,6 +213,55 @@
             this.panel6.Size = new System.Drawing.Size(227, 1);
             this.panel6.TabIndex = 5;
             // 
+            // codProdutoPanel
+            // 
+            this.codProdutoPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.codProdutoPanel.Controls.Add(this.lblCodProduto);
+            this.codProdutoPanel.Controls.Add(this.panel3);
+            this.codProdutoPanel.Controls.Add(this.txtCodProduto);
+            this.codProdutoPanel.Location = new System.Drawing.Point(487, 74);
+            this.codProdutoPanel.Name = "codProdutoPanel";
+            this.codProdutoPanel.Size = new System.Drawing.Size(255, 98);
+            this.codProdutoPanel.TabIndex = 2;
+            // 
+            // lblCodProduto
+            // 
+            this.lblCodProduto.AutoSize = true;
+            this.lblCodProduto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodProduto.ForeColor = System.Drawing.Color.White;
+            this.lblCodProduto.Location = new System.Drawing.Point(3, 3);
+            this.lblCodProduto.Name = "lblCodProduto";
+            this.lblCodProduto.Size = new System.Drawing.Size(150, 20);
+            this.lblCodProduto.TabIndex = 4;
+            this.lblCodProduto.Text = "Código do Produto";
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Location = new System.Drawing.Point(7, 40);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(245, 1);
+            this.panel3.TabIndex = 5;
+            // 
+            // txtCodProduto
+            // 
+            this.txtCodProduto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCodProduto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.txtCodProduto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
+            this.txtCodProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
+            this.txtCodProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodProduto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodProduto.ForeColor = System.Drawing.Color.White;
+            this.txtCodProduto.Location = new System.Drawing.Point(7, 23);
+            this.txtCodProduto.Name = "txtCodProduto";
+            this.txtCodProduto.Size = new System.Drawing.Size(245, 19);
+            this.txtCodProduto.TabIndex = 3;
+            // 
             // UCVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -272,13 +273,13 @@
             this.Size = new System.Drawing.Size(745, 513);
             this.tblVenda.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
-            this.codProdutoPanel.ResumeLayout(false);
-            this.codProdutoPanel.PerformLayout();
             this.nomeProdutoPanel.ResumeLayout(false);
             this.nomeProdutoPanel.PerformLayout();
             this.quantidadePanel.ResumeLayout(false);
             this.quantidadePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).EndInit();
+            this.codProdutoPanel.ResumeLayout(false);
+            this.codProdutoPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
