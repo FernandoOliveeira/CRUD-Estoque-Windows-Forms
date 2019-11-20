@@ -18,6 +18,13 @@ namespace Sistema_Estoque.ViewLayer
             InitializeComponent();
         }
 
+        public void LimparCampos()
+        {
+            txtNomeProduto.Text = "";
+            txtQuantidade.Value = 0;
+            txtCodProduto.Text = "";
+        }
+
         private void btnEnviar_Click(object sender, EventArgs e)
         {
             DlProduto objDlProduto = new DlProduto();
@@ -39,6 +46,7 @@ namespace Sistema_Estoque.ViewLayer
                     if (objDlProduto.VenderProdutos(txtNomeProduto.Text.Trim(), (int)txtQuantidade.Value, txtCodProduto.Text.Trim()))
                     {
                         MessageBox.Show("Venda efetuada com sucesso !", "Vendido com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LimparCampos();
                     }
                     else
                     {
