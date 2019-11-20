@@ -77,6 +77,7 @@ namespace Sistema_Estoque.ViewLayer
                         objBlProduto.AbrirBanco();
                         objBlProduto.CadastrarProdutos(objProduto);
                         objBlProduto.FecharBanco(objBlProduto.AbrirBanco());
+
                         MessageBox.Show("Produto cadastrado com sucesso !", "Produto Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         LimparCampos();

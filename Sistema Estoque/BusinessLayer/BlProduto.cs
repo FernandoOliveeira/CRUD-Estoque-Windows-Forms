@@ -1,10 +1,6 @@
 ﻿using Sistema_Estoque.DataLayer;
 using Sistema_Estoque.Model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sistema_Estoque.BusinessLayer
 {
@@ -30,5 +26,7 @@ namespace Sistema_Estoque.BusinessLayer
 
             return false;
         }
+
     }
 }
+

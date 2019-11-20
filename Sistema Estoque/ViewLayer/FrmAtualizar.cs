@@ -171,14 +171,25 @@ namespace Sistema_Estoque.ViewLayer
                 };
 
 
-                objBlProduto.AbrirBanco();
-                objBlProduto.AtualizarProdutos(objProduto);
-                objBlProduto.FecharBanco(objBlProduto.AbrirBanco());
+                if (objBlProduto.VerificarDadosProduto(objProduto))
+                {
 
 
-                MessageBox.Show("Produto atualizado com sucesso !", "Produto Atualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                this.Close();
+                    objBlProduto.AbrirBanco();
+                    objBlProduto.AtualizarProdutos(objProduto);
+                    objBlProduto.FecharBanco(objBlProduto.AbrirBanco());
+
+
+                    MessageBox.Show("Produto atualizado com sucesso !", "Produto Atualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Um ou mais campos estão vazios\nPreencha todos os campos antes de continuar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
             catch (Exception)
             {

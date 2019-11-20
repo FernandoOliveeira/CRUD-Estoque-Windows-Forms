@@ -58,10 +58,6 @@ namespace Sistema_Estoque.ViewLayer
                 consultarCodigoPanelLine.BackColor = Color.FromArgb(120, 120, 120);
                 consultarCodBarrasPanelLine.BackColor = Color.FromArgb(120, 120, 120);
             }
-            else
-            {
-
-            }
         }
 
         private void txtConsultarNome_TextChanged(object sender, EventArgs e)
@@ -99,10 +95,6 @@ namespace Sistema_Estoque.ViewLayer
 
                 consultarNomePanelLine.BackColor = Color.FromArgb(120, 120, 120);
                 consultarCodBarrasPanelLine.BackColor = Color.FromArgb(120, 120, 120);
-            }
-            else
-            {
-
             }
         }
 
@@ -143,10 +135,6 @@ namespace Sistema_Estoque.ViewLayer
 
                 consultarNomePanelLine.BackColor = Color.FromArgb(120, 120, 120);
                 consultarCodigoPanelLine.BackColor = Color.FromArgb(120, 120, 120);
-            }
-            else
-            {
-
             }
         }
 
