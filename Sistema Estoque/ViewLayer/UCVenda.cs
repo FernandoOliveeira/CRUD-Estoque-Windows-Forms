@@ -20,15 +20,31 @@ namespace Sistema_Estoque.ViewLayer
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            DlProduto dlProduto = new DlProduto();
+            DlProduto objDlProduto = new DlProduto();
 
-            if(dlProduto.VenderProdutos(txtNomeProduto.Text, (int)txtQuantidade.Value, txtCodProduto.Text))
+            if (txtQuantidade.Value <= 0)
             {
-                MessageBox.Show("Venda efetuada com sucesso !", "Vendido com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Quantidade inválida", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Não foi possível vender este item", "Erro ao realizar venda", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                if (objDlProduto.VerificarQuantidadeEstoque(txtNomeProduto.Text.Trim(), (int)txtQuantidade.Value, txtCodProduto.Text.Trim()))
+                {
+                    MessageBox.Show("Quantidade digitada maior que a quantidade em estoque", "Quantidade inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+
+                    if (objDlProduto.VenderProdutos(txtNomeProduto.Text.Trim(), (int)txtQuantidade.Value, txtCodProduto.Text.Trim()))
+                    {
+                        MessageBox.Show("Venda efetuada com sucesso !", "Vendido com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Não foi possível vender este item", "Erro ao realizar venda", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
         }
     }
