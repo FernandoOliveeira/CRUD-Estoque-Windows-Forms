@@ -524,7 +524,6 @@
             this.Controls.Add(this.label2);
             this.Name = "UCCadastrar";
             this.Size = new System.Drawing.Size(745, 513);
-            this.Load += new System.EventHandler(this.UCCadastrar_Load);
             this.tblCadastrar.ResumeLayout(false);
             this.dataValidadePanel.ResumeLayout(false);
             this.dataValidadePanel.PerformLayout();

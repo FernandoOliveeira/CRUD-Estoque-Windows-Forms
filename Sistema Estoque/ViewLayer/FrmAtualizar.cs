@@ -77,6 +77,22 @@ namespace Sistema_Estoque.ViewLayer
         }
 
 
+        // Permite apenas números no campo Preco
+        private void txtPreco_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != ','))
+            {
+                e.Handled = true;
+            }
+
+            // Permite apenas um separador decimal
+            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf(',') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
         #region Buttons
 
         private void btnMinimizar_Click(object sender, EventArgs e)

@@ -386,6 +386,7 @@
             this.txtPreco.ShortcutsEnabled = false;
             this.txtPreco.Size = new System.Drawing.Size(327, 19);
             this.txtPreco.TabIndex = 3;
+            this.txtPreco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPreco_KeyPress);
             // 
             // nomeProdutoPanel
             // 

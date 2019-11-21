@@ -21,14 +21,6 @@ namespace Sistema_Estoque.ViewLayer
             dtValidade.Value = DateTime.Now;
         }
 
-
-
-        private void UCCadastrar_Load(object sender, EventArgs e)
-        {
-           
-        }
-
-
         
         private void LimparCampos()
         {
