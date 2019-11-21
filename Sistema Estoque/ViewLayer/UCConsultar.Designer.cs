@@ -85,7 +85,6 @@
             this.dgvConsulta.AllowUserToResizeRows = false;
             this.dgvConsulta.AutoGenerateColumns = false;
             this.dgvConsulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvConsulta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dgvConsulta.BackgroundColor = System.Drawing.Color.White;
             this.dgvConsulta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvConsulta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -111,9 +110,10 @@
             this.dATACADASTRODataGridViewTextBoxColumn,
             this.ATUALIZAR,
             this.EXCLUIR});
+            this.dgvConsulta.Cursor = System.Windows.Forms.Cursors.Default;
             this.dgvConsulta.DataSource = this.pRODUTOSBindingSource;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(241)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
@@ -308,28 +308,28 @@
             // cODBARRASDataGridViewTextBoxColumn
             // 
             this.cODBARRASDataGridViewTextBoxColumn.DataPropertyName = "COD_BARRAS";
-            this.cODBARRASDataGridViewTextBoxColumn.HeaderText = "COD_BARRAS";
+            this.cODBARRASDataGridViewTextBoxColumn.HeaderText = "CÓD. BARRAS";
             this.cODBARRASDataGridViewTextBoxColumn.Name = "cODBARRASDataGridViewTextBoxColumn";
             this.cODBARRASDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cODPRODUTODataGridViewTextBoxColumn
             // 
             this.cODPRODUTODataGridViewTextBoxColumn.DataPropertyName = "COD_PRODUTO";
-            this.cODPRODUTODataGridViewTextBoxColumn.HeaderText = "COD_PRODUTO";
+            this.cODPRODUTODataGridViewTextBoxColumn.HeaderText = "CÓD. PRODUTO";
             this.cODPRODUTODataGridViewTextBoxColumn.Name = "cODPRODUTODataGridViewTextBoxColumn";
             this.cODPRODUTODataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dATAVALIDADEDataGridViewTextBoxColumn
             // 
             this.dATAVALIDADEDataGridViewTextBoxColumn.DataPropertyName = "DATA_VALIDADE";
-            this.dATAVALIDADEDataGridViewTextBoxColumn.HeaderText = "DATA_VALIDADE";
+            this.dATAVALIDADEDataGridViewTextBoxColumn.HeaderText = "DATA DE VALIDADE";
             this.dATAVALIDADEDataGridViewTextBoxColumn.Name = "dATAVALIDADEDataGridViewTextBoxColumn";
             this.dATAVALIDADEDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // lOCALARMAZENADODataGridViewTextBoxColumn
             // 
             this.lOCALARMAZENADODataGridViewTextBoxColumn.DataPropertyName = "LOCAL_ARMAZENADO";
-            this.lOCALARMAZENADODataGridViewTextBoxColumn.HeaderText = "LOCAL_ARMAZENADO";
+            this.lOCALARMAZENADODataGridViewTextBoxColumn.HeaderText = "LOCAL ARMAZENADO";
             this.lOCALARMAZENADODataGridViewTextBoxColumn.Name = "lOCALARMAZENADODataGridViewTextBoxColumn";
             this.lOCALARMAZENADODataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -343,7 +343,7 @@
             // dATACADASTRODataGridViewTextBoxColumn
             // 
             this.dATACADASTRODataGridViewTextBoxColumn.DataPropertyName = "DATA_CADASTRO";
-            this.dATACADASTRODataGridViewTextBoxColumn.HeaderText = "DATA_CADASTRO";
+            this.dATACADASTRODataGridViewTextBoxColumn.HeaderText = "DATA DE CADASTRO";
             this.dATACADASTRODataGridViewTextBoxColumn.Name = "dATACADASTRODataGridViewTextBoxColumn";
             this.dATACADASTRODataGridViewTextBoxColumn.ReadOnly = true;
             // 
