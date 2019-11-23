@@ -44,7 +44,7 @@ namespace Sistema_Estoque.ViewLayer
             else
             {
 
-                if (!blProduto.EntrarProdutos(txtNomeProduto.Text.Trim(), (int)txtQuantidade.Value, txtCodBarras.Text.Trim(), dtValidade.Value, txtLocalArmazenado.Text.Trim()) && !(txtQuantidade.Value != 0) && !(txtLocalArmazenado.Text != ""))
+                if (txtNomeProduto.Text.Trim() == "" || txtQuantidade.Value == 0 || txtCodBarras.Text.Trim() == "" || txtLocalArmazenado.Text == "")
                 {
                     // Entra nesta condição caso TODOS os inputs estejam vazios
 
