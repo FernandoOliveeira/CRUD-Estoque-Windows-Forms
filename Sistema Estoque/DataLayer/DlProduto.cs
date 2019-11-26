@@ -89,14 +89,14 @@ namespace Sistema_Estoque.DataLayer
 
             int res = command.ExecuteNonQuery();
 
+            FecharBanco(AbrirBanco());
+
             if (res != 0)
             {
-                FecharBanco(AbrirBanco());
 
                 return true;
             }
 
-            FecharBanco(AbrirBanco());
 
             return false;
 
@@ -119,14 +119,14 @@ namespace Sistema_Estoque.DataLayer
 
             int res = command.ExecuteNonQuery();
 
+            FecharBanco(AbrirBanco());
+
             if (res != 0)
             {
-                FecharBanco(AbrirBanco());
 
                 return true;
             }
 
-            FecharBanco(AbrirBanco());
 
             return false;
 
@@ -140,14 +140,13 @@ namespace Sistema_Estoque.DataLayer
 
             int res = command.ExecuteNonQuery();
 
+            FecharBanco(AbrirBanco());
+
             if (res != 0)
             {
-                FecharBanco(AbrirBanco());
 
                 return true;
             }
-
-            FecharBanco(AbrirBanco());
 
             return false;
         }
@@ -177,13 +176,11 @@ namespace Sistema_Estoque.DataLayer
             if (codigoBarras == codBarras)
             {
                 codigoBarras = " ";
-                FecharBanco(AbrirBanco());
 
                 return true;
             }
 
             codigoBarras = " ";
-            FecharBanco(AbrirBanco());
 
             return false;
 
@@ -214,13 +211,44 @@ namespace Sistema_Estoque.DataLayer
             if (nomeProduto == nome)
             {
                 nomeProduto = " ";
-                FecharBanco(AbrirBanco());
 
                 return true;
             }
 
             nomeProduto = " ";
+
+            return false;
+        }
+        
+        public bool VerificarProdutosCodProduto(string codProduto)
+        {
+            DataTable consultaProduto = new DataTable();
+
+
+            string queryStr = "SELECT COD_PRODUTO FROM PRODUTOS WHERE COD_PRODUTO = '" + codProduto + "'";
+
+            SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
+            SqlDataReader reader = command.ExecuteReader();
+
+            consultaProduto.Load(reader);
+
+            string codigoProduto = " ";
+
+            foreach (DataRow row in consultaProduto.Rows)
+            {
+                codigoProduto = row["COD_PRODUTO"].ToString();
+            }
+
             FecharBanco(AbrirBanco());
+
+            if (codigoProduto == codProduto)
+            {
+                codigoProduto = " ";
+
+                return true;
+            }
+
+            codigoProduto = " ";
 
             return false;
         }
@@ -242,9 +270,10 @@ namespace Sistema_Estoque.DataLayer
                 quantidadeEstoque = int.Parse(row["QUANTIDADE"].ToString());
             }
 
+            FecharBanco(AbrirBanco());
+
             if (quantidade > quantidadeEstoque)
             {
-                FecharBanco(AbrirBanco());
 
                 quantidadeEstoque = 0;
 
@@ -285,14 +314,13 @@ namespace Sistema_Estoque.DataLayer
 
             int res = commandEntrarProduto.ExecuteNonQuery();
 
+            FecharBanco(AbrirBanco());
+
             if (res != 0)
             {
-                FecharBanco(AbrirBanco());
 
                 return true;
             }
-
-            FecharBanco(AbrirBanco());
 
             return false;
 
@@ -345,17 +373,14 @@ namespace Sistema_Estoque.DataLayer
             SqlCommand commandAtualizarProduto = new SqlCommand(queryAtualizarProduto, AbrirBanco());
             int AtualizarProduto = commandAtualizarProduto.ExecuteNonQuery();
 
-
+            FecharBanco(AbrirBanco());
 
             if (Vendas != 0 && AtualizarProduto != 0)
             {
-                FecharBanco(AbrirBanco());
 
                 return true;
             }
 
-
-            FecharBanco(AbrirBanco());
 
             return false;
         }
