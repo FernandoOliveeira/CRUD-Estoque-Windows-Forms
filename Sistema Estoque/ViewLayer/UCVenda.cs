@@ -29,30 +29,39 @@ namespace Sistema_Estoque.ViewLayer
         {
             DlProduto objDlProduto = new DlProduto();
 
-            if (txtQuantidade.Value <= 0)
-            {
-                MessageBox.Show("Quantidade inválida", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
+            if (objDlProduto.VerificarProdutosNome(txtNomeProduto.Text))
             {
 
-                if (objDlProduto.VerificarQuantidadeEstoque(txtNomeProduto.Text.Trim(), (int)txtQuantidade.Value, txtCodProduto.Text.Trim()))
+
+                if (txtQuantidade.Value <= 0)
                 {
-                    MessageBox.Show("Quantidade digitada maior que a quantidade em estoque", "Quantidade inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Quantidade inválida", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
 
-                    if (objDlProduto.VenderProdutos(txtNomeProduto.Text.Trim(), (int)txtQuantidade.Value, txtCodProduto.Text.Trim()))
+                    if (objDlProduto.VerificarQuantidadeEstoque(txtNomeProduto.Text.Trim(), (int)txtQuantidade.Value, txtCodProduto.Text.Trim()))
                     {
-                        MessageBox.Show("Venda efetuada com sucesso !", "Vendido com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        LimparCampos();
+                        MessageBox.Show("Quantidade digitada maior que a quantidade em estoque", "Quantidade inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
-                        MessageBox.Show("Não foi possível vender este item", "Erro ao realizar venda", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        if (objDlProduto.VenderProdutos(txtNomeProduto.Text.Trim(), (int)txtQuantidade.Value, txtCodProduto.Text.Trim()))
+                        {
+                            MessageBox.Show("Venda efetuada com sucesso !", "Vendido com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LimparCampos();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Não foi possível vender este item", "Erro ao realizar venda", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
+            }
+            else
+            {
+                MessageBox.Show("Nome de produto não encontrado !", "Produto não encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

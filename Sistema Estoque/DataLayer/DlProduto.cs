@@ -190,6 +190,41 @@ namespace Sistema_Estoque.DataLayer
 
         }
 
+        public bool VerificarProdutosNome(string nome)
+        {
+            DataTable consultaProduto = new DataTable();
+
+
+            string queryStr = "SELECT NOME FROM PRODUTOS WHERE NOME = '" + nome + "'";
+
+            SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
+            SqlDataReader reader = command.ExecuteReader();
+
+            consultaProduto.Load(reader);
+
+            string nomeProduto = " ";
+
+            foreach (DataRow row in consultaProduto.Rows)
+            {
+                nomeProduto = row["NOME"].ToString();
+            }
+
+            FecharBanco(AbrirBanco());
+
+            if (nomeProduto == nome)
+            {
+                nomeProduto = " ";
+                FecharBanco(AbrirBanco());
+
+                return true;
+            }
+
+            nomeProduto = " ";
+            FecharBanco(AbrirBanco());
+
+            return false;
+        }
+
         public bool VerificarQuantidadeEstoque(string nome, int quantidade, string codProduto)
         {
             DataTable consultaEstoque = new DataTable();
