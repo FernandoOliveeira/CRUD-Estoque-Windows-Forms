@@ -31,8 +31,8 @@ namespace Sistema_Estoque.ViewLayer
 
         private void UCConsultar_Load(object sender, EventArgs e)
         {
-            //BlProduto objBlProduto = new BlProduto();
-            //dgvConsulta.DataSource = objBlProduto.ConsultarProdutos();
+            BlProduto objBlProduto = new BlProduto();
+            dgvConsulta.DataSource = objBlProduto.ConsultarProdutos();
 
         }
 
@@ -157,7 +157,7 @@ namespace Sistema_Estoque.ViewLayer
 
         private void dgvConsulta_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvConsulta.Columns[e.ColumnIndex].Name == "ATUALIZAR")
+            if (dgvConsulta.Columns[e.ColumnIndex].Name == "ATUALIZAR") // Inicia esta verificação caso seja clicado no botão ATUALIZAR no DataGridView
             {
 
                 string idProduto = dgvConsulta.SelectedRows[0].Cells[1].Value.ToString();
@@ -196,7 +196,7 @@ namespace Sistema_Estoque.ViewLayer
                 }
             }
 
-            if (dgvConsulta.Columns[e.ColumnIndex].Name == "EXCLUIR")
+            if (dgvConsulta.Columns[e.ColumnIndex].Name == "EXCLUIR") // Inicia esta verificação caso seja clicado no botão EXCLUIR no DataGridView
             {
                 string idProduto = dgvConsulta.SelectedRows[0].Cells[1].Value.ToString();
 

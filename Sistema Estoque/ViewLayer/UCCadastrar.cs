@@ -64,7 +64,7 @@ namespace Sistema_Estoque.ViewLayer
                     };
 
 
-                    if (objBlProduto.VerificarDadosProduto(objProduto))
+                    if (objBlProduto.VerificarDadosProduto(objProduto)) // Verifica se todos os campos foram preenchidos
                     {
                         objBlProduto.AbrirBanco();
                         objBlProduto.CadastrarProdutos(objProduto);
