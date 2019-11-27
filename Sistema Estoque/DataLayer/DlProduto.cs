@@ -253,11 +253,11 @@ namespace Sistema_Estoque.DataLayer
             return false;
         }
 
-        public bool VerificarQuantidadeEstoque(string nome, int quantidade, string codProduto)
+        public bool VerificarQuantidadeEstoque(int quantidade, string codProduto)
         {
             DataTable consultaEstoque = new DataTable();
 
-            string queryConsultarEstoque = "SELECT QUANTIDADE FROM PRODUTOS WHERE NOME = '" + nome + "' AND COD_PRODUTO = '" + codProduto + "'";
+            string queryConsultarEstoque = "SELECT QUANTIDADE FROM PRODUTOS WHERE COD_PRODUTO = '" + codProduto + "'";
             SqlCommand command = new SqlCommand(queryConsultarEstoque, AbrirBanco());
             SqlDataReader reader = command.ExecuteReader();
 
@@ -326,11 +326,11 @@ namespace Sistema_Estoque.DataLayer
 
         }
 
-        public bool VenderProdutos(string nome, int quantidade, string codProduto)
+        public bool VenderProdutos(int quantidade, string codProduto)
         {
             DataTable consultaProdutos = new DataTable();
 
-            string queryStr = "SELECT ID_PRODUTOS, PRECO, QUANTIDADE FROM PRODUTOS WHERE NOME = '" + nome + "' AND COD_PRODUTO = '" + codProduto + "'";
+            string queryStr = "SELECT ID_PRODUTOS, PRECO, QUANTIDADE FROM PRODUTOS WHERE COD_PRODUTO = '" + codProduto + "'";
 
             SqlCommand command = new SqlCommand(queryStr, AbrirBanco());
             SqlDataReader reader = command.ExecuteReader();
@@ -383,6 +383,29 @@ namespace Sistema_Estoque.DataLayer
 
 
             return false;
+        }
+
+
+        public string VerificarVendaProdutos(string codProduto)
+        {
+            DataTable consultaEstoque = new DataTable();
+
+            string queryConsultarEstoque = "SELECT NOME FROM PRODUTOS WHERE COD_PRODUTO = '" + codProduto + "'";
+            SqlCommand command = new SqlCommand(queryConsultarEstoque, AbrirBanco());
+            SqlDataReader reader = command.ExecuteReader();
+
+            consultaEstoque.Load(reader);
+
+            string nomeProduto = "";
+
+            foreach (DataRow row in consultaEstoque.Rows)
+            {
+                nomeProduto = row["NOME"].ToString();
+            }
+
+            return nomeProduto;
+
+
         }
 
     }

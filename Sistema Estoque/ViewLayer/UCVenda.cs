@@ -20,7 +20,7 @@ namespace Sistema_Estoque.ViewLayer
 
         public void LimparCampos()
         {
-            txtNomeProduto.Text = "";
+
             txtQuantidade.Value = 0;
             txtCodProduto.Text = "";
         }
@@ -29,48 +29,50 @@ namespace Sistema_Estoque.ViewLayer
         {
             DlProduto objDlProduto = new DlProduto();
 
-            if (objDlProduto.VerificarProdutosNome(txtNomeProduto.Text))
+
+            if (objDlProduto.VerificarProdutosCodProduto(txtCodProduto.Text)) // Verifica se o código do produto existe no banco no dados
             {
-                if (objDlProduto.VerificarProdutosCodProduto(txtCodProduto.Text))
+
+                if (txtQuantidade.Value <= 0)
+                {
+                    MessageBox.Show("Quantidade inválida", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
                 {
 
-
-
-                    if (txtQuantidade.Value <= 0)
+                    if (objDlProduto.VerificarQuantidadeEstoque((int)txtQuantidade.Value, txtCodProduto.Text.Trim())) // Verifica se a quantidade digitada não é maior que a quantidade em estoque
                     {
-                        MessageBox.Show("Quantidade inválida", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Quantidade digitada maior que a quantidade em estoque", "Quantidade inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                     }
                     else
                     {
 
-                        if (objDlProduto.VerificarQuantidadeEstoque(txtNomeProduto.Text.Trim(), (int)txtQuantidade.Value, txtCodProduto.Text.Trim()))
+                        if (MessageBox.Show("Deseja vender este item ?\n" + objDlProduto.VerificarVendaProdutos(txtCodProduto.Text.Trim()), "Vender Produto", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
-                            MessageBox.Show("Quantidade digitada maior que a quantidade em estoque", "Quantidade inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                            if (objDlProduto.VenderProdutos((int)txtQuantidade.Value, txtCodProduto.Text.Trim())) // Realiza a baixa do produto
+                            {
+                                MessageBox.Show("Venda Realizada com sucesso !", "Vendido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                LimparCampos();
+                            }
+
                         }
                         else
                         {
+                            MessageBox.Show("Não foi possível vender este item", "Erro ao realizar venda", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                            if (objDlProduto.VenderProdutos(txtNomeProduto.Text.Trim(), (int)txtQuantidade.Value, txtCodProduto.Text.Trim()))
-                            {
-                                MessageBox.Show("Venda efetuada com sucesso !", "Vendido com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                LimparCampos();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Não foi possível vender este item", "Erro ao realizar venda", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
                         }
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Código do produto não encontrado !", "Código não encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show("Nome de produto não encontrado !", "Produto não encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Código do produto não encontrado !", "Código não encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+
     }
 }

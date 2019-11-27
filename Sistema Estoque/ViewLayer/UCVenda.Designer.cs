@@ -32,10 +32,6 @@
             this.tblVenda = new System.Windows.Forms.TableLayoutPanel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.btnEnviar = new System.Windows.Forms.Button();
-            this.nomeProdutoPanel = new System.Windows.Forms.Panel();
-            this.lblNomeProduto = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtNomeProduto = new System.Windows.Forms.TextBox();
             this.quantidadePanel = new System.Windows.Forms.Panel();
             this.txtQuantidade = new System.Windows.Forms.NumericUpDown();
             this.lblQuantidade = new System.Windows.Forms.Label();
@@ -46,7 +42,6 @@
             this.txtCodProduto = new System.Windows.Forms.TextBox();
             this.tblVenda.SuspendLayout();
             this.panel12.SuspendLayout();
-            this.nomeProdutoPanel.SuspendLayout();
             this.quantidadePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).BeginInit();
             this.codProdutoPanel.SuspendLayout();
@@ -71,9 +66,8 @@
             this.tblVenda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.71935F));
             this.tblVenda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.86488F));
             this.tblVenda.Controls.Add(this.panel12, 1, 3);
-            this.tblVenda.Controls.Add(this.nomeProdutoPanel, 0, 1);
-            this.tblVenda.Controls.Add(this.quantidadePanel, 1, 1);
             this.tblVenda.Controls.Add(this.codProdutoPanel, 2, 1);
+            this.tblVenda.Controls.Add(this.quantidadePanel, 0, 1);
             this.tblVenda.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblVenda.Location = new System.Drawing.Point(0, 55);
             this.tblVenda.Name = "tblVenda";
@@ -112,55 +106,6 @@
             this.btnEnviar.UseVisualStyleBackColor = false;
             this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
-            // nomeProdutoPanel
-            // 
-            this.nomeProdutoPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.nomeProdutoPanel.Controls.Add(this.lblNomeProduto);
-            this.nomeProdutoPanel.Controls.Add(this.panel1);
-            this.nomeProdutoPanel.Controls.Add(this.txtNomeProduto);
-            this.nomeProdutoPanel.Location = new System.Drawing.Point(3, 74);
-            this.nomeProdutoPanel.Name = "nomeProdutoPanel";
-            this.nomeProdutoPanel.Size = new System.Drawing.Size(235, 98);
-            this.nomeProdutoPanel.TabIndex = 0;
-            // 
-            // lblNomeProduto
-            // 
-            this.lblNomeProduto.AutoSize = true;
-            this.lblNomeProduto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeProduto.ForeColor = System.Drawing.Color.White;
-            this.lblNomeProduto.Location = new System.Drawing.Point(3, 3);
-            this.lblNomeProduto.Name = "lblNomeProduto";
-            this.lblNomeProduto.Size = new System.Drawing.Size(139, 20);
-            this.lblNomeProduto.TabIndex = 4;
-            this.lblNomeProduto.Text = "Nome do Produto";
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(7, 40);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(225, 1);
-            this.panel1.TabIndex = 5;
-            // 
-            // txtNomeProduto
-            // 
-            this.txtNomeProduto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNomeProduto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtNomeProduto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
-            this.txtNomeProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(79)))), ((int)(((byte)(103)))));
-            this.txtNomeProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNomeProduto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeProduto.ForeColor = System.Drawing.Color.White;
-            this.txtNomeProduto.Location = new System.Drawing.Point(7, 23);
-            this.txtNomeProduto.Name = "txtNomeProduto";
-            this.txtNomeProduto.Size = new System.Drawing.Size(225, 19);
-            this.txtNomeProduto.TabIndex = 3;
-            // 
             // quantidadePanel
             // 
             this.quantidadePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -169,9 +114,9 @@
             this.quantidadePanel.Controls.Add(this.txtQuantidade);
             this.quantidadePanel.Controls.Add(this.lblQuantidade);
             this.quantidadePanel.Controls.Add(this.panel6);
-            this.quantidadePanel.Location = new System.Drawing.Point(244, 74);
+            this.quantidadePanel.Location = new System.Drawing.Point(3, 74);
             this.quantidadePanel.Name = "quantidadePanel";
-            this.quantidadePanel.Size = new System.Drawing.Size(237, 98);
+            this.quantidadePanel.Size = new System.Drawing.Size(235, 98);
             this.quantidadePanel.TabIndex = 1;
             // 
             // txtQuantidade
@@ -189,7 +134,7 @@
             0,
             0});
             this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(227, 22);
+            this.txtQuantidade.Size = new System.Drawing.Size(225, 22);
             this.txtQuantidade.TabIndex = 3;
             // 
             // lblQuantidade
@@ -210,7 +155,7 @@
             this.panel6.BackColor = System.Drawing.Color.Black;
             this.panel6.Location = new System.Drawing.Point(7, 40);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(227, 1);
+            this.panel6.Size = new System.Drawing.Size(225, 1);
             this.panel6.TabIndex = 5;
             // 
             // codProdutoPanel
@@ -273,8 +218,6 @@
             this.Size = new System.Drawing.Size(745, 513);
             this.tblVenda.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
-            this.nomeProdutoPanel.ResumeLayout(false);
-            this.nomeProdutoPanel.PerformLayout();
             this.quantidadePanel.ResumeLayout(false);
             this.quantidadePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).EndInit();
@@ -294,10 +237,6 @@
         private System.Windows.Forms.Label lblCodProduto;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtCodProduto;
-        private System.Windows.Forms.Panel nomeProdutoPanel;
-        private System.Windows.Forms.Label lblNomeProduto;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtNomeProduto;
         private System.Windows.Forms.Panel quantidadePanel;
         private System.Windows.Forms.NumericUpDown txtQuantidade;
         private System.Windows.Forms.Label lblQuantidade;
